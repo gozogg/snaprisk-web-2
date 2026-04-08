@@ -10,6 +10,7 @@ function About() {
 
       <main className="content">
         <h1 className="text-4xl font-bold text-center">About</h1>
+        <h1 className="text-4xl font-bold text-center">Brand Pillars</h1>
       </main>
     </div>
   );

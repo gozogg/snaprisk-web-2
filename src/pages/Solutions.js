@@ -10,6 +10,7 @@ function Solutions() {
 
       <main className="content">
         <h1 className="text-4xl font-bold text-center">Solutions</h1>
+        
       </main>
     </div>
   );

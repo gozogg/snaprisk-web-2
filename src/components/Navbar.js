@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom';
 
 function Navbar() {
   const linkClass =
-    'text-primary no-underline transition-colors hover:text-slate-300';
+    'text-primary no-underline transition-colors hover:text-slate-300 font-semibold';
 
   const dropdownLinkClass =
     'block px-4 py-2 text-sm text-white no-underline transition-colors hover:bg-black/20';
