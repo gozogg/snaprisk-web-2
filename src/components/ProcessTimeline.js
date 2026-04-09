@@ -65,33 +65,21 @@ function DescriptionList({ description }) {
       : [];
   if (items.length === 0) return null;
   return (
-    <ul className="mt-3 list-disc space-y-2 pl-5 text-base leading-relaxed text-gray-600 marker:text-primary md:text-[17px]">
+    <ul className="mt-3 list-none space-y-2 pl-5 text-base leading-relaxed text-gray-600 marker:text-primary md:text-[17px]">
       {items.map((item, i) => (
-        <li key={i}>{item}</li>
+        <li key={i}><BulletArrow/> {item}</li>
       ))}
     </ul>
   );
 }
 
-function JourneyArrow() {
+function BulletArrow() {
   return (
-    <div className="flex justify-center py-2 md:py-3" aria-hidden>
-      <svg
-        className="h-8 w-8 text-primary/45"
-        viewBox="0 0 24 24"
-        fill="none"
-        stroke="currentColor"
-        strokeWidth="1.75"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-      >
-        <path d="M12 5v14M7 14l5 5 5-5" />
-      </svg>
-    </div>
-  );
+    <span className="text-primary">➢</span>
+  )
 }
 
-function TimelineStep({ step, index, total, isLast }) {
+function TimelineStep({ step, index, total }) {
   const ref = useRef(null);
   const [visible, setVisible] = useState(false);
 
@@ -108,22 +96,19 @@ function TimelineStep({ step, index, total, isLast }) {
     return () => observer.disconnect();
   }, []);
 
-  const n = String(index + 1).padStart(2, '0');
+  const isRight = index % 2 === 1;
+  const hiddenState = isRight ? 'translate-x-10 opacity-0' : '-translate-x-10 opacity-0';
+  const shownState = 'translate-x-0 opacity-100';
 
   return (
-    <li className="m-0 list-none p-0">
+    <li className={`m-0 list-none p-0 md:col-span-1 ${isRight ? 'md:col-start-2' : 'md:col-start-1'}`}>
       <div ref={ref} className="relative">
         <div
           className={`relative overflow-hidden rounded-2xl border border-primary/15 bg-gradient-to-br from-white to-secondary/25 p-6 shadow-sm transition-all duration-700 ease-out motion-reduce:transition-none md:p-8 ${
-            visible ? 'translate-y-0 opacity-100' : 'translate-y-8 opacity-0'
+            visible ? shownState : hiddenState
           }`}
           style={{ transitionDelay: visible ? `${Math.min(index, 5) * 80}ms` : '0ms' }}
         >
-          {/* <div
-            className="pointer-events-none absolute -right-0 -top-2 select-none font-bold text-[5rem] leading-none text-primary/[0.07] md:text-[6rem]"
-          >
-            {n}
-          </div> */}
           <div className="relative">
             <p className="m-0 text-xs font-semibold uppercase tracking-[0.2em] text-primary">
               Stop {index + 1} of {total}
@@ -138,7 +123,6 @@ function TimelineStep({ step, index, total, isLast }) {
           </div>
         </div>
       </div>
-      {/* {!isLast && <JourneyArrow />} */}
     </li>
   );
 }
@@ -166,14 +150,17 @@ function ProcessTimeline({ steps = DEFAULT_STEPS }) {
         </svg>
       </div>
 
-      <ol className="m-0 grid list-none grid-cols-1 gap-y-6 p-0 md:grid-cols-2 md:gap-x-8 md:gap-y-8">
+      <ol className="relative m-0 grid list-none grid-cols-1 gap-y-6 p-0 md:grid-cols-2 md:gap-x-12 md:gap-y-8">
+        <div
+          className="pointer-events-none absolute bottom-2 left-1/2 top-2 hidden w-px -translate-x-1/2 bg-primary/20 md:block"
+          aria-hidden
+        />
         {steps.map((step, index) => (
           <TimelineStep
             key={step.title}
             step={step}
             index={index}
             total={steps.length}
-            isLast={index === steps.length - 1}
           />
         ))}
       </ol>

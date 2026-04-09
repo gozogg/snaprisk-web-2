@@ -12,7 +12,7 @@ function SnapALERT() {
           <div className="relative mx-auto w-[88%]">
             <div className="absolute -bottom-10 -left-10 h-40 w-40 bg-primary" />
             <img
-              src="/img/solutions/snapcat.png"
+              src="/img/solutions/snapalert.png"
               alt="SnapCAT"
               className="relative z-10 w-full rounded-lg object-cover shadow-lg"
             />
@@ -57,9 +57,9 @@ function SnapALERT() {
           <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
             <article className="group rounded-2xl border border-gray-200 bg-white p-7 shadow-sm transition-all duration-200 hover:-translate-y-1 hover:shadow-lg">
               <p className="text-sm font-semibold uppercase tracking-[0.16em] text-primary">Feature 01</p>
-              <h3 className="mt-2 text-xl font-semibold text-gray-900">24/7 Monitoring</h3>
+              <h3 className="mt-2 text-xl font-semibold text-gray-900">24/7 Monitoring & Alerts</h3>
               <p className="mt-3 text-base leading-relaxed text-gray-700">
-              Client access to SnapALERT® to track natural disasters, fires, severe weather, and civil unrest near your properties. 
+              Client access to SnapALERT® to track natural disasters, fires, and severe weather near your properties, with tailored notifications based on risk tolerance and property type.
               </p>
             </article>
 
@@ -67,31 +67,23 @@ function SnapALERT() {
               <p className="text-sm font-semibold uppercase tracking-[0.16em] text-primary">Feature 02</p>
               <h3 className="mt-2 text-xl font-semibold text-gray-900">Geospatial Intelligence</h3>
               <p className="mt-3 text-base leading-relaxed text-gray-700">
-                Maps events to specific locations, in real-time. 
+              Maps events to specific locations in real time, giving precise visibility into risks affecting your properties.
               </p>
             </article>
 
             <article className="group rounded-2xl border border-gray-200 bg-white p-7 shadow-sm transition-all duration-200 hover:-translate-y-1 hover:shadow-lg">
               <p className="text-sm font-semibold uppercase tracking-[0.16em] text-primary">Feature 03</p>
-              <h3 className="mt-2 text-xl font-semibold text-gray-900">Custom Alerts</h3>
+              <h3 className="mt-2 text-xl font-semibold text-gray-900">Actionable Guidance</h3>
               <p className="mt-3 text-base leading-relaxed text-gray-700">
-              Tailored notifications based on risk tolerance and property type. 
+              Provides recommended next steps to help mitigate exposure and respond effectively to events. 
               </p>
             </article>
 
             <article className="group rounded-2xl border border-gray-200 bg-white p-7 shadow-sm transition-all duration-200 hover:-translate-y-1 hover:shadow-lg">
               <p className="text-sm font-semibold uppercase tracking-[0.16em] text-primary">Feature 04</p>
-              <h3 className="mt-2 text-xl font-semibold text-gray-900">Actionable Guidance</h3>
+              <h3 className="mt-2 text-xl font-semibold text-gray-900">Integrated Reporting & Analysis</h3>
               <p className="mt-3 text-base leading-relaxed text-gray-700">
-                Provides recommended next steps to mitigate exposure. 
-              </p>
-            </article>
-
-            <article className="group rounded-2xl border border-gray-200 bg-white p-7 shadow-sm transition-all duration-200 hover:-translate-y-1 hover:shadow-lg">
-              <p className="text-sm font-semibold uppercase tracking-[0.16em] text-primary">Feature 05</p>
-              <h3 className="mt-2 text-xl font-semibold text-gray-900">Integrated Reporting</h3>
-              <p className="mt-3 text-base leading-relaxed text-gray-700">
-                Logs alerts into your SnapRISK® portal for follow-up and analysis. 
+              Logs alerts into your SnapRISK® portal for follow-up, tracking, and deeper analysis. 
               </p>
             </article>
           </div>

@@ -9,13 +9,13 @@ function Navbar() {
 
   const solutionItems = [
     { to: '/solutions/hpr', label: 'HPR' },
-    { to: '/solutions/snaprec', label: 'SnapREC' },
-    { to: '/solutions/snapcat', label: 'SnapCAT' },
-    { to: '/solutions/snapcope', label: 'SnapCOPE' },
+    { to: '/solutions/snaprec', label: 'SnapREC®' },
+    { to: '/solutions/snapcat', label: 'SnapCAT®' },
+    { to: '/solutions/snapcope', label: 'SnapCOPE®' },
     { to: '/solutions/snapir', label: 'SnapIR' },
-    { to: '/solutions/snapvalues', label: 'SnapVALUES' },
-    { to: '/solutions/self-e-audit', label: 'Self E-Audit' },
-    { to: '/solutions/snapalert', label: 'SnapALERT' },
+    { to: '/solutions/snapvalues', label: 'SnapVALUES™' },
+    { to: '/solutions/self-e-audit', label: 'Self E-Audit®' },
+    { to: '/solutions/snapalert', label: 'SnapALERT®' },
   ];
 
   const technologyItems = [

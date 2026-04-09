@@ -24,7 +24,7 @@ const BLOCKS = [
 function ProcessBlock({ block }) {
   return (
     <article className="group overflow-hidden rounded-xl border border-gray-200/80 bg-white shadow-sm transition-shadow hover:shadow-xl">
-      <div className="relative h-64 w-full overflow-hidden md:h-72">
+      <div className="relative h-56 w-full overflow-hidden md:h-72 lg:h-96">
         <img
           src={block.img}
           alt=""
@@ -36,7 +36,7 @@ function ProcessBlock({ block }) {
         <div className="relative flex h-full flex-col justify-end p-6 text-left">
           <h3 className="m-0 text-xl font-bold text-white md:text-2xl">{block.title}</h3>
           <p className="mt-2 text-sm leading-relaxed text-white/90 md:text-base">{block.description}</p>
-          <Link to={block.link} className="mt-2 text-sm leading-relaxed text-white/90 md:text-base">Learn more</Link>
+          <Link to={block.link} className="mt-2 text-sm text-white/90 md:text-base px-4 py-2 rounded-md text-right">Learn more <i class="fa-solid fa-arrow-right"></i></Link>
         </div>
       </div>
     </article>

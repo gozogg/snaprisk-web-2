@@ -1,9 +1,9 @@
 import '../App.css';
 import Navbar from '../components/Navbar';
 import ProcessTimeline from '../components/ProcessTimeline';
-import ProcessTimelineCircles from '../components/ProcessTimelineCircles';
 import IndustriesSlide from '../components/IndustriesSlide';
 import ProcessBlocks from '../components/ProcessBlocks';
+import NextSteps from '../components/NextSteps';
 
 function Home() {
   return (
@@ -44,6 +44,12 @@ function Home() {
         </div>
       </section>
 
+      {/* <section>
+        <div className="mx-auto max-w-6xl">
+          <ProcessTimelineCircles />
+        </div>
+      </section> */}
+
       <section className='text-center bg-secondary py-16'>
         <p className="m-0 text-xl font-semibold uppercase tracking-[0.25em] text-primary">INDUSTRIES</p>
         <p className="mx-auto mt-3 max-w-lg text-base leading-relaxed text-gray-600 md:text-lg">We bring deep expertise across a broad range of industries, enabling us to deliver tailored solutions regardless of sector.</p>
@@ -60,13 +66,18 @@ function Home() {
         </div>
       </section>
 
-      <section className="bg-white px-6 pb-20 pt-10 md:px-10 lg:px-16">
-        <h2 className="text-center text-4xl font-bold text-gray-900">Next Steps</h2>
-        <p className="mx-auto mt-3 max-w-2xl text-center text-base leading-relaxed text-gray-600 md:text-lg">
-          Follow the journey in one row. Hover each circle to see more detail.
-        </p>
-        <div className="mt-8">
-          <ProcessTimelineCircles />
+      <section
+        className="relative overflow-hidden px-6 pb-20 pt-10 text-center md:px-10 lg:px-16"
+        style={{
+          backgroundImage: "url('/img/home/nextsteps.jpg')",
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+        }}
+      >
+        <div className="absolute inset-0 bg-black/35"/>
+        <div className="relative z-10">
+          <p className="m-0 text-xl font-semibold uppercase tracking-[0.25em] text-white mx-96 border-b-2 pb-8">NEXT STEPS</p>
+          <NextSteps />
         </div>
       </section>
     </div>

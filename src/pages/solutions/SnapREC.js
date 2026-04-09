@@ -12,7 +12,7 @@ function SnapREC() {
           <div className="relative mx-auto w-[88%]">
             <div className="absolute -bottom-10 -left-10 h-40 w-40 bg-primary" />
             <img
-              src="/img/solutions/snapcat.png"
+              src="/img/solutions/snaprec.png"
               alt="SnapCAT"
               className="relative z-10 w-full rounded-lg object-cover shadow-lg"
             />
@@ -55,41 +55,33 @@ function SnapREC() {
           <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
             <article className="group rounded-2xl border border-gray-200 bg-white p-7 shadow-sm transition-all duration-200 hover:-translate-y-1 hover:shadow-lg">
               <p className="text-sm font-semibold uppercase tracking-[0.16em] text-primary">Feature 01</p>
-              <h3 className="mt-2 text-xl font-semibold text-gray-900">Centralized Risk Data</h3>
+              <h3 className="mt-2 text-xl font-semibold text-gray-900">Centralized Risk Management</h3>
               <p className="mt-3 text-base leading-relaxed text-gray-700">
-              Every property, every recommendation, every update – organized in one place, accessible anytime. 
+              All property data, recommendations, and updates organized in one accessible system at any time.  
               </p>
             </article>
 
             <article className="group rounded-2xl border border-gray-200 bg-white p-7 shadow-sm transition-all duration-200 hover:-translate-y-1 hover:shadow-lg">
               <p className="text-sm font-semibold uppercase tracking-[0.16em] text-primary">Feature 02</p>
-              <h3 className="mt-2 text-xl font-semibold text-gray-900">Real-Time Progress Tracking</h3>
+              <h3 className="mt-2 text-xl font-semibold text-gray-900">Real-Time Tracking & Prioritization</h3>
               <p className="mt-3 text-base leading-relaxed text-gray-700">
-              Track open risk recommendations, implementation status, due dates, and responsible parties – all in a clear, dashboard- style view. 
+              Monitor progress, due dates, and responsible parties while filtering by risk severity, cost, or location to focus efforts where they matter most.
               </p>
             </article>
 
             <article className="group rounded-2xl border border-gray-200 bg-white p-7 shadow-sm transition-all duration-200 hover:-translate-y-1 hover:shadow-lg">
               <p className="text-sm font-semibold uppercase tracking-[0.16em] text-primary">Feature 03</p>
-              <h3 className="mt-2 text-xl font-semibold text-gray-900">Prioritization Made Easy</h3>
+              <h3 className="mt-2 text-xl font-semibold text-gray-900">Collaborative Workflow</h3>
               <p className="mt-3 text-base leading-relaxed text-gray-700">
-              Filter and sort by risk severity, cost to implement, or location – so you can focus resources where they will have the greatest impact. 
+              Enable risk, facilities, engineering, operations, and leadership to work together within one unified platform.
               </p>
             </article>
 
             <article className="group rounded-2xl border border-gray-200 bg-white p-7 shadow-sm transition-all duration-200 hover:-translate-y-1 hover:shadow-lg">
               <p className="text-sm font-semibold uppercase tracking-[0.16em] text-primary">Feature 04</p>
-              <h3 className="mt-2 text-xl font-semibold text-gray-900">Collaborative Compliance</h3>
+              <h3 className="mt-2 text-xl font-semibold text-gray-900">Reporting & Compliance</h3>
               <p className="mt-3 text-base leading-relaxed text-gray-700">
-              Risk Management, Facilities, Engineering, Operations, and Leadership can all engage in one unified system. 
-              </p>
-            </article>
-
-            <article className="group rounded-2xl border border-gray-200 bg-white p-7 shadow-sm transition-all duration-200 hover:-translate-y-1 hover:shadow-lg">
-              <p className="text-sm font-semibold uppercase tracking-[0.16em] text-primary">Feature 05</p>
-              <h3 className="mt-2 text-xl font-semibold text-gray-900">Carrier-Ready Reporting</h3>
-              <p className="mt-3 text-base leading-relaxed text-gray-700">
-              Export progress reports and analytics to demonstrate your commitment to continuous risk improvement – great for underwriting and renewals. 
+              Generate carrier-ready reports and analytics to support underwriting and demonstrate continuous risk improvement.  
               </p>
             </article>
           </div>

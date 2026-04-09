@@ -20,9 +20,9 @@ function SnapCAT() {
         </div>
         <div className="w-1/2 p-4 flex flex-col justify-center space-y-5">
           <p className="text-xs font-semibold uppercase tracking-[0.2em] text-primary">Solutions</p>
-          <h1 className="text-5xl font-semibold tracking-tight text-gray-900">SnapCAT</h1>
+          <h1 className="text-5xl font-semibold tracking-tight text-gray-900">SnapCAT®</h1>
           <p className="max-w-xl text-lg leading-relaxed text-gray-700">
-          SnapCAT focuses on collecting, verifying, and housing natural catastrophe (NatCat) modifier data building-by-building in a cost-effective way – 
+          SnapCAT® focuses on collecting, verifying, and housing natural catastrophe (NatCat) modifier data building-by-building in a cost-effective way – 
           without the need for expensive traditional inspections. We have developed a streamlined process that makes gathering this critical data much 
           more affordable and efficient. 
           </p>
@@ -91,11 +91,10 @@ function SnapCAT() {
             </article>
           </div>
 
-          <div className="relative overflow-hidden rounded-3xl bg-gray-900 p-8 md:p-10">
-            <div className="absolute -right-10 -bottom-16 h-52 w-52 rounded-full bg-primary/35 blur-2xl" />
-            <p className="relative max-w-4xl text-2xl font-medium leading-relaxed text-white">
-              SnapCAT empowers better decisions by turning complex risk data into clear, actionable insight so you can protect
-              your assets, people, and operations with confidence.
+          <div className="relative overflow-hidden rounded-3xl bg-gray-900 p-8 md:p-10 text-center">
+            <div className="rounded-full bg-primary/35 blur-2xl" />
+            <p className="relative text-2xl font-medium leading-relaxed text-white text-center">
+             SnapCAT empowers better decisions by turning complex risk data into clear, actionable insight – so you can protect your assets, people, and operations with confidence! 
             </p>
           </div>
         </div>
