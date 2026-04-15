@@ -1,5 +1,175 @@
 import '../../App.css';
 import Navbar from '../../components/Navbar';
+import TeamBlock from '../../components/TeamBlocks';
+
+
+const leadership = [
+  {
+    img: '/img/portraits/ellenMichael.jpeg',
+    firstName: 'Ellen',
+    lastName: 'Michael',
+    linkedin: 'https://www.linkedin.com/company/snaprisk',
+    shortDescription: `As President of SnapRISK, Ellen Marie Michael leads with over 30 years of experience in HPR account management, 
+                  sales, and executive leadership.`,
+    longDescription: `As President of SnapRISK, Ellen Marie Michael leads with over 30 years of experience in HPR account management, sales, and executive leadership. 
+                  A former risk manager and seasoned industry executive, Ellen understands the challenges risk professionals face and turns that insight into practical, strategic 
+                  guidance for clients and teams alike. Known for her passion for solving problems and elevating client service, Ellen combines deep technical knowledge with a 
+                  results-driven mindset. Her leadership reflects the core of SnapRISK’s mission—to transform the complexity of property risk engineering into opportunity through 
+                  technology, expertise, and partnership. Ellen’s energy, authenticity, and commitment to excellence inspire those around her, driving both client success and team 
+                  growth.`,
+    title: 'President',
+    location: 'Phoenix, AZ'
+  }, 
+  {
+    img: '/img/portraits/gregLindsley.jpg',
+    firstName: 'Greg',
+    lastName: 'Lindsley',
+    linkedin: 'https://www.linkedin.com/company/snaprisk',
+    shortDescription: `Gregory Lindsley is a Partner at SnapRISK, overseeing company growth and services provided to our clients.`,
+    longDescription: `Gregory Lindsley is a Partner at SnapRISK, overseeing company growth and services provided to our clients. The procurement of 
+                  new client relationships is an important part of our growth, while acting as a point for comprehensive information regarding services provided 
+                  not only by SnapRISK but other partners as well as ours. Prior to joining SnapRISK, Mr. Lindsley was responsible for property loss control services 
+                  at both Global Risk Consultants and Aon Risk Services of Minnesota. Most recently he served as EVP at First Onsite Restoration where he learned 
+                  invaluable experiences with property mitigation/restoration services and processes in natural disaster area wide events.`,
+    title: 'Partner',
+    location: 'Phoenix, AZ'
+  }, 
+]
+
+const sales = [
+  {
+    img: '/img/portraits/jerryBasta.png',
+    firstName: 'Jerry',
+    lastName: 'Basta',
+    linkedin: 'https://www.linkedin.com/company/snaprisk',
+    shortDescription: `Jerry Basta is an Account Manager and business development professional for SnapRISK.`,
+    longDescription: `Jerry Basta is an Account Manager and business development professional for SnapRISK. In his current role he leads the international sales, 
+                  marketing, and account management team, as well as managing supplier and partnership relationships. As Account Manager he assumes overall 
+                  responsibility for customer satisfaction, service performance, delivery, and quality. He is also responsible for developing new business for
+                  SnapRISK and new applications for the SnapRISK® technology platform.
+                  Prior to joining SnapRISK, Mr. Basta held leadership roles at Global Risk Consultants, First Onsite Restoration and Willis (now Willis Towers Watson). 
+                  His responsibilities included managing a global sales team, global account management and project management of multimillion dollar property claims. 
+                  He also acted as project manager for research projects in fire protection technology, including large scale fire testing for the aerosol and consumer products industry.`,
+    title: 'Executive Vice President',
+    location: 'Ann Arbor, MI'
+  }, 
+  {
+    img: '/img/portraits/paulFix.jpg',
+    firstName: 'Paul',
+    lastName: 'Fix',
+    linkedin: 'https://www.linkedin.com/company/snaprisk',
+    shortDescription: `Paul Fix is an Executive Vice President with SnapRISK and has extensive experience as a sales and account management executive.`,
+    longDescription: `Paul Fix is an Executive Vice President with SnapRISK and has extensive experience as a sales and account management executive. 
+                  He is well-connected throughout the global risk management and insurance community. His strengths include communication, collaboration, 
+                  critical thinking, strategic vision and building relationships that last a lifetime. In his current role he will continue to expand the 
+                  SnapRISK brand experience and delivery of innovative risk control services. Prior to joining SnapRISK, Mr. Fix held a variety of leadership 
+                  roles in insurance (FM & IRI), brokerage (Aon), property risk control (Global Risk Consultants), restoration (First Onsite) and client servicing 
+                  (all of the above). At GRC, he led the global sales team and was responsible for the overall growth, retention and development of risk control 
+                  opportunities for his clients. Each of these experiences will be invaluable for him in his role at SnapRISK as we continue to grow and exceed expectations.`,
+    title: 'Executive Vice President',
+    location: 'Minneapolis, MN'
+  }, 
+  {
+    img: '/img/portraits/jeffNall.jpg',
+    firstName: 'Jeff',
+    lastName: 'Nall',
+    linkedin: 'https://www.linkedin.com/company/snaprisk',
+    shortDescription: 'Jeff is responsible for managing the core services delivered to individual clients and oversight of all activity.',
+    longDescription: `Jeff is responsible for managing the core services
+                  delivered to individual clients and oversight of all activity.
+                  As an experienced leader of property risk control consulting services and a registered
+                  professional engineer, Jeff is also responsible for marketing the services of SnapRISK® for client consulting
+                  relationships. His areas of expertise include corporate program development, property insurance submittals,
+                  complex risk consulting, quantitative risk assessment, and problem solving. In working with a major
+                  beverage client, he gained extensive experience in innovative protection methods for flammable liquid
+                  processing and storage, he also managed the publication of corporate standards.`,
+    title: 'Executive Vice President',
+    location: 'Atlanta, GA'
+  }, 
+  {
+    img: '/img/portraits/aleaciaPerdomo.jpg',
+    firstName: 'Aleacia',
+    lastName: 'Perdomo',
+    linkedin: 'https://www.linkedin.com/company/snaprisk',
+    shortDescription: `Aleacia Perdomo leads the strategic vision and delivery of 
+                    property engineering solutions and technology.`,
+    longDescription: `Aleacia Perdomo leads the strategic vision and delivery of 
+                    property engineering solutions and technology. She specializes in portfolios with significant natural 
+                    catastrophe exposure, advancing the SnapRISK services that empower clients and their trusted advisors 
+                    to achieve stronger, data-driven outcomes. Her leadership spans channel distribution, risk consulting, 
+                    and client engagement initiatives. Based in Atlanta, Aleacia brings over 30 years of experience across 
+                    the full risk ecosystem—including underwriting & distribution management at a leading global carrier, 
+                    advisory roles at a premier risk consulting firm, and go-to-market strategy for a risk-tech platform. 
+                    This diverse background fuels her commitment to delivering integrated, data-driven solutions for today’s 
+                    dynamic risk environment utilizing the 
+                    industry-leading SnapRISK® technology.`,
+    title: 'Executive Vice President',
+    location: 'Atlanta, GA'
+  }, 
+  {
+    img: '/img/portraits/marcoSobejano.jpg',
+    firstName: 'Marco',
+    lastName: 'Sobejano',
+    linkedin: 'https://www.linkedin.com/company/snaprisk',
+    shortDescription: `Marco Sobejano is the Managing Director for EMEA at SnapRISK, leading strategic growth and client engagement across Europe, 
+                    the Middle East, and Africa.`,
+    longDescription: `Marco Sobejano is the Managing Director for EMEA at SnapRISK, leading strategic growth and client engagement across Europe, 
+                    the Middle East, and Africa. With a strong background in risk engineering and global insurance program management, Marco works 
+                    closely with clients, brokers, and partners to deliver tailored, unbundled solutions that support long-term risk improvement. 
+                    He plays a key role in expanding SnapRISK’s footprint in the region and ensuring that our services align with the evolving needs 
+                    of both multinational and regional clients.`,
+    title: 'Managing Director EMEA',
+    location: 'Netherlands'
+  }, 
+]
+
+const operations = [
+  {
+    img: '/img/portraits/kevinBeach.jpg',
+    firstName: 'Kevin',
+    lastName: 'Beach',
+    linkedin: 'https://www.linkedin.com/company/snaprisk',
+    shortDescription: `Kevin attended the University of Illinois at Urbana-Champaign where he studied economics and computer
+                  science, and has experience working in both the financial and insurance industries.`,
+    longDescription: `Kevin attended the University of Illinois at Urbana-Champaign where he studied economics and computer
+                  science, and has experience working in both the financial and insurance industries. Since joining the
+                  team, Kevin has been continuously finding ways to integrate new technologies into SnapRISK® in order
+                  to make data collection and data analysis more seamless and efficient. His main focuses include data
+                  analytics, web development, and product innovation.`,
+    title: 'Lead Developer',
+    location: 'Phoenix, AZ'
+  }, 
+  {
+    img: '/img/portraits/matthewMaday.jpg',
+    firstName: 'Matthew',
+    lastName: 'Maday',
+    linkedin: 'https://www.linkedin.com/company/snaprisk',
+    shortDescription: `Matthew holds a bachelor’s degree from Oklahoma State University in fire protection and safety
+                  engineering technology.`,
+    longDescription: `Matthew holds a bachelor’s degree from Oklahoma State University in fire protection and safety
+                  engineering technology. He began his career at FM Global as a field engineer and then as a licensed
+                  adjuster. Since joining the team, Matthew has applied his practical experience and knowledge to help
+                  innovate the way our clients approach property risk management. Matthew is focused on ensuring the
+                  SnapRISK team efficiently and effectively meets all of our clients risk management needs.`,
+    title: 'Director of Operations',
+    location: 'Chicago, IL'
+  }, 
+  {
+    img: '/img/portraits/annieTrapp.jpg',
+    firstName: 'Annie',
+    lastName: 'Trapp',
+    linkedin: 'https://www.linkedin.com/company/snaprisk',
+    shortDescription: 'Annie joined SnapRISK in 2019, working in client support and data analysis.',
+    longDescription: `Annie joined SnapRISK in 2019, working in client support and data analysis. After receiving her
+                    bachelor’s degree from Lee University in 2014, she worked in multiple industries throughout the
+                    Cincinnati area with a focus in account management and client relations. At SnapRISK, Annie enjoys
+                    working with a diverse client base, whether local or international. She is passionate about making
+                    SnapRISK meet a client's needs to be helpful and effective.`,
+    title: 'Client Success Manager',
+    location: 'Cincinnati, OH'
+  }
+]
+
 
 function OurTeam() {
   return (
@@ -9,8 +179,37 @@ function OurTeam() {
       </header>
 
       <main className="content">
-        <h1 className="text-4xl font-bold text-center">Our Team</h1>
+        <h1 className="text-4xl font-bold text-center">Meet Our Team</h1>
       </main>
+
+      <section>
+        <h1 className="text-4xl font-bold text-center">Executive Leadership</h1>
+        <div className="grid grid-cols-1 gap-6 md:grid-cols-2 md:gap-8 px-24 py-12">
+        {leadership.map(person => (
+          <TeamBlock key={person.firstName} teammate={person} />
+        ))}
+        </div>
+      </section>
+
+      <section>
+        <h1 className="text-4xl font-bold text-center">Executive Sales & Account Management</h1>
+        <div className="flex flex-wrap justify-center gap-6 px-24 py-12 md:gap-8">
+          {sales.map((person) => (
+            <div key={person.firstName} className="w-full md:w-[calc(33.333%-1.5rem)] max-w-sm">
+              <TeamBlock teammate={person} />
+            </div>
+          ))}
+        </div>
+      </section>
+
+      <section>
+        <h1 className="text-4xl font-bold text-center">Executive Sales & Account Management</h1>
+        <div className="grid grid-cols-1 gap-6 md:grid-cols-3 md:gap-8 px-24 py-12">
+        {operations.map(person => (
+          <TeamBlock key={person.firstName} teammate={person} />
+        ))}
+        </div>
+      </section>
     </div>
   );
 }

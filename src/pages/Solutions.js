@@ -1,6 +1,7 @@
 import '../App.css';
 import Navbar from '../components/Navbar';
 import DPPArrows from '../components/DPPArrows';
+import CircularGallery from '../components/CircularGallery';
 
 function FlameBullet({ className = '' }) {
   return (
@@ -41,7 +42,7 @@ function Solutions() {
                 <div class="flex flex-col md:flex-row items-center">
                   
                   <div class="w-full px-4">
-                    <div class="grid grid-cols-12 mx-auto">
+                    <div class="grid  mx-auto">
                       <div class="col-span-12 2xl:col-span-7 z-40">
                         <h1 class="text-md font-bold text-fuchsia-500 mb-2">Digital Property Profile®</h1>
                         <h1 class="text-5xl inter font-extrabold text-gray-800">Create your Digital Property Profile</h1>
