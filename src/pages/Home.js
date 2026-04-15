@@ -14,7 +14,7 @@ function Home() {
       <section
         className="relative flex min-h-[min(75vh,48rem)] w-full flex-col overflow-hidden"
       >
-        <video
+        {/* <video
           className="pointer-events-none absolute inset-0 z-0 h-full w-full object-cover"
           autoPlay
           muted
@@ -24,7 +24,17 @@ function Home() {
           aria-hidden
         >
           <source src="/img/home/home_video_3.mp4" type="video/mp4" />
-        </video>
+        </video> */}
+        <img
+          className="pointer-events-none absolute inset-0 z-0 h-full w-full object-cover"
+          src="img/home/video.gif"
+          autoPlay
+          muted
+          loop
+          playsInline
+          preload="auto"
+          aria-hidden>
+        </img>
         <div className="relative z-10 flex flex-1 flex-col items-start justify-start px-6 pb-14 pt-10 text-left md:px-16 md:pb-20 md:pt-14 lg:px-20">
           <h1 className="m-0 text-4xl font-bold tracking-tight text-primary drop-shadow-md md:text-6xl">
             SnapRISK

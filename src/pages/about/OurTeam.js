@@ -1,6 +1,7 @@
 import '../../App.css';
 import Navbar from '../../components/Navbar';
 import TeamBlock from '../../components/TeamBlocks';
+import TeamPhotoCarousel from '../../components/TeamPhotoCarousel';
 
 
 const leadership = [
@@ -38,7 +39,7 @@ const leadership = [
 
 const sales = [
   {
-    img: '/img/portraits/jerryBasta.png',
+    img: '/img/portraits/jerry_new.png',
     firstName: 'Jerry',
     lastName: 'Basta',
     linkedin: 'https://www.linkedin.com/company/snaprisk',
@@ -54,7 +55,7 @@ const sales = [
     location: 'Ann Arbor, MI'
   }, 
   {
-    img: '/img/portraits/paulFix.jpg',
+    img: '/img/portraits/paul_new.png',
     firstName: 'Paul',
     lastName: 'Fix',
     linkedin: 'https://www.linkedin.com/company/snaprisk',
@@ -70,7 +71,7 @@ const sales = [
     location: 'Minneapolis, MN'
   }, 
   {
-    img: '/img/portraits/jeffNall.jpg',
+    img: '/img/portraits/jeff_new.png',
     firstName: 'Jeff',
     lastName: 'Nall',
     linkedin: 'https://www.linkedin.com/company/snaprisk',
@@ -87,7 +88,7 @@ const sales = [
     location: 'Atlanta, GA'
   }, 
   {
-    img: '/img/portraits/aleaciaPerdomo.jpg',
+    img: '/img/portraits/aleacia_new.png',
     firstName: 'Aleacia',
     lastName: 'Perdomo',
     linkedin: 'https://www.linkedin.com/company/snaprisk',
@@ -107,7 +108,7 @@ const sales = [
     location: 'Atlanta, GA'
   }, 
   {
-    img: '/img/portraits/marcoSobejano.jpg',
+    img: '/img/portraits/marco.png',
     firstName: 'Marco',
     lastName: 'Sobejano',
     linkedin: 'https://www.linkedin.com/company/snaprisk',
@@ -178,8 +179,27 @@ function OurTeam() {
         <Navbar />
       </header>
 
-      <main className="content">
-        <h1 className="text-4xl font-bold text-center">Meet Our Team</h1>
+      <main className="content px-4 pb-14 md:px-8 md:pb-18">
+        <section className="mx-auto mt-10 max-w-5xl rounded-3xl border border-white/10 bg-secondary p-8 shadow-2xl shadow-primary/10 md:mt-14 md:p-12">
+          <p className="text-center text-xs font-semibold uppercase tracking-[0.24em] text-primary/80">
+            Meet Our Team
+          </p>
+          <h1 className="mt-3 text-center text-4xl font-bold leading-tight text-white md:text-5xl">
+            A Proven Global Team
+          </h1>
+          <p className="mx-auto mt-6 max-w-4xl text-center text-base leading-8 text-slate-200 md:text-lg">
+            At SnapRISK, we have the most experienced GLOBAL team of skilled professionals in the
+            industry.
+          </p>
+          <div className="mx-auto mt-8 max-w-4xl rounded-2xl border border-white/10 bg-slate-950/40 p-6 md:p-8">
+            {/* <h2 className="text-center text-2xl font-semibold text-white md:text-3xl">A Proven Team</h2> */}
+            <p className="mt-4 text-center text-sm leading-7 text-slate-300 md:text-base md:leading-8">
+              We&apos;re proud of the experience that our team brings to the table, and we&apos;re committed
+              to using it to help our clients succeed and grow in their respective industries. Our global
+              team consists of HPR consultants with decades of experience under their belt.
+            </p>
+          </div>
+        </section>
       </main>
 
       <section>
@@ -203,13 +223,15 @@ function OurTeam() {
       </section>
 
       <section>
-        <h1 className="text-4xl font-bold text-center">Executive Sales & Account Management</h1>
+        <h1 className="text-4xl font-bold text-center">Operations</h1>
         <div className="grid grid-cols-1 gap-6 md:grid-cols-3 md:gap-8 px-24 py-12">
         {operations.map(person => (
           <TeamBlock key={person.firstName} teammate={person} />
         ))}
         </div>
       </section>
+
+      <TeamPhotoCarousel />
     </div>
   );
 }
