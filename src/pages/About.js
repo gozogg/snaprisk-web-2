@@ -175,7 +175,7 @@ function About() {
             </p>
           </div>
 
-          <div className="mt-6 grid gap-6 rounded-3xl border border-gray-200 bg-white p-6 shadow-sm md:grid-cols-[2fr_1fr] md:p-8">
+          <div className="mt-6 rounded-3xl border border-gray-200 bg-white p-4 shadow-sm md:p-6">
             <div className="h-[500px] overflow-hidden rounded-2xl border border-gray-200 md:h-[600px]">
               <iframe
                 src="https://www.google.com/maps/d/embed?mid=1i0pWlsAbQWo4SVOTL2K7Wc8qj6DTclk&output=embed"
@@ -184,15 +184,15 @@ function About() {
                 title="SnapRISK and partner locations map"
               />
             </div>
-            <div className="flex flex-col justify-center rounded-2xl border border-primary/15 bg-secondary p-6 text-center">
-              <h3 className="text-2xl font-semibold text-gray-900">Legend</h3>
-              <div className="mt-6 flex items-center justify-center gap-3 text-primary">
-                <i className="fa-solid fa-location-dot" aria-hidden="true"></i>
-                <p className="text-base font-medium text-gray-700">SnapRISK</p>
+            <div className="mx-auto mt-4 flex w-full max-w-full flex-wrap items-center justify-center gap-x-6 gap-y-2 rounded-xl border border-primary/15 bg-secondary px-4 py-2.5 sm:w-1/2 sm:max-w-none">
+              <span className="text-xs font-semibold uppercase tracking-[0.14em] text-gray-500">Legend</span>
+              <div className="flex items-center gap-2 text-primary">
+                <i className="fa-solid fa-location-dot text-sm" aria-hidden="true"></i>
+                <span className="text-sm font-medium text-gray-700">SnapRISK</span>
               </div>
-              <div className="mt-3 flex items-center justify-center gap-3 text-red-500">
-                <i className="fa-solid fa-location-dot" aria-hidden="true"></i>
-                <p className="text-base font-medium text-gray-700">Partners</p>
+              <div className="flex items-center gap-2 text-red-500">
+                <i className="fa-solid fa-location-dot text-sm" aria-hidden="true"></i>
+                <span className="text-sm font-medium text-gray-700">Partners</span>
               </div>
             </div>
           </div>
