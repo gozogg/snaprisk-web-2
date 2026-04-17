@@ -9,7 +9,7 @@ const leadership = [
     img: '/img/portraits/ellenMichael.jpeg',
     firstName: 'Ellen',
     lastName: 'Michael',
-    linkedin: 'https://www.linkedin.com/company/snaprisk',
+    linkedin: 'https://www.linkedin.com/in/ellenmariemichael/',
     shortDescription: `As President of SnapRISK, Ellen Marie Michael leads with over 30 years of experience in HPR account management, 
                   sales, and executive leadership.`,
     longDescription: `As President of SnapRISK, Ellen Marie Michael leads with over 30 years of experience in HPR account management, sales, and executive leadership. 
@@ -25,7 +25,7 @@ const leadership = [
     img: '/img/portraits/gregLindsley.jpg',
     firstName: 'Greg',
     lastName: 'Lindsley',
-    linkedin: 'https://www.linkedin.com/company/snaprisk',
+    linkedin: 'https://www.linkedin.com/in/greg-lindsley-5a12785/',
     shortDescription: `Gregory Lindsley is a Partner at SnapRISK, overseeing company growth and services provided to our clients.`,
     longDescription: `Gregory Lindsley is a Partner at SnapRISK, overseeing company growth and services provided to our clients. The procurement of 
                   new client relationships is an important part of our growth, while acting as a point for comprehensive information regarding services provided 
@@ -42,7 +42,7 @@ const sales = [
     img: '/img/portraits/jerry_new.png',
     firstName: 'Jerry',
     lastName: 'Basta',
-    linkedin: 'https://www.linkedin.com/company/snaprisk',
+    linkedin: 'https://www.linkedin.com/in/jerry-basta-92729a7/',
     shortDescription: `Jerry Basta is an Account Manager and business development professional for SnapRISK.`,
     longDescription: `Jerry Basta is an Account Manager and business development professional for SnapRISK. In his current role he leads the international sales, 
                   marketing, and account management team, as well as managing supplier and partnership relationships. As Account Manager he assumes overall 
@@ -58,7 +58,7 @@ const sales = [
     img: '/img/portraits/paul_new.png',
     firstName: 'Paul',
     lastName: 'Fix',
-    linkedin: 'https://www.linkedin.com/company/snaprisk',
+    linkedin: 'https://www.linkedin.com/in/paul-fix-177bb460/',
     shortDescription: `Paul Fix is an Executive Vice President with SnapRISK and has extensive experience as a sales and account management executive.`,
     longDescription: `Paul Fix is an Executive Vice President with SnapRISK and has extensive experience as a sales and account management executive. 
                   He is well-connected throughout the global risk management and insurance community. His strengths include communication, collaboration, 
@@ -74,7 +74,7 @@ const sales = [
     img: '/img/portraits/jeff_new.png',
     firstName: 'Jeff',
     lastName: 'Nall',
-    linkedin: 'https://www.linkedin.com/company/snaprisk',
+    linkedin: 'https://www.linkedin.com/in/jeff-nall-p-e-a4847313/',
     shortDescription: 'Jeff is responsible for managing the core services delivered to individual clients and oversight of all activity.',
     longDescription: `Jeff is responsible for managing the core services
                   delivered to individual clients and oversight of all activity.
@@ -91,7 +91,7 @@ const sales = [
     img: '/img/portraits/aleacia_new.png',
     firstName: 'Aleacia',
     lastName: 'Perdomo',
-    linkedin: 'https://www.linkedin.com/company/snaprisk',
+    linkedin: 'https://www.linkedin.com/in/aleacia-perdomo-53b13521/',
     shortDescription: `Aleacia Perdomo leads the strategic vision and delivery of 
                     property engineering solutions and technology.`,
     longDescription: `Aleacia Perdomo leads the strategic vision and delivery of 
@@ -111,7 +111,7 @@ const sales = [
     img: '/img/portraits/marco.png',
     firstName: 'Marco',
     lastName: 'Sobejano',
-    linkedin: 'https://www.linkedin.com/company/snaprisk',
+    linkedin: 'https://www.linkedin.com/in/marcosobejano/',
     shortDescription: `Marco Sobejano is the Managing Director for EMEA at SnapRISK, leading strategic growth and client engagement across Europe, 
                     the Middle East, and Africa.`,
     longDescription: `Marco Sobejano is the Managing Director for EMEA at SnapRISK, leading strategic growth and client engagement across Europe, 
@@ -129,7 +129,7 @@ const operations = [
     img: '/img/portraits/kevinBeach.jpg',
     firstName: 'Kevin',
     lastName: 'Beach',
-    linkedin: 'https://www.linkedin.com/company/snaprisk',
+    linkedin: 'https://www.linkedin.com/in/kevin-beach-a6a4a9aa/',
     shortDescription: `Kevin attended the University of Illinois at Urbana-Champaign where he studied economics and computer
                   science, and has experience working in both the financial and insurance industries.`,
     longDescription: `Kevin attended the University of Illinois at Urbana-Champaign where he studied economics and computer
@@ -144,7 +144,7 @@ const operations = [
     img: '/img/portraits/matthewMaday.jpg',
     firstName: 'Matthew',
     lastName: 'Maday',
-    linkedin: 'https://www.linkedin.com/company/snaprisk',
+    linkedin: 'https://www.linkedin.com/in/matthew-maday-981a46153/',
     shortDescription: `Matthew holds a bachelor’s degree from Oklahoma State University in fire protection and safety
                   engineering technology.`,
     longDescription: `Matthew holds a bachelor’s degree from Oklahoma State University in fire protection and safety
@@ -159,7 +159,7 @@ const operations = [
     img: '/img/portraits/annieTrapp.jpg',
     firstName: 'Annie',
     lastName: 'Trapp',
-    linkedin: 'https://www.linkedin.com/company/snaprisk',
+    linkedin: 'https://www.linkedin.com/in/annie-trapp/',
     shortDescription: 'Annie joined SnapRISK in 2019, working in client support and data analysis.',
     longDescription: `Annie joined SnapRISK in 2019, working in client support and data analysis. After receiving her
                     bachelor’s degree from Lee University in 2014, she worked in multiple industries throughout the
@@ -184,10 +184,10 @@ function OurTeam() {
           <p className="text-center text-xs font-semibold uppercase tracking-[0.24em] text-primary/80">
             Meet Our Team
           </p>
-          <h1 className="mt-3 text-center text-4xl font-bold leading-tight text-white md:text-5xl">
+          <h1 className="mt-3 text-center text-4xl font-bold leading-tight text-primary md:text-5xl">
             A Proven Global Team
           </h1>
-          <p className="mx-auto mt-6 max-w-4xl text-center text-base leading-8 text-slate-200 md:text-lg">
+          <p className="mx-auto mt-6 max-w-4xl text-center text-base leading-8 text-slate-100 md:text-lg">
             At SnapRISK, we have the most experienced GLOBAL team of skilled professionals in the
             industry.
           </p>
