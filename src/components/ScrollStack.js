@@ -69,8 +69,15 @@ const ScrollStack = ({
   const getElementOffset = useCallback(
     element => {
       if (useWindowScroll) {
-        const rect = element.getBoundingClientRect();
-        return rect.top + window.scrollY;
+        // Use layout offsets (not transformed rects) to avoid jitter feedback
+        // when cards are actively animating with translate/scale.
+        let offsetTop = 0;
+        let node = element;
+        while (node) {
+          offsetTop += node.offsetTop || 0;
+          node = node.offsetParent;
+        }
+        return offsetTop;
       } else {
         return element.offsetTop;
       }
@@ -192,28 +199,9 @@ const ScrollStack = ({
 
   const setupLenis = useCallback(() => {
     if (useWindowScroll) {
-      const lenis = new Lenis({
-        duration: 1.2,
-        easing: t => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
-        smoothWheel: true,
-        touchMultiplier: 2,
-        infinite: false,
-        wheelMultiplier: 1,
-        lerp: 0.1,
-        syncTouch: true,
-        syncTouchLerp: 0.075
-      });
-
-      lenis.on('scroll', handleScroll);
-
-      const raf = time => {
-        lenis.raf(time);
-        animationFrameRef.current = requestAnimationFrame(raf);
-      };
-      animationFrameRef.current = requestAnimationFrame(raf);
-
-      lenisRef.current = lenis;
-      return lenis;
+      // In window scroll mode, rely on native scroll behavior to avoid fighting
+      // with the page's own scrolling pipeline.
+      return null;
     } else {
       const scroller = scrollerRef.current;
       if (!scroller) return;
@@ -271,7 +259,27 @@ const ScrollStack = ({
       card.style.webkitPerspective = '1000px';
     });
 
-    setupLenis();
+    let cleanupWindowListeners = () => {};
+    if (useWindowScroll) {
+      let scheduled = false;
+      const scheduleUpdate = () => {
+        if (scheduled) return;
+        scheduled = true;
+        animationFrameRef.current = requestAnimationFrame(() => {
+          updateCardTransforms();
+          scheduled = false;
+        });
+      };
+
+      window.addEventListener('scroll', scheduleUpdate, { passive: true });
+      window.addEventListener('resize', scheduleUpdate);
+      cleanupWindowListeners = () => {
+        window.removeEventListener('scroll', scheduleUpdate);
+        window.removeEventListener('resize', scheduleUpdate);
+      };
+    } else {
+      setupLenis();
+    }
 
     updateCardTransforms();
 
@@ -279,6 +287,7 @@ const ScrollStack = ({
       if (animationFrameRef.current) {
         cancelAnimationFrame(animationFrameRef.current);
       }
+      cleanupWindowListeners();
       if (lenisRef.current) {
         lenisRef.current.destroy();
       }
@@ -328,7 +337,7 @@ const ScrollStack = ({
 
   return (
     <div className={containerClassName} ref={scrollerRef} style={containerStyles}>
-      <div className="scroll-stack-inner pt-[20vh] px-20 pb-[50rem] min-h-screen">
+      <div className="scroll-stack-inner px-20 pb-[14rem] min-h-screen">
         {children}
         {/* Spacer so the last pin can release cleanly */}
         <div className="scroll-stack-end w-full h-px" />

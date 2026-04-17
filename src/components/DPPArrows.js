@@ -1,14 +1,15 @@
 // PropertyProfileDiagram.jsx
 import { useNavigate } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 const NODES = [
-    { id: 'snapcat',    label: 'SnapCAT',      path: '/snapcat',  icon: '/img/solutionLogos/snapcat.png',   angle: -90              }, // top
-    { id: 'snapcope',   label: 'SnapCOPE',     path: '/snapcope',   icon: '/img/solutionLogos/snapcope.png',  angle: -90 + 51.4       },
-    { id: 'snapalert',  label: 'SnapALERT',    path: '/snapalert',   icon: '/img/solutionLogos/snapalert.png', angle: -90 + 51.4 * 2   },
-    { id: 'snapvalues', label: 'SnapVALUES',   path: '/snapvalues',  icon: '/img/solutionLogos/snapvalues.png', angle: -90 + 51.4 * 3   },
-    { id: 'eaudit',     label: 'Self E-AUDIT', path: '/self-eaudit', icon: '/img/solutionLogos/snapeaudit.png', angle: -90 + 51.4 * 4   },
-    { id: 'snaprec',    label: 'SnapREC',      path: '/snaprec',     icon: '/img/solutionLogos/snaprec.png', angle: -90 + 51.4 * 5   },
-    { id: 'snapir',    label: 'SnapIR',     path: '/snapir',   icon: '/img/solutionLogos/snapir_.png', angle: -90 + 51.4 * 6   }, // 👈 add yours
+    { id: 'snapcat',    label: 'SnapCAT',      path: '/solutions/snapcat',  icon: '/img/solutionLogos/snapcat.png',   angle: -90              }, // top
+    { id: 'snapcope',   label: 'SnapCOPE',     path: '/solutions/snapcope',   icon: '/img/solutionLogos/snapcope.png',  angle: -90 + 51.4       },
+    { id: 'snapalert',  label: 'SnapALERT',    path: '/solutions/snapalert',   icon: '/img/solutionLogos/snapalert.png', angle: -90 + 51.4 * 2   },
+    { id: 'snapvalues', label: 'SnapVALUES',   path: '/solutions/snapvalues',  icon: '/img/solutionLogos/snapvalues.png', angle: -90 + 51.4 * 3   },
+    { id: 'eaudit',     label: 'Self E-AUDIT', path: '/solutions/self-eaudit', icon: '/img/solutionLogos/snapeaudit.png', angle: -90 + 51.4 * 4   },
+    { id: 'snaprec',    label: 'SnapREC',      path: '/solutions/snaprec',     icon: '/img/solutionLogos/snaprec.png', angle: -90 + 51.4 * 5   },
+    { id: 'snapir',    label: 'SnapIR',     path: '/solutions/snapir',   icon: '/img/solutionLogos/snapir_.png', angle: -90 + 51.4 * 6   }, // 👈 add yours
   ];
 
 const RADIUS = 150; // distance from center to each node
@@ -75,9 +76,9 @@ export default function DPPArrows({ className = '' }) {
         const nx = CX + RADIUS * Math.cos(toRad(node.angle));
         const ny = CY + RADIUS * Math.sin(toRad(node.angle));
         return (
-          <g
+        <Link to={node.path}>
+                  <g
             key={node.id}
-            onClick={() => navigate(node.path)}
             style={{ cursor: 'pointer' }}
             role="link"
             aria-label={node.label}
@@ -108,6 +109,7 @@ export default function DPPArrows({ className = '' }) {
               {node.label}
             </text> */}
           </g>
+        </Link>
         );
       })}
     </svg>

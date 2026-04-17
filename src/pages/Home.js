@@ -1,9 +1,78 @@
 import '../App.css';
 import Navbar from '../components/Navbar';
-import ProcessTimeline from '../components/ProcessTimeline';
 import IndustriesSlide from '../components/IndustriesSlide';
 import ProcessBlocks from '../components/ProcessBlocks';
 import NextSteps from '../components/NextSteps';
+import ScrollStack, { ScrollStackItem } from '../components/ScrollStack'
+
+const JOURNEY_STEPS = [
+  {
+    title: 'Discover',
+    subtitle: 'Identify risk exposure and data gaps',
+    icon: 'fa-solid fa-magnifying-glass',
+    bullets: [
+      'Portfolio review and initial conversations',
+      'Pinpoint missing or outdated COPE, NatCat, and engineering data',
+      'Align on goals: underwriting, cost savings, and visibility',
+    ],
+    img: '/img/home/discover.jpg'
+  },
+  {
+    title: 'Capture',
+    subtitle: 'Collect accurate, real-time property data',
+    icon: 'fa-solid fa-camera',
+    bullets: [
+      'Onsite HPR surveys or remote audits',
+      'Mobile-first data collection (photos, geolocation, structured inputs)',
+      'No paper, no delays',
+    ],
+    img: '/img/home/capture.jpg'
+  },
+  {
+    title: 'Structure',
+    subtitle: 'Turn raw data into standardized digital assets',
+    icon: 'fa-solid fa-diagram-project',
+    bullets: [
+      'Build Digital Property Profiles',
+      'Organize data through SnapCOPE, SnapCAT, and other modules',
+      'Clean, validated, model-ready datasets',
+    ],
+    img: '/img/home/structure.jpg'
+  },
+  {
+    title: 'Visualize',
+    subtitle: 'Transform data into portfolio-level insight',
+    icon: 'fa-solid fa-chart-line',
+    bullets: [
+      'Map risk across locations',
+      'Layer in hazard data (flood, wildfire, earthquake)',
+      'Identify trends, concentrations, and blind spots',
+    ],
+    img: '/img/home/visualize.jpg'
+  },
+  {
+    title: 'Act',
+    subtitle: 'Drive risk improvement and engineering action',
+    icon: 'fa-solid fa-bolt',
+    bullets: [
+      'Deliver reports instantly',
+      'Track recommendations through SnapREC',
+      'Prioritize mitigation efforts with confidence',
+    ],
+    img: '/img/home/act.jpg'
+  },
+  {
+    title: 'Optimize',
+    subtitle: 'Continuously improve and inform decisions',
+    icon: 'fa-solid fa-gears',
+    bullets: [
+      'Maintain living, updateable data',
+      'Support underwriting and renewal strategy',
+      'Reduce costs and strengthen risk posture',
+    ],
+    img: '/img/home/optimize.jpg'
+  },
+];
 
 function Home() {
   return (
@@ -48,17 +117,57 @@ function Home() {
         </div>
       </section>
 
-      <section className="border-t border-gray-100 bg-white px-6 py-16 md:px-10 md:py-20 lg:px-16">
-        <div className="mx-auto max-w-6xl">
-          <ProcessTimeline />
+      <section className="border-t border-gray-100 bg-white py-16 md:py-20">
+        <div className="sticky top-0 z-20 mx-auto max-w-6xl border-b border-primary/10 bg-white/95 px-6 py-4 text-center backdrop-blur md:px-10 lg:px-16">
+          <p className="m-0 text-xl font-semibold uppercase tracking-[0.25em] text-primary">
+            The journey with SnapRISK
+          </p>
+          <p className="mx-auto mt-3 max-w-lg text-base leading-relaxed text-gray-600 md:text-lg">
+            Six stages from first conversation to lasting partnership.
+          </p>
         </div>
+        <ScrollStack
+          useWindowScroll
+          className="mt-4"
+          itemDistance={52}
+          stackPosition="26%"
+          scaleEndPosition="14%"
+          baseScale={0.82}
+          itemScale={0.018}
+          itemStackDistance={14}
+        >
+          {JOURNEY_STEPS.map((step, index) => (
+            <ScrollStackItem
+              key={step.title}
+              itemClassName="mx-auto max-w-4xl border border-primary/15 bg-white text-left shadow-[0_12px_30px_rgba(15,23,42,0.12)]"
+            >
+              <div className="relative pr-20 md:pr-48 lg:pr-60">
+                <div className="pointer-events-none absolute right-0 top-1/2 -translate-y-1/2">
+                  <img
+                    src={step.img}
+                    alt={`${step.title} step`}
+                    className="h-14 w-14 rounded-lg object-cover shadow-sm md:h-48 md:w-48 lg:h-60 lg:w-60"
+                    loading="lazy"
+                  />
+                </div>
+                <p className="m-0 text-xs font-semibold uppercase tracking-[0.2em] text-primary">
+                  Stop {index + 1} of {JOURNEY_STEPS.length}
+                </p>
+                <p className="mt-2 text-sm font-medium italic text-gray-500 md:text-base">{step.subtitle}</p>
+                <h3 className="mt-3 text-2xl font-semibold tracking-tight text-gray-900">{step.title}</h3>
+                <ul className="mt-3 space-y-2 pl-5 text-base leading-relaxed text-gray-600">
+                  {step.bullets.map((item) => (
+                    <li key={item} className="list-none">
+                      <span className="mr-2 text-primary">➢</span>
+                      {item}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </ScrollStackItem>
+          ))}
+        </ScrollStack>
       </section>
-
-      {/* <section>
-        <div className="mx-auto max-w-6xl">
-          <ProcessTimelineCircles />
-        </div>
-      </section> */}
 
       <section className='text-center bg-secondary py-16'>
         <p className="m-0 text-xl font-semibold uppercase tracking-[0.25em] text-primary">INDUSTRIES</p>
