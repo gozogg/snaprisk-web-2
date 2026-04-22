@@ -1,12 +1,26 @@
 import '../App.css';
 import { useEffect, useState } from 'react';
 import Navbar from '../components/Navbar';
+import { useSearchParams } from 'react-router-dom';
 
 function Contact() {
   const [inquiryType, setInquiryType] = useState('');
+  const [role, setRole] = useState('');
   const [loading, setLoading] = useState(false);
   const [success, setSuccess] = useState(false);
   const [error, setError] = useState(null);
+  const [searchParams] = useSearchParams();
+
+  useEffect (() => {
+    const type = searchParams.get('type');
+    const role = searchParams.get('role')
+    if (['demo', 'careers', 'queries'].includes(type)) {
+      setInquiryType(type)
+    }
+    if (role) {
+      setRole(role)
+    }
+  },[]);
 
   useEffect(() => {
     if (!success) return;
@@ -16,6 +30,7 @@ function Contact() {
     window.addEventListener('keydown', onKeyDown);
     return () => window.removeEventListener('keydown', onKeyDown);
   }, [success]);
+
 
   const fieldClassName =
     'mt-2 w-full rounded-md border border-gray-300 bg-white px-3 py-2 text-gray-800 outline-none transition focus:border-primary focus:ring-2 focus:ring-primary/20';
@@ -312,7 +327,7 @@ function Contact() {
                 <div className="grid gap-5 md:grid-cols-2">
                   <div>
                     <label htmlFor="careerRole" className="text-sm font-medium text-gray-700">Role of Interest</label>
-                    <input id="careerRole" name="roleOfInterest" type="text" className={fieldClassName} placeholder="e.g., Risk Engineer, Product Manager" />
+                    <input id="careerRole" name="roleOfInterest" type="text" className={fieldClassName} placeholder="e.g., Risk Engineer, Product Manager" value={role} onChange={e => setRole(e.target.value)}/>
                   </div>
                   <div>
                     <label htmlFor="careerLinkedIn" className="text-sm font-medium text-gray-700">LinkedIn URL</label>

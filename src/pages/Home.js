@@ -4,6 +4,7 @@ import IndustriesSlide from '../components/IndustriesSlide';
 import ProcessBlocks from '../components/ProcessBlocks';
 import NextSteps from '../components/NextSteps';
 import ScrollStack, { ScrollStackItem } from '../components/ScrollStack'
+import ColorBends from '../components/ColorBends';
 
 const JOURNEY_STEPS = [
   {
@@ -76,44 +77,51 @@ const JOURNEY_STEPS = [
 
 function Home() {
   return (
-    <div className="app">
-      <header className="hero" id="home">
+    <div className="app relative">
+      <div className="pointer-events-none absolute inset-x-0 top-0 z-0 h-[min(100vh,60rem)] overflow-hidden">
+        <ColorBends
+          className="h-full w-full"
+          colors={['#ff5c7a', '#BE5CF2', '#D16FBC']}
+          rotation={90}
+          speed={0.2}
+          scale={1}
+          frequency={1}
+          warpStrength={1}
+          mouseInfluence={1}
+          noise={0.15}
+          parallax={0.5}
+          iterations={1}
+          intensity={1.5}
+          bandWidth={6}
+          transparent
+          autoRotate={0}
+        />
+      </div>
+
+      <header className="hero relative z-10" id="home">
         <Navbar />
       </header>
       <section
-        className="relative flex min-h-[min(75vh,48rem)] w-full flex-col overflow-hidden"
+        className="relative z-10 flex min-h-[min(75vh,48rem)] w-full flex-col overflow-hidden text-center"
       >
-        {/* <video
-          className="pointer-events-none absolute inset-0 z-0 h-full w-full object-cover"
-          autoPlay
-          muted
-          loop
-          playsInline
-          preload="auto"
-          aria-hidden
-        >
-          <source src="/img/home/home_video_3.mp4" type="video/mp4" />
-        </video> */}
-        <img
-          className="pointer-events-none absolute inset-0 z-0 h-full w-full object-cover"
-          src="img/home/video.gif"
-          autoPlay
-          muted
-          loop
-          playsInline
-          preload="auto"
-          aria-hidden>
-        </img>
-        <div className="relative z-10 flex flex-1 flex-col items-start justify-start px-6 pb-14 pt-10 text-left md:px-16 md:pb-20 md:pt-14 lg:px-20">
+        <div className="relative z-10 flex flex-1 flex-col items-center justify-start px-6 pb-14 pt-10 text-center md:px-16 md:pb-20 md:pt-24 lg:px-20">
+          <p className="m-0 text-xs font-semibold uppercase tracking-[0.22em] text-primary/80">Welcome</p>
           <h1 className="m-0 text-4xl font-bold tracking-tight text-primary drop-shadow-md md:text-6xl">
-            SnapRISK
+            Together in Risk
           </h1>
           <p className="mt-6 max-w-2xl text-lg leading-relaxed text-primary/95 drop-shadow md:mt-8 md:text-xl">
             SnapRISK is a global technology company specializing in risk engineering. We transform
             the complexity of property risk engineering into opportunity by combining technology,
             expertise, and partnership.
           </p>
-          <button className="mt-6 w-fit bg-primary text-white px-5 py-2.5 rounded-md font-medium transition-opacity hover:opacity-90">Learn more</button>
+          <div className="mt-6 flex flex-wrap items-center justify-center gap-3">
+            <button className="w-fit rounded-md bg-primary px-5 py-2.5 font-medium text-white transition-opacity hover:opacity-90">
+              View Solutions
+            </button>
+            <button className="w-fit rounded-md bg-primary px-5 py-2.5 font-medium text-white transition-opacity hover:opacity-90">
+              Request a Demo
+            </button>
+          </div>
         </div>
       </section>
 

@@ -1,5 +1,6 @@
 import '../../App.css';
 import Navbar from '../../components/Navbar';
+import { Link } from 'react-router-dom';
 
 const JOIN_REASONS = [
   {
@@ -66,9 +67,11 @@ function Careers() {
                 <h3 className="mt-2 text-2xl font-semibold text-gray-900">Property Risk Consultant</h3>
                 <p className="mt-2 text-sm text-gray-600">Engineering | Remote | Full-time</p>
               </div>
-              <button className="w-fit rounded-md bg-primary px-5 py-2.5 font-medium text-white transition-opacity hover:opacity-90">
-                Apply Now
-              </button>
+              <Link to={`/contact?type=careers&role=Property%20Risk%20Consultant`}>
+                <button className="w-fit rounded-md bg-primary px-5 py-2.5 font-medium text-white transition-opacity hover:opacity-90">
+                  Apply Now
+                </button>
+              </Link>
             </div>
 
             <div className="mt-6 space-y-6 text-gray-700">

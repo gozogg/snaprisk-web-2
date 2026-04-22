@@ -179,7 +179,7 @@ function About() {
             <div className="h-[500px] overflow-hidden rounded-2xl border border-gray-200 md:h-[600px]">
               <iframe
                 src="https://www.google.com/maps/d/embed?mid=1i0pWlsAbQWo4SVOTL2K7Wc8qj6DTclk&output=embed"
-                className="-mt-20 h-[calc(100%+4rem)] w-full"
+                className="-mt-20 h-[calc(100%+5rem)] w-full"
                 loading="lazy"
                 title="SnapRISK and partner locations map"
               />

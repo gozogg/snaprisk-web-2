@@ -30,7 +30,7 @@ function Navbar() {
     { to: '/about/case-studies', label: 'Case Studies' },
     { to: '/about/team', label: 'Our Team' },
     { to: '/about/careers', label: 'Careers' }, 
-    { to: '/about/resources', label: 'Resources' }
+    // { to: '/about/resources', label: 'Resources' }
   ]
 
   return (
