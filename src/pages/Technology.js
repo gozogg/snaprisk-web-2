@@ -1,5 +1,9 @@
 import '../App.css';
 import Navbar from '../components/Navbar';
+import PixelBlast from '../components/backgrounds/PixelBlast';
+import Beams from '../components/backgrounds/Beams';
+import FloatingLines from '../components/backgrounds/FloatingLines';
+import LiquidChrome from '../components/backgrounds/LiquidChrome';
 
 const SHARED_CAPABILITIES = [
   'View all your locations in one place',
@@ -56,24 +60,35 @@ const MODULES = [
 
 function Technology() {
   return (
-    <div className="app">
-      <header className="hero" id="technology">
+    <div className="app relative">
+      <div className="pointer-events-none absolute inset-x-0 top-0 z-0 h-[min(100vh,46rem)] overflow-hidden">
+      <LiquidChrome
+    baseColor={[0.780, 0.702, 0.816]}
+    speed={0.25}
+    amplitude={0.2}
+    interactive={true}
+  />
+      </div>
+      <header className="hero relative z-30" id="technology">
         <Navbar />
       </header>
 
-      <main className="px-6 pb-16 md:px-10 md:pb-20 lg:px-16">
-        <section className="mx-auto mt-10 max-w-6xl rounded-3xl border border-primary/20 bg-secondary p-8 shadow-sm md:mt-12 md:p-10">
-          <p className="text-xs font-semibold uppercase tracking-[0.2em] text-primary">Technology</p>
-          <h1 className="mt-3 text-4xl font-semibold tracking-tight text-gray-900 md:text-5xl">
-            You&apos;ve got the data, now it&apos;s time to put it to work
+      <section className="relative z-10 flex min-h-[min(85vh,40rem)] w-full flex-col overflow-hidden text-center">
+        <div className="relative z-10 flex flex-1 flex-col items-center justify-start px-6 pb-14 pt-12 text-center md:px-16 md:pb-20 md:pt-20 lg:px-20">
+          <p className="m-0 text-xs font-semibold uppercase tracking-[0.22em] text-primary/80">Technology</p>
+          <h1 className="mt-3 text-4xl font-bold tracking-tight text-primary drop-shadow-md md:text-6xl">
+            You&apos;ve got the data, <br></br>now it&apos;s time to put it to work
           </h1>
-          <p className="mt-6 max-w-4xl text-base leading-relaxed text-gray-700 md:text-lg">
+          <p className="mt-6 max-w-4xl text-base leading-relaxed text-primary/95 drop-shadow md:mt-8 md:text-xl">
             SnapRISK technology converts risk engineering data into action-ready insight for underwriting, operations,
             and resilience planning. Build one connected workflow from survey scheduling through recommendation response.
           </p>
-        </section>
+        </div>
+      </section>
 
-        <section className="mx-auto mt-8 max-w-6xl rounded-3xl border border-primary/20 bg-white p-8 shadow-sm md:p-10">
+      <main className="relative z-10 px-6 pb-16 md:px-10 md:pb-20 lg:px-16">
+
+        <section className="mx-auto max-w-6xl rounded-3xl border border-primary/20 bg-white p-8 shadow-sm md:p-10">
           <p className="text-xs font-semibold uppercase tracking-[0.2em] text-primary">Shared Capabilities</p>
           <h2 className="mt-3 text-3xl font-semibold tracking-tight text-gray-900 md:text-4xl">
             One platform. Consistent visibility.

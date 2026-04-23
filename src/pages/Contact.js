@@ -14,7 +14,7 @@ function Contact() {
   useEffect (() => {
     const type = searchParams.get('type');
     const role = searchParams.get('role')
-    if (['demo', 'careers', 'queries'].includes(type)) {
+    if (['demo', 'careers', 'queries', 'solutions'].includes(type)) {
       setInquiryType(type)
     }
     if (role) {
@@ -117,6 +117,42 @@ function Contact() {
     }
   }
 
+  async function handleSolutions(event) {
+    event.preventDefault();
+    const form = event.currentTarget;
+    setLoading(true);
+    setError(null);
+    const { formData, values } = getFormValues(form);
+    const selectedSolutions = formData.getAll('solutionsInterestedIn');
+
+    try {
+      const res = await fetch('/api/solutions', {
+        method: 'POST',
+        body: JSON.stringify({
+          first_name: values.firstName,
+          last_name: values.lastName,
+          email: values.email,
+          company: values.company,
+          goals: values.goals,
+          solutions: selectedSolutions,
+        }),
+        headers: {
+          'Content-Type': 'application/json',
+        },
+      });
+      if (res.ok) {
+        setSuccess(true);
+        form.reset();
+      } else {
+        setError('Something went wrong. Please try again.');
+      }
+    } catch {
+      setError('Something went wrong. Please try again.');
+    } finally {
+      setLoading(false);
+    }
+  }
+
   async function handleSubmit(event) {
     event.preventDefault();
     const form = event.currentTarget;
@@ -180,6 +216,7 @@ function Contact() {
             >
               <option value="">Choose an option</option>
               <option value="demo">Request Demo</option>
+              <option value="solutions">Solutions and Products</option>
               <option value="careers">Careers</option>
               <option value="queries">Additional Queries</option>
             </select>
@@ -293,6 +330,92 @@ function Contact() {
                   className="rounded-md bg-primary px-5 py-2.5 font-medium text-white transition-opacity hover:opacity-90 disabled:cursor-not-allowed disabled:opacity-60"
                 >
                   {loading ? 'Sending…' : 'Submit Demo Request'}
+                </button>
+              </form>
+            )}
+
+            {inquiryType === 'solutions' && (
+              <form className="space-y-5" onSubmit={handleSolutions}>
+                <h2 className="text-3xl font-semibold tracking-tight text-gray-900">Solutions and Products</h2>
+                <p className="text-gray-600">If you're interested in learning more about some of our solutions</p>
+
+                <div className="grid gap-5 md:grid-cols-2">
+                  <div>
+                    <label htmlFor="solutionsFirstName" className="text-sm font-medium text-gray-700">First Name</label>
+                    <input id="solutionsFirstName" name="firstName" type="text" className={fieldClassName} required />
+                  </div>
+                  <div>
+                    <label htmlFor="solutionsLastName" className="text-sm font-medium text-gray-700">Last Name</label>
+                    <input id="solutionsLastName" name="lastName" type="text" className={fieldClassName} required />
+                  </div>
+                </div>
+
+                <div className="grid gap-5 md:grid-cols-2">
+                  <div>
+                    <label htmlFor="solutionsEmail" className="text-sm font-medium text-gray-700">Work Email</label>
+                    <input id="solutionsEmail" name="email" type="email" className={fieldClassName} required />
+                  </div>
+                  <div>
+                    <label htmlFor="solutionsCompany" className="text-sm font-medium text-gray-700">Company</label>
+                    <input id="solutionsCompany" name="company" type="text" className={fieldClassName} required />
+                  </div>
+                </div>
+
+                <fieldset>
+                  <legend className="text-sm font-medium text-gray-700">Select Solutions Interested In</legend>
+                  <div className="mt-3 grid gap-2 rounded-md border border-gray-300 bg-white p-4 sm:grid-cols-2">
+                    <label className="flex items-center gap-2 text-sm text-gray-700">
+                      <input type="checkbox" name="solutionsInterestedIn" value="hpr" className="h-4 w-4 accent-primary" />
+                      HPR
+                    </label>
+                    <label className="flex items-center gap-2 text-sm text-gray-700">
+                      <input type="checkbox" name="solutionsInterestedIn" value="snaprec" className="h-4 w-4 accent-primary" />
+                      SnapREC
+                    </label>
+                    <label className="flex items-center gap-2 text-sm text-gray-700">
+                      <input type="checkbox" name="solutionsInterestedIn" value="snapcat" className="h-4 w-4 accent-primary" />
+                      SnapCAT
+                    </label>
+                    <label className="flex items-center gap-2 text-sm text-gray-700">
+                      <input type="checkbox" name="solutionsInterestedIn" value="snapcope" className="h-4 w-4 accent-primary" />
+                      SnapCOPE
+                    </label>
+                    <label className="flex items-center gap-2 text-sm text-gray-700">
+                      <input type="checkbox" name="solutionsInterestedIn" value="snapir" className="h-4 w-4 accent-primary" />
+                      SnapIR
+                    </label>
+                    <label className="flex items-center gap-2 text-sm text-gray-700">
+                      <input type="checkbox" name="solutionsInterestedIn" value="snapvalues" className="h-4 w-4 accent-primary" />
+                      SnapVALUES
+                    </label>
+                    <label className="flex items-center gap-2 text-sm text-gray-700">
+                      <input type="checkbox" name="solutionsInterestedIn" value="self-e-audit" className="h-4 w-4 accent-primary" />
+                      Self eAudit
+                    </label>
+                    <label className="flex items-center gap-2 text-sm text-gray-700">
+                      <input type="checkbox" name="solutionsInterestedIn" value="snapalert" className="h-4 w-4 accent-primary" />
+                      SnapALERT
+                    </label>
+                  </div>
+                </fieldset>
+
+                <div>
+                  <label htmlFor="solutionsGoals" className="text-sm font-medium text-gray-700">Primary Goals</label>
+                  <textarea
+                    id="solutionsGoals"
+                    name="goals"
+                    rows="4"
+                    className={fieldClassName}
+                    placeholder="What do you want to improve (e.g., underwriting data quality, NatCat visibility, recommendation tracking)?"
+                  />
+                </div>
+
+                <button
+                  type="submit"
+                  disabled={loading}
+                  className="rounded-md bg-primary px-5 py-2.5 font-medium text-white transition-opacity hover:opacity-90 disabled:cursor-not-allowed disabled:opacity-60"
+                >
+                  {loading ? 'Sending…' : 'Submit Solutions Request'}
                 </button>
               </form>
             )}

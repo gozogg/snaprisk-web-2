@@ -1,6 +1,9 @@
 import { useEffect, useState } from 'react';
 import '../App.css';
 import Navbar from '../components/Navbar';
+import Threads from '../components/backgrounds/Threads';
+import DotGrid from '../components/backgrounds/DotGrid';
+import LiquidChrome from '../components/backgrounds/LiquidChrome';
 
 function CountUp({ end, duration = 1200, suffix = '' }) {
   const [value, setValue] = useState(0);
@@ -29,21 +32,29 @@ function CountUp({ end, duration = 1200, suffix = '' }) {
 
 function About() {
   return (
-    <div className="app">
-      <header className="hero" id="about">
+    <div className="app relative">
+      <div className="pointer-events-none absolute inset-x-0 top-0 z-0 h-[min(100vh,46rem)] overflow-hidden">
+      <LiquidChrome
+    baseColor={[0.780, 0.702, 0.816]}
+    speed={0.25}
+    amplitude={0.2}
+    interactive={true}
+  />
+      </div>
+
+      <header className="hero relative z-30" id="about">
         <Navbar />
       </header>
 
-      <main className="px-6 pb-16 md:px-10 md:pb-20 lg:px-16">
-        <section className="mx-auto mt-10 max-w-6xl rounded-3xl border border-primary/20 bg-secondary p-8 shadow-sm md:mt-12 md:p-12">
-          <p className="text-center text-xs font-semibold uppercase tracking-[0.24em] text-primary">
+      <section className="relative z-10 flex min-h-[min(85vh,40rem)] w-full flex-col overflow-hidden text-center">
+        <div className="relative z-10 flex flex-1 flex-col items-center justify-start px-6 pb-14 pt-12 text-center md:px-16 md:pb-20 md:pt-20 lg:px-20">
+          <p className="m-0 text-xs font-semibold uppercase tracking-[0.22em] text-primary/80">
             About SnapRISK
           </p>
-          <h1 className="mt-3 text-center text-4xl font-semibold leading-tight tracking-tight text-gray-900 md:text-5xl">
+          <h1 className="mt-3 text-4xl font-bold leading-tight tracking-tight text-primary drop-shadow-md md:text-6xl">
             Who Is SnapRISK?
           </h1>
-
-          <p className="mx-auto mt-6 max-w-5xl text-center text-base leading-8 text-gray-700 md:text-lg">
+          <p className="mx-auto mt-6 max-w-5xl text-base leading-8 text-primary/95 drop-shadow md:mt-8 md:text-xl">
             SnapRISK is a global technology company specializing in risk engineering. We transform the
             complexity of property risk engineering into opportunity by combining technology, expertise,
             and partnership. Our consultants are some of the best in the business and our global network
@@ -51,38 +62,12 @@ function About() {
             we deliver property risk engineering solutions that simplify decisions, strengthen resilience,
             and create lasting value for our clients.
           </p>
+        </div>
+      </section>
 
-          <h2 className="mt-12 text-center text-3xl font-semibold leading-tight tracking-tight text-gray-900 md:text-4xl">
-            What Separates Us from the Competition?
-          </h2>
+      <main className="relative z-10 px-6 pb-16 md:px-10 md:pb-20 lg:px-16">
 
-          <div className="mt-10 grid gap-4 md:grid-cols-3">
-            <article className="rounded-2xl border border-gray-200 bg-white p-6 shadow-sm">
-              <h3 className="text-sm font-semibold uppercase tracking-[0.16em] text-primary">Cutting-Edge Technology</h3>
-              <p className="mt-2 text-sm leading-6 text-gray-700">
-                User-friendly platform enhances accessibility and streamlines data analytics for diverse clients with a
-                geospatial view of your portfolio.
-              </p>
-            </article>
-
-            <article className="rounded-2xl border border-gray-200 bg-white p-6 shadow-sm">
-              <h3 className="text-sm font-semibold uppercase tracking-[0.16em] text-primary">Full-Service HPR Consultancy</h3>
-              <p className="mt-2 text-sm leading-6 text-gray-700">
-                Global risk engineering for companies of any size and in any industry.
-              </p>
-            </article>
-
-            <article className="rounded-2xl border border-gray-200 bg-white p-6 shadow-sm">
-              <h3 className="text-sm font-semibold uppercase tracking-[0.16em] text-primary">Powerful Combination</h3>
-              <p className="mt-2 text-sm leading-6 text-gray-700">
-                We are the only HPR engineering company with homegrown technology, and the only property risk platform
-                that is also a full-service consultancy.
-              </p>
-            </article>
-          </div>
-        </section>
-
-        <section className="mx-auto mt-12 max-w-6xl">
+      <section className="mx-auto mt-12 max-w-6xl pb-12">
           <h2 className="text-center text-3xl font-semibold leading-tight tracking-tight text-gray-900 md:text-4xl">
             SnapRISK in Action
           </h2>
@@ -123,6 +108,37 @@ function About() {
               <p className="mt-2 text-sm font-semibold text-gray-900">Industries Served</p>
               <p className="mt-2 text-sm text-gray-600">
                 No matter the sector, we have the power.
+              </p>
+            </article>
+          </div>
+        </section>
+
+        <section className="mx-auto max-w-6xl rounded-3xl border border-primary/20 bg-secondary p-8 shadow-sm md:p-12">
+          <h2 className="text-center text-3xl font-semibold leading-tight tracking-tight text-gray-900 md:text-4xl">
+            What Separates Us from the Competition?
+          </h2>
+
+          <div className="mt-10 grid gap-4 md:grid-cols-3">
+            <article className="rounded-2xl border border-gray-200 bg-white p-6 shadow-sm">
+              <h3 className="text-sm font-semibold uppercase tracking-[0.16em] text-primary">Cutting-Edge Technology</h3>
+              <p className="mt-2 text-sm leading-6 text-gray-700">
+                User-friendly platform enhances accessibility and streamlines data analytics for diverse clients with a
+                geospatial view of your portfolio.
+              </p>
+            </article>
+
+            <article className="rounded-2xl border border-gray-200 bg-white p-6 shadow-sm">
+              <h3 className="text-sm font-semibold uppercase tracking-[0.16em] text-primary">Full-Service HPR Consultancy</h3>
+              <p className="mt-2 text-sm leading-6 text-gray-700">
+                Global risk engineering for companies of any size and in any industry.
+              </p>
+            </article>
+
+            <article className="rounded-2xl border border-gray-200 bg-white p-6 shadow-sm">
+              <h3 className="text-sm font-semibold uppercase tracking-[0.16em] text-primary">Powerful Combination</h3>
+              <p className="mt-2 text-sm leading-6 text-gray-700">
+                We are the only HPR engineering company with homegrown technology, and the only property risk platform
+                that is also a full-service consultancy.
               </p>
             </article>
           </div>
