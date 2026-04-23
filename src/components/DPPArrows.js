@@ -7,7 +7,7 @@ const NODES = [
     { id: 'snapcope',   label: 'SnapCOPE',     path: '/solutions/snapcope',   icon: '/img/solutionLogos/snapcope.png',  angle: -90 + 51.4       },
     { id: 'snapalert',  label: 'SnapALERT',    path: '/solutions/snapalert',   icon: '/img/solutionLogos/snapalert.png', angle: -90 + 51.4 * 2   },
     { id: 'snapvalues', label: 'SnapVALUES',   path: '/solutions/snapvalues',  icon: '/img/solutionLogos/snapvalues.png', angle: -90 + 51.4 * 3   },
-    { id: 'eaudit',     label: 'Self E-AUDIT', path: '/solutions/self-eaudit', icon: '/img/solutionLogos/snapeaudit.png', angle: -90 + 51.4 * 4   },
+    { id: 'eaudit',     label: 'Self E-AUDIT', path: '/solutions/self-e-audit', icon: '/img/solutionLogos/snapeaudit.png', angle: -90 + 51.4 * 4   },
     { id: 'snaprec',    label: 'SnapREC',      path: '/solutions/snaprec',     icon: '/img/solutionLogos/snaprec.png', angle: -90 + 51.4 * 5   },
     { id: 'snapir',    label: 'SnapIR',     path: '/solutions/snapir',   icon: '/img/solutionLogos/snapir_.png', angle: -90 + 51.4 * 6   }, // 👈 add yours
   ];

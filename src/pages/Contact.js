@@ -3,7 +3,7 @@ import { useEffect, useState } from 'react';
 import Navbar from '../components/Navbar';
 import { useSearchParams } from 'react-router-dom';
 
-const VALID_SOLUTIONS = ['hpr', 'snaprec', 'snapcat', 'snapcope', 'snapir', 'snapvalues', 'self-e-audit', 'snapalert'];
+const VALID_SOLUTIONS = ['hpr', 'snaprec', 'snapcat', 'snapcope', 'snapir', 'snapvalues', 'self-e-audit', 'snapalert', 'dashboard', 'ir-dashboard', 'hotwork', 'impairments'];
 
 function Contact() {
   const [inquiryType, setInquiryType] = useState('');
@@ -283,7 +283,7 @@ function Contact() {
                 </div>
 
                 <fieldset>
-                  <legend className="text-sm font-medium text-gray-700">Select Solutions Interested In</legend>
+                  <legend className="text-sm font-medium text-gray-700">Select Areas of Interest</legend>
                   <div className="mt-3 grid gap-2 rounded-md border border-gray-300 bg-white p-4 sm:grid-cols-2">
                     <label className="flex items-center gap-2 text-sm text-gray-700">
                       <input type="checkbox" name="solutionsInterestedIn" value="hpr" defaultChecked={solution === 'hpr'} className="h-4 w-4 accent-primary" />
@@ -316,6 +316,22 @@ function Contact() {
                     <label className="flex items-center gap-2 text-sm text-gray-700">
                       <input type="checkbox" name="solutionsInterestedIn" value="snapalert" defaultChecked={solution === 'snapalert'} className="h-4 w-4 accent-primary" />
                       SnapALERT
+                    </label>
+                    <label className="flex items-center gap-2 text-sm text-gray-700">
+                      <input type="checkbox" name="solutionsInterestedIn" value="snapalert" defaultChecked={solution === 'dashboard'} className="h-4 w-4 accent-primary" />
+                      Dashboard
+                    </label>
+                    <label className="flex items-center gap-2 text-sm text-gray-700">
+                      <input type="checkbox" name="solutionsInterestedIn" value="snapalert" defaultChecked={solution === 'ir-dashboard'} className="h-4 w-4 accent-primary" />
+                      IR Dashboard
+                    </label>
+                    <label className="flex items-center gap-2 text-sm text-gray-700">
+                      <input type="checkbox" name="solutionsInterestedIn" value="snapalert" defaultChecked={solution === 'hotwork'} className="h-4 w-4 accent-primary" />
+                      Hot Work
+                    </label>
+                    <label className="flex items-center gap-2 text-sm text-gray-700">
+                      <input type="checkbox" name="solutionsInterestedIn" value="snapalert" defaultChecked={solution === 'impairments'} className="h-4 w-4 accent-primary" />
+                      Impairments
                     </label>
                   </div>
                 </fieldset>

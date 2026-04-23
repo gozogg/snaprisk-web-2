@@ -187,21 +187,21 @@ const operations = [
     location: 'Seattle, WA'
   },
   {
-    img: '/img/portraits/chrisPhillips.jpg',
+    img: '/img/portraits/terryChavez.jpeg',
     firstName: 'Terry',
     lastName: 'Chavez',
-    linkedin: 'https://www.linkedin.com/in/christopher-l-phillips-2b2a615b/',
-    shortDescription: `Christopher Lon Phillips is Director of Engineering at SnapRISK, where he leads risk assessment, 
-    mitigation, and client education across a wide range of industries.`,
-    longDescription: `Christopher Lon Phillips is Director of Engineering at SnapRISK, where he leads risk assessment, 
-    mitigation, and client education across a wide range of industries. He brings extensive experience in fire and equipment 
-    hazards, supporting clients with plan reviews, asset management strategies, and property loss prevention. Prior to 
-    joining SnapRISK, Mr. Phillips held roles with several global engineering and property insurance firms, where he 
-    managed accounts, conducted risk assessments, and led project follow-ups and loss investigations. Most recently, 
-    he served as Service Director for an Asset Management and Reliability solution developed during COVID-related 
-    supply chain disruptions, helping organizations optimize asset performance and reduce operating costs. `,
+    linkedin: 'https://www.linkedin.com/in/terry-c-b72645319/',
+    shortDescription: `Terence (Terry) Chavez is Senior Infrared Thermographer at SnapRISK, bringing over 20 years of experience in electrical safety and thermography.`,
+    longDescription: `Terence (Terry) Chavez is Senior Infrared Thermographer at SnapRISK, bringing over 20 years of experience in electrical safety and thermography.
+     He specializes in infrared surveys and inspections across industrial, commercial, and manufacturing environments, with deep expertise in electrical 
+     power distribution and HVAC systems. A Certified General Electrician and ETR (Electro-Thermal Radiation) Specialist, Terry has supported high-stakes projects 
+     globally, consistently prioritizing safety and efficiency. Prior to joining SnapRISK, Terry owned Omen Electrical Safety Consultants LLC, delivering 
+     consulting and training services focused on electrical safety. He has also held senior roles at TÜV SÜD Global Risk Consultants and ABM Power LLC, 
+     strengthening his experience in safety consulting and code compliance. Most recently, he has been recognized for his expertise in forensic analysis
+      of PV power generation and solar array structures, while also serving as an FAA Certified Part 107 Drone Pilot, enhancing aerial inspection capabilities.
+ `,
     title: 'Senior IR Thermographer',
-    location: 'Seattle, WA'
+    location: 'Virginia'
   }
 ]
 
@@ -260,7 +260,9 @@ function OurTeam() {
         <h1 className="text-4xl font-bold text-center">Operations & Engineering</h1>
         <div className="flex flex-wrap justify-center gap-6 px-24 py-12 md:gap-8">
         {operations.map(person => (
-          <TeamBlock key={person.firstName} teammate={person} />
+          <div key= {person.firstName} className="w-full md:w-[calc(33.333%-1.5rem)] max-w-sm">
+            <TeamBlock key={person.firstName} teammate={person} />
+          </div>
         ))}
         </div>
       </section>
