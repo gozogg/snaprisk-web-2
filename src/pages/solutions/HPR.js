@@ -1,5 +1,7 @@
 import '../../App.css';
 import Navbar from '../../components/Navbar';
+import LearnMore from '../../components/LearnMore';
+import RequestDemo from '../../components/RequestDemo';
 
 function HPR() {
   return (
@@ -26,9 +28,10 @@ function HPR() {
           risk insight that supports stronger coverage and better client outcomes. We combine deep HPR engineering expertise with mobile-first technology to make risk data work harder, 
           faster, and smarter—for brokers, carriers, and insureds alike.
           </p>
-          <button className="w-fit bg-primary text-white px-5 py-2.5 rounded-md font-medium transition-opacity hover:opacity-90">
-            Learn More
-          </button>
+          <div className="flex flex-wrap items-center gap-3">
+            <LearnMore solution={'hpr'}/>
+            <RequestDemo solution={'hpr'}/>
+          </div>
         </div>
       </section>
 

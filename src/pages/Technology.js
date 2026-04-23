@@ -4,6 +4,7 @@ import PixelBlast from '../components/backgrounds/PixelBlast';
 import Beams from '../components/backgrounds/Beams';
 import FloatingLines from '../components/backgrounds/FloatingLines';
 import LiquidChrome from '../components/backgrounds/LiquidChrome';
+import RequestDemo from '../components/RequestDemo';
 
 const SHARED_CAPABILITIES = [
   'View all your locations in one place',
@@ -83,6 +84,9 @@ function Technology() {
             SnapRISK technology converts risk engineering data into action-ready insight for underwriting, operations,
             and resilience planning. Build one connected workflow from survey scheduling through recommendation response.
           </p>
+          <div className="flex flex-wrap items-center gap-3 pt-12">
+            <RequestDemo solution={''}/>
+          </div>
         </div>
       </section>
 

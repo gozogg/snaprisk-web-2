@@ -1,5 +1,7 @@
 import '../../App.css';
 import Navbar from '../../components/Navbar';
+import LearnMore from '../../components/LearnMore';
+import RequestDemo from '../../components/RequestDemo';
 
 function SnapCOPE() {
   return (
@@ -25,9 +27,10 @@ function SnapCOPE() {
           SnapCOPE® is SnapRISK’s digital tool for collecting and organizing Construction, Occupancy, Protection, and Exposure (COPE) data – essential 
 for accurate property risk assessment and underwriting. Geospatial location of building “pins” will be field verified at locations surveyed. 
           </p>
-          <button className="w-fit bg-primary text-white px-5 py-2.5 rounded-md font-medium transition-opacity hover:opacity-90">
-            Learn More
-          </button>
+          <div className="flex flex-wrap items-center gap-3">
+            <LearnMore solution={'snapcope'}/>
+            <RequestDemo solution={'snapcope'}/>
+          </div>
         </div>
       </section>
 

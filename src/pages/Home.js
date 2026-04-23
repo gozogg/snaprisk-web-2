@@ -5,6 +5,7 @@ import ProcessBlocks from '../components/ProcessBlocks';
 import NextSteps from '../components/NextSteps';
 import ScrollStack, { ScrollStackItem } from '../components/ScrollStack'
 import ColorBends from '../components/backgrounds/ColorBends';
+import { Link } from 'react-router-dom';
 
 const JOURNEY_STEPS = [
   {
@@ -114,13 +115,11 @@ function Home() {
             the complexity of property risk engineering into opportunity by combining technology,
             expertise, and partnership.
           </p>
-          <div className="mt-6 flex flex-wrap items-center justify-center gap-3">
-            <button className="w-fit rounded-md bg-primary px-5 py-2.5 font-medium text-white transition-opacity hover:opacity-90">
-              View Solutions
-            </button>
-            <button className="w-fit rounded-md bg-primary px-5 py-2.5 font-medium text-white transition-opacity hover:opacity-90">
-              Request a Demo
-            </button>
+          <div className="mt-8 flex flex-wrap items-center justify-center gap-3">
+            <Link to='/solutions' className="w-fit rounded-md bg-primary px-5 py-2.5 font-medium text-white transition-opacity hover:opacity-90">
+            View Solutions</Link>
+            <Link to='/contact?type=demo' className="w-fit rounded-md bg-primary px-5 py-2.5 font-medium text-white transition-opacity hover:opacity-90">
+            Request a Demo</Link>
           </div>
         </div>
       </section>

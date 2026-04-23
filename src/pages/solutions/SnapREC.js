@@ -1,5 +1,7 @@
 import '../../App.css';
 import Navbar from '../../components/Navbar';
+import LearnMore from '../../components/LearnMore';
+import RequestDemo from '../../components/RequestDemo';
 
 function SnapREC() {
   return (
@@ -24,9 +26,10 @@ function SnapREC() {
           <p className="max-w-xl text-lg leading-relaxed text-gray-700">
           SnapREC® allows you to streamline how you track, manage, and act on your property risk improvement opportunities – across your entire portfolio. 
           </p>
-          <button className="w-fit bg-primary text-white px-5 py-2.5 rounded-md font-medium transition-opacity hover:opacity-90">
-            Learn More
-          </button>
+          <div className="flex flex-wrap items-center gap-3">
+            <LearnMore solution={'snaprec'}/>
+            <RequestDemo solution={'snaprec'}/>
+          </div>
         </div>
       </section>
 

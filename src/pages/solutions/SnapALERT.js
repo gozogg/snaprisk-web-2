@@ -1,5 +1,7 @@
 import '../../App.css';
 import Navbar from '../../components/Navbar';
+import LearnMore from '../../components/LearnMore';
+import RequestDemo from '../../components/RequestDemo';
 
 function SnapALERT() {
   return (
@@ -26,9 +28,10 @@ function SnapALERT() {
           Address threats before they escalate, take initial action to protect your people and assets, enhance your emergency preparedness, and understand your exposures across 
           all locations instantly.  
           </p>
-          <button className="w-fit bg-primary text-white px-5 py-2.5 rounded-md font-medium transition-opacity hover:opacity-90">
-            Learn More
-          </button>
+          <div className="flex flex-wrap items-center gap-3">
+            <LearnMore solution={'snapalert'}/>
+            <RequestDemo solution={'snapalert'}/>
+          </div>
         </div>
       </section>
 

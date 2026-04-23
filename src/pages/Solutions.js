@@ -7,6 +7,8 @@ import DarkVeil from '../components/backgrounds/DarkVeil';
 import Plasma from '../components/backgrounds/Plasma';
 import Iridescence from '../components/backgrounds/Iridescence';
 import LiquidChrome from '../components/backgrounds/LiquidChrome';
+import LearnMore from '../components/LearnMore';
+import RequestDemo from '../components/RequestDemo';
 
 function FlameBullet({ className = '' }) {
   return (
@@ -61,6 +63,10 @@ function Solutions() {
               portfolio.
             </span>
           </p>
+          <div className="flex flex-wrap items-center gap-3 pt-12">
+            <LearnMore solution={''}/>
+            <RequestDemo solution={''}/>
+          </div>
         </div>
       </section>
 

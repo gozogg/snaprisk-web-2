@@ -3,24 +3,31 @@ import { useEffect, useState } from 'react';
 import Navbar from '../components/Navbar';
 import { useSearchParams } from 'react-router-dom';
 
+const VALID_SOLUTIONS = ['hpr', 'snaprec', 'snapcat', 'snapcope', 'snapir', 'snapvalues', 'self-e-audit', 'snapalert'];
+
 function Contact() {
   const [inquiryType, setInquiryType] = useState('');
   const [role, setRole] = useState('');
+  const [solution, setSolution] = useState('');
   const [loading, setLoading] = useState(false);
   const [success, setSuccess] = useState(false);
   const [error, setError] = useState(null);
   const [searchParams] = useSearchParams();
 
-  useEffect (() => {
+  useEffect(() => {
     const type = searchParams.get('type');
-    const role = searchParams.get('role')
+    const role = searchParams.get('role');
+    const selectedSolution = searchParams.get('solution');
     if (['demo', 'careers', 'queries', 'solutions'].includes(type)) {
-      setInquiryType(type)
+      setInquiryType(type);
     }
     if (role) {
-      setRole(role)
+      setRole(role);
     }
-  },[]);
+    if (selectedSolution && VALID_SOLUTIONS.includes(selectedSolution)) {
+      setSolution(selectedSolution);
+    }
+  }, [searchParams]);
 
   useEffect(() => {
     if (!success) return;
@@ -279,35 +286,35 @@ function Contact() {
                   <legend className="text-sm font-medium text-gray-700">Select Solutions Interested In</legend>
                   <div className="mt-3 grid gap-2 rounded-md border border-gray-300 bg-white p-4 sm:grid-cols-2">
                     <label className="flex items-center gap-2 text-sm text-gray-700">
-                      <input type="checkbox" name="solutionsInterestedIn" value="hpr" className="h-4 w-4 accent-primary" />
+                      <input type="checkbox" name="solutionsInterestedIn" value="hpr" defaultChecked={solution === 'hpr'} className="h-4 w-4 accent-primary" />
                       HPR
                     </label>
                     <label className="flex items-center gap-2 text-sm text-gray-700">
-                      <input type="checkbox" name="solutionsInterestedIn" value="snaprec" className="h-4 w-4 accent-primary" />
+                      <input type="checkbox" name="solutionsInterestedIn" value="snaprec" defaultChecked={solution === 'snaprec'} className="h-4 w-4 accent-primary" />
                       SnapREC
                     </label>
                     <label className="flex items-center gap-2 text-sm text-gray-700">
-                      <input type="checkbox" name="solutionsInterestedIn" value="snapcat" className="h-4 w-4 accent-primary" />
+                      <input type="checkbox" name="solutionsInterestedIn" value="snapcat" defaultChecked={solution === 'snapcat'} className="h-4 w-4 accent-primary" />
                       SnapCAT
                     </label>
                     <label className="flex items-center gap-2 text-sm text-gray-700">
-                      <input type="checkbox" name="solutionsInterestedIn" value="snapcope" className="h-4 w-4 accent-primary" />
+                      <input type="checkbox" name="solutionsInterestedIn" value="snapcope" defaultChecked={solution === 'snapcope'} className="h-4 w-4 accent-primary" />
                       SnapCOPE
                     </label>
                     <label className="flex items-center gap-2 text-sm text-gray-700">
-                      <input type="checkbox" name="solutionsInterestedIn" value="snapir" className="h-4 w-4 accent-primary" />
+                      <input type="checkbox" name="solutionsInterestedIn" value="snapir" defaultChecked={solution === 'snapir'} className="h-4 w-4 accent-primary" />
                       SnapIR
                     </label>
                     <label className="flex items-center gap-2 text-sm text-gray-700">
-                      <input type="checkbox" name="solutionsInterestedIn" value="snapvalues" className="h-4 w-4 accent-primary" />
+                      <input type="checkbox" name="solutionsInterestedIn" value="snapvalues" defaultChecked={solution === 'snapvalues'} className="h-4 w-4 accent-primary" />
                       SnapVALUES
                     </label>
                     <label className="flex items-center gap-2 text-sm text-gray-700">
-                      <input type="checkbox" name="solutionsInterestedIn" value="self-e-audit" className="h-4 w-4 accent-primary" />
+                      <input type="checkbox" name="solutionsInterestedIn" value="self-e-audit" defaultChecked={solution === 'self-e-audit'} className="h-4 w-4 accent-primary" />
                       Self eAudit
                     </label>
                     <label className="flex items-center gap-2 text-sm text-gray-700">
-                      <input type="checkbox" name="solutionsInterestedIn" value="snapalert" className="h-4 w-4 accent-primary" />
+                      <input type="checkbox" name="solutionsInterestedIn" value="snapalert" defaultChecked={solution === 'snapalert'} className="h-4 w-4 accent-primary" />
                       SnapALERT
                     </label>
                   </div>
@@ -365,35 +372,35 @@ function Contact() {
                   <legend className="text-sm font-medium text-gray-700">Select Solutions Interested In</legend>
                   <div className="mt-3 grid gap-2 rounded-md border border-gray-300 bg-white p-4 sm:grid-cols-2">
                     <label className="flex items-center gap-2 text-sm text-gray-700">
-                      <input type="checkbox" name="solutionsInterestedIn" value="hpr" className="h-4 w-4 accent-primary" />
+                      <input type="checkbox" name="solutionsInterestedIn" value="hpr" defaultChecked={solution === 'hpr'} className="h-4 w-4 accent-primary" />
                       HPR
                     </label>
                     <label className="flex items-center gap-2 text-sm text-gray-700">
-                      <input type="checkbox" name="solutionsInterestedIn" value="snaprec" className="h-4 w-4 accent-primary" />
+                      <input type="checkbox" name="solutionsInterestedIn" value="snaprec" defaultChecked={solution === 'snaprec'} className="h-4 w-4 accent-primary" />
                       SnapREC
                     </label>
                     <label className="flex items-center gap-2 text-sm text-gray-700">
-                      <input type="checkbox" name="solutionsInterestedIn" value="snapcat" className="h-4 w-4 accent-primary" />
+                      <input type="checkbox" name="solutionsInterestedIn" value="snapcat" defaultChecked={solution === 'snapcat'} className="h-4 w-4 accent-primary" />
                       SnapCAT
                     </label>
                     <label className="flex items-center gap-2 text-sm text-gray-700">
-                      <input type="checkbox" name="solutionsInterestedIn" value="snapcope" className="h-4 w-4 accent-primary" />
+                      <input type="checkbox" name="solutionsInterestedIn" value="snapcope" defaultChecked={solution === 'snapcope'} className="h-4 w-4 accent-primary" />
                       SnapCOPE
                     </label>
                     <label className="flex items-center gap-2 text-sm text-gray-700">
-                      <input type="checkbox" name="solutionsInterestedIn" value="snapir" className="h-4 w-4 accent-primary" />
+                      <input type="checkbox" name="solutionsInterestedIn" value="snapir" defaultChecked={solution === 'snapir'} className="h-4 w-4 accent-primary" />
                       SnapIR
                     </label>
                     <label className="flex items-center gap-2 text-sm text-gray-700">
-                      <input type="checkbox" name="solutionsInterestedIn" value="snapvalues" className="h-4 w-4 accent-primary" />
+                      <input type="checkbox" name="solutionsInterestedIn" value="snapvalues" defaultChecked={solution === 'snapvalues'} className="h-4 w-4 accent-primary" />
                       SnapVALUES
                     </label>
                     <label className="flex items-center gap-2 text-sm text-gray-700">
-                      <input type="checkbox" name="solutionsInterestedIn" value="self-e-audit" className="h-4 w-4 accent-primary" />
+                      <input type="checkbox" name="solutionsInterestedIn" value="self-e-audit" defaultChecked={solution === 'self-e-audit'} className="h-4 w-4 accent-primary" />
                       Self eAudit
                     </label>
                     <label className="flex items-center gap-2 text-sm text-gray-700">
-                      <input type="checkbox" name="solutionsInterestedIn" value="snapalert" className="h-4 w-4 accent-primary" />
+                      <input type="checkbox" name="solutionsInterestedIn" value="snapalert" defaultChecked={solution === 'snapalert'} className="h-4 w-4 accent-primary" />
                       SnapALERT
                     </label>
                   </div>

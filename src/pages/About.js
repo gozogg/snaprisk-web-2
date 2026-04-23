@@ -4,6 +4,8 @@ import Navbar from '../components/Navbar';
 import Threads from '../components/backgrounds/Threads';
 import DotGrid from '../components/backgrounds/DotGrid';
 import LiquidChrome from '../components/backgrounds/LiquidChrome';
+import RequestDemo from '../components/RequestDemo';
+import { Link } from 'react-router-dom';
 
 function CountUp({ end, duration = 1200, suffix = '' }) {
   const [value, setValue] = useState(0);
@@ -62,6 +64,10 @@ function About() {
             we deliver property risk engineering solutions that simplify decisions, strengthen resilience,
             and create lasting value for our clients.
           </p>
+          <div className="flex flex-wrap items-center gap-3 pt-12">
+            <RequestDemo solution={''}/>
+            <Link to='/contact?type=careers'className="w-fit rounded-md bg-primary px-5 py-2.5 font-medium text-white transition-opacity hover:opacity-90">Join our Team</Link>
+          </div>
         </div>
       </section>
 

@@ -185,6 +185,23 @@ const operations = [
     supply chain disruptions, helping organizations optimize asset performance and reduce operating costs. `,
     title: 'Director of Engineering',
     location: 'Seattle, WA'
+  },
+  {
+    img: '/img/portraits/chrisPhillips.jpg',
+    firstName: 'Terry',
+    lastName: 'Chavez',
+    linkedin: 'https://www.linkedin.com/in/christopher-l-phillips-2b2a615b/',
+    shortDescription: `Christopher Lon Phillips is Director of Engineering at SnapRISK, where he leads risk assessment, 
+    mitigation, and client education across a wide range of industries.`,
+    longDescription: `Christopher Lon Phillips is Director of Engineering at SnapRISK, where he leads risk assessment, 
+    mitigation, and client education across a wide range of industries. He brings extensive experience in fire and equipment 
+    hazards, supporting clients with plan reviews, asset management strategies, and property loss prevention. Prior to 
+    joining SnapRISK, Mr. Phillips held roles with several global engineering and property insurance firms, where he 
+    managed accounts, conducted risk assessments, and led project follow-ups and loss investigations. Most recently, 
+    he served as Service Director for an Asset Management and Reliability solution developed during COVID-related 
+    supply chain disruptions, helping organizations optimize asset performance and reduce operating costs. `,
+    title: 'Senior IR Thermographer',
+    location: 'Seattle, WA'
   }
 ]
 
@@ -241,7 +258,7 @@ function OurTeam() {
 
       <section>
         <h1 className="text-4xl font-bold text-center">Operations & Engineering</h1>
-        <div className="grid grid-cols-1 gap-6 md:grid-cols-2 md:gap-8 px-24 py-12">
+        <div className="flex flex-wrap justify-center gap-6 px-24 py-12 md:gap-8">
         {operations.map(person => (
           <TeamBlock key={person.firstName} teammate={person} />
         ))}
