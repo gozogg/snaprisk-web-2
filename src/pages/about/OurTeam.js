@@ -201,7 +201,7 @@ const operations = [
       of PV power generation and solar array structures, while also serving as an FAA Certified Part 107 Drone Pilot, enhancing aerial inspection capabilities.
  `,
     title: 'Senior IR Thermographer',
-    location: 'Virginia'
+    location: 'Virginia Beach, Virginia'
   }
 ]
 
