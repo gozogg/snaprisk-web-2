@@ -78,7 +78,7 @@ function About() {
             SnapRISK in Action
           </h2>
 
-          <div className="mt-8 grid gap-4 md:grid-cols-4">
+          <div className="mt-8 grid gap-4 md:grid-cols-2">
             <article className="rounded-2xl border border-gray-200 bg-white p-6 text-center shadow-sm">
               <p className="text-4xl font-bold text-primary">
                 <CountUp end={2000} suffix="+" />
@@ -89,7 +89,7 @@ function About() {
               </p>
             </article>
 
-            <article className="rounded-2xl border border-gray-200 bg-white p-6 text-center shadow-sm">
+            {/* <article className="rounded-2xl border border-gray-200 bg-white p-6 text-center shadow-sm">
               <p className="text-4xl font-bold text-primary">
                 <CountUp end={6} />
               </p>
@@ -105,7 +105,7 @@ function About() {
               <p className="mt-2 text-sm text-gray-600">
                 So your needs are always our top priority.
               </p>
-            </article>
+            </article> */}
 
             <article className="rounded-2xl border border-gray-200 bg-white p-6 text-center shadow-sm">
               <p className="text-4xl font-bold text-primary">

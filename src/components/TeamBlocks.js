@@ -34,8 +34,12 @@ export default function TeamBlock({ teammate }) {
           </p>
         </div>
         <p className="text-sm leading-6 text-primary text-center gap-2">
+        {teammate.location && (
+          <>
           <i className="fa-solid fa-location-dot m-2"></i>
           {teammate.location}
+          </>
+          )}
         </p>
       </div>
     </article>

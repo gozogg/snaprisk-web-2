@@ -87,26 +87,26 @@ const sales = [
     title: 'Executive Vice President',
     location: 'Atlanta, GA'
   }, 
-  {
-    img: '/img/portraits/aleacia_new.png',
-    firstName: 'Aleacia',
-    lastName: 'Perdomo',
-    linkedin: 'https://www.linkedin.com/in/aleacia-perdomo-53b13521/',
-    shortDescription: `Aleacia Perdomo leads the strategic vision and delivery of 
-                    property engineering solutions and technology.`,
-    longDescription: `Aleacia Perdomo leads the strategic vision and delivery of 
-                    property engineering solutions and technology. She specializes in portfolios with significant natural 
-                    catastrophe exposure, advancing the SnapRISK services that empower clients and their trusted advisors 
-                    to achieve stronger, data-driven outcomes. Her leadership spans channel distribution, risk consulting, 
-                    and client engagement initiatives. Based in Atlanta, Aleacia brings over 30 years of experience across 
-                    the full risk ecosystem—including underwriting & distribution management at a leading global carrier, 
-                    advisory roles at a premier risk consulting firm, and go-to-market strategy for a risk-tech platform. 
-                    This diverse background fuels her commitment to delivering integrated, data-driven solutions for today’s 
-                    dynamic risk environment utilizing the 
-                    industry-leading SnapRISK® technology.`,
-    title: 'Executive Vice President',
-    location: 'Atlanta, GA'
-  }, 
+  // {
+  //   img: '/img/portraits/aleacia_new.png',
+  //   firstName: 'Aleacia',
+  //   lastName: 'Perdomo',
+  //   linkedin: 'https://www.linkedin.com/in/aleacia-perdomo-53b13521/',
+  //   shortDescription: `Aleacia Perdomo leads the strategic vision and delivery of 
+  //                   property engineering solutions and technology.`,
+  //   longDescription: `Aleacia Perdomo leads the strategic vision and delivery of 
+  //                   property engineering solutions and technology. She specializes in portfolios with significant natural 
+  //                   catastrophe exposure, advancing the SnapRISK services that empower clients and their trusted advisors 
+  //                   to achieve stronger, data-driven outcomes. Her leadership spans channel distribution, risk consulting, 
+  //                   and client engagement initiatives. Based in Atlanta, Aleacia brings over 30 years of experience across 
+  //                   the full risk ecosystem—including underwriting & distribution management at a leading global carrier, 
+  //                   advisory roles at a premier risk consulting firm, and go-to-market strategy for a risk-tech platform. 
+  //                   This diverse background fuels her commitment to delivering integrated, data-driven solutions for today’s 
+  //                   dynamic risk environment utilizing the 
+  //                   industry-leading SnapRISK® technology.`,
+  //   title: 'Executive Vice President',
+  //   location: 'Atlanta, GA'
+  // }, 
   {
     img: '/img/portraits/marco.png',
     firstName: 'Marco',
@@ -201,7 +201,7 @@ const operations = [
       of PV power generation and solar array structures, while also serving as an FAA Certified Part 107 Drone Pilot, enhancing aerial inspection capabilities.
  `,
     title: 'Senior IR Thermographer',
-    location: 'Virginia Beach, Virginia'
+    // location: 'Virginia Beach, Virginia'
   }
 ]
 
@@ -247,9 +247,9 @@ function OurTeam() {
 
       <section>
         <h1 className="text-4xl font-bold text-center">Executive Sales & Account Management</h1>
-        <div className="flex flex-wrap justify-center gap-6 px-24 py-12 md:gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 px-24 py-12 md:gap-8">
           {sales.map((person) => (
-            <div key={person.firstName} className="w-full md:w-[calc(33.333%-1.5rem)] max-w-sm">
+            <div key={person.firstName} className="w-full">
               <TeamBlock teammate={person} />
             </div>
           ))}
