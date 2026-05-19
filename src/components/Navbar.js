@@ -23,7 +23,6 @@ function Navbar() {
     { to: '/technology/ir-dashboard', label: 'IR Dashboard' },
     { to: '/technology/impairments', label: 'Impairments' },
     { to: '/technology/hotwork', label: 'Hot Work' },
-    { to: '/technology/platform', label: 'Platform' },
   ]
 
   const aboutItems = [

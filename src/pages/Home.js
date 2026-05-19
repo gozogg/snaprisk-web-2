@@ -6,6 +6,7 @@ import NextSteps from '../components/NextSteps';
 import ScrollStack, { ScrollStackItem } from '../components/ScrollStack'
 import ColorBends from '../components/backgrounds/ColorBends';
 import { Link } from 'react-router-dom';
+import Footer from '../components/Footer';
 
 const JOURNEY_STEPS = [
   {
@@ -206,6 +207,8 @@ function Home() {
           <NextSteps />
         </div>
       </section>
+
+      <Footer/>
     </div>
   );
 }

@@ -17,7 +17,6 @@ import SelfEAudit from './pages/solutions/SelfEAudit';
 import SnapALERT from './pages/solutions/SnapALERT';
 
 import Dashboard from './pages/technology/Dashboard';
-import Platform from './pages/technology/Platform';
 import IRDashboard from './pages/technology/IRDashboard';
 import Impairments from './pages/technology/Impairments';
 import HotWork from './pages/technology/HotWork';
@@ -50,7 +49,6 @@ function App() {
         <Route path="/technology/ir-dashboard" element={<IRDashboard />} />
         <Route path="/technology/impairments" element={<Impairments />} />
         <Route path="/technology/hotwork" element={<HotWork />} />
-        <Route path="/technology/platform" element={<Platform />} />
 
         <Route path="/about" element={<About />} />
         <Route path="/about/case-studies" element={<CaseStudies />} />
