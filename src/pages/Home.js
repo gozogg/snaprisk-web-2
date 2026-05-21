@@ -90,7 +90,6 @@ function Home() {
           loop
           playsInline
           preload="metadata"
-          poster="/img/home_background.jpeg"
           aria-hidden
         >
           <source src="/img/home/homepage_video.mp4" type="video/mp4" />
