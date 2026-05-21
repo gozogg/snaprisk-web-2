@@ -1,6 +1,6 @@
 // PropertyProfileDiagram.jsx
-import { useNavigate } from 'react-router-dom';
 import { Link } from 'react-router-dom';
+import { useState } from 'react';
 
 const NODES = [
     { id: 'snapcat',    label: 'SnapCAT',      path: '/solutions/snapcat',  icon: '/img/solutionLogos/snapcat.png',   angle: -90              }, // top
@@ -21,7 +21,7 @@ function toRad(deg) {
 }
 
 export default function DPPArrows({ className = '' }) {
-  const navigate = useNavigate();
+  const [hoverID, setHoverID] = useState(null)
 
   return (
     <svg
@@ -77,11 +77,15 @@ export default function DPPArrows({ className = '' }) {
         const ny = CY + RADIUS * Math.sin(toRad(node.angle));
         return (
         <Link to={node.path}>
-                  <g
-            key={node.id}
-            style={{ cursor: 'pointer' }}
-            role="link"
-            aria-label={node.label}
+          <g
+            onMouseEnter={() => setHoverID(node.id)}
+            onMouseLeave={() => setHoverID(null)}
+            style={{
+              cursor: 'pointer',
+              transformOrigin: `${nx}px ${ny}px`,
+              transform: hoverID === node.id ? 'scale(1.15)' : 'scale(1)',
+              transition: 'transform 0.2s ease',
+            }}
           >
             <circle
               cx={nx} cy={ny} r={36}

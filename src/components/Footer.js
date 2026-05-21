@@ -7,8 +7,8 @@ const QUICK_LINKS = [
 ];
 
 const LEGAL_LINKS = [
-  { label: 'Privacy Policy', href: 'https://snaprisk.com/privacy.html' },
-  { label: 'Terms & Conditions', href: 'https://snaprisk.com/termsandconditions.html' },
+  { label: 'Privacy Policy', to: '/privacy' },
+  { label: 'Terms & Conditions', to: '/terms' },
 ];
 
 const CONTACT_ITEMS = [
@@ -77,13 +77,13 @@ export default function Footer() {
                 <p className="mb-6 text-sm font-semibold text-gray-400">Fort Worth, TX 76107</p>
               </div>
             </div>
-            <div className="sm:ml-auto sm:text-right md:self-center lg:ml-5 lg:self-start">
+            {/* <div className="sm:ml-auto sm:text-right md:self-center lg:ml-5 lg:self-start">
               <img
                 src="/img/SBE_footer_logo.png"
                 className="h-20 object-cover md:h-12 lg:h-20"
                 alt="Women's Business Enterprise certification"
               />
-            </div>
+            </div> */}
           </div>
 
           <div className="grid grid-cols-1 gap-10 sm:grid-cols-3 sm:gap-6">
@@ -102,8 +102,8 @@ export default function Footer() {
               <h2 className="mb-6 text-sm font-semibold uppercase text-white">Legal</h2>
               <ul className="m-0 list-none p-0">
                 {LEGAL_LINKS.map(link => (
-                  <li key={link.href} className="mb-4 last:mb-0">
-                    <FooterLink item={{ ...link, external: true }} />
+                  <li key={link.label} className="mb-4 last:mb-0">
+                    <FooterLink item={{ ...link, external: Boolean(link.href) }} />
                   </li>
                 ))}
               </ul>
@@ -125,7 +125,7 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="pt-6">
+        {/* <div className="pt-6">
           <p className="text-sm text-gray-400 sm:text-center">
             Carrington Risk Consulting LLC, doing business as SnapRISK, is proud to be a woman-founded,
             female-run business. We support and align with the mission of the Women&apos;s Business Enterprise
@@ -135,7 +135,7 @@ export default function Footer() {
             government agencies—and we&apos;re ready to help strengthen your supply chain through inclusive
             partnerships.
           </p>
-        </div>
+        </div> */}
 
         <hr className="my-6 border-gray-700 sm:mx-auto lg:my-8" />
 

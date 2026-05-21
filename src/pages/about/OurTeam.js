@@ -187,7 +187,7 @@ const operations = [
     location: 'Seattle, WA'
   },
   {
-    img: '/img/portraits/terryChavez.jpeg',
+    img: '/img/portraits/terry_new.png',
     firstName: 'Terry',
     lastName: 'Chavez',
     linkedin: 'https://www.linkedin.com/in/terry-c-b72645319/',

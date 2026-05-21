@@ -2,18 +2,18 @@ import { useEffect, useMemo, useState } from 'react';
 
 const TEAM_PHOTO_FILES = [
   'Ingmar_chris_holland.jpg',
-  'team_new.png',
-  'Pump Testing 1 .jpg',
+  'fire_pump_testing_chris.jpg',
   'terry_ir_2.jpg',
   'terry_ir.jpg',
   'jeff_chris_atlanta.jpg',
-  'TransformerClass .jpg',
+  'transformer_class.jpg',
   'snaprisk_at_cubbies.jpg',
-  'Fire Pump testing 3 .jpg',
+  'fire_pump_selfie_chris.jpg',
   'alisha_field.jpeg',
-  'Terry IR Work .jpg',
+  'terry_ir_work.jpg',
   'theo_field.jpg',
-  'olivia_greg_alisha_chris.jpg'
+  'olivia_greg_alisha_chris.jpg',
+  'team_rims_2026.jpeg'
 ];
 
 function formatCaption(filename) {

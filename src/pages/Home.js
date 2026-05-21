@@ -3,10 +3,8 @@ import Navbar from '../components/Navbar';
 import IndustriesSlide from '../components/IndustriesSlide';
 import ProcessBlocks from '../components/ProcessBlocks';
 import NextSteps from '../components/NextSteps';
-import ScrollStack, { ScrollStackItem } from '../components/ScrollStack'
-import ColorBends from '../components/backgrounds/ColorBends';
+import ScrollStack, { ScrollStackItem } from '../components/ScrollStack';
 import { Link } from 'react-router-dom';
-import Footer from '../components/Footer';
 
 const JOURNEY_STEPS = [
   {
@@ -80,47 +78,61 @@ const JOURNEY_STEPS = [
 function Home() {
   return (
     <div className="app relative">
-      <div className="pointer-events-none absolute inset-x-0 top-0 z-0 h-[100vh] overflow-hidden">
-        <ColorBends
-          className="h-full w-full"
-          colors={['#ff5c7a', '#BE5CF2', '#D16FBC']}
-          rotation={90}
-          speed={0.2}
-          scale={1}
-          frequency={1}
-          warpStrength={1}
-          mouseInfluence={1}
-          noise={0.15}
-          parallax={0.5}
-          iterations={1}
-          intensity={1.5}
-          bandWidth={6}
-          transparent
-          autoRotate={0}
-        />
-      </div>
-
-      <header className="hero relative z-30" id="home">
-        <Navbar />
-      </header>
       <section
-        className="relative z-10 flex h-[min(85vh,50rem)] w-full flex-col overflow-hidden text-center"
+        id="home"
+        data-no-reveal
+        className="relative flex min-h-[min(100vh,52rem)] w-full flex-col overflow-hidden"
       >
-        <div className="relative z-10 flex flex-1 flex-col items-center justify-start px-6 pb-14 pt-10 text-center md:px-16 md:pb-20 md:pt-24 lg:px-20">
+        <video
+          className="pointer-events-none absolute inset-0 z-0 h-full w-full object-cover"
+          autoPlay
+          muted
+          loop
+          playsInline
+          preload="metadata"
+          poster="/img/home_background.jpeg"
+          aria-hidden
+        >
+          <source src="/img/home/homepage_video.mp4" type="video/mp4" />
+        </video>
+
+        {/* Scrim: light panel for copy on the left, subtle darken on the right */}
+        <div
+          className="pointer-events-none absolute inset-0 z-[1] bg-gradient-to-r from-white/95 via-white/75 to-white/25 md:from-white/92 md:via-white/55 md:to-transparent"
+          aria-hidden
+        />
+        <div
+          className="pointer-events-none absolute inset-0 z-[1] bg-gradient-to-t from-primary/15 via-transparent to-white/40"
+          aria-hidden
+        />
+
+        <header className="hero relative z-30">
+          <Navbar />
+        </header>
+
+        <div className="relative z-10 flex flex-1 flex-col items-start justify-center px-6 pb-16 pt-6 md:px-16 md:pb-20 md:pt-8 lg:px-20">
           <p className="m-0 text-xs font-semibold uppercase tracking-[0.22em] text-primary/80">Welcome</p>
-          <h1 className="m-0 text-4xl font-bold tracking-tight text-primary drop-shadow-md md:text-6xl">
+          <h1 className="mt-3 max-w-3xl text-4xl font-bold leading-tight tracking-tight text-primary md:text-6xl">
             Together in Risk
           </h1>
-          <p className="mt-6 max-w-2xl text-lg leading-relaxed text-primary/95 drop-shadow md:mt-8 md:text-xl">
-            SnapRISK is a global technology company specializing in risk engineering. We transform
-            the complexity of property risk engineering into opportunity by combining technology,
-            expertise, and partnership.
+          <p className="mt-6 max-w-2xl text-lg leading-relaxed text-gray-800 md:mt-8 md:text-xl">
+            SnapRISK is a global technology company specializing in property risk engineering. We help
+            organizations navigate complex property exposures through innovative technology, deep engineering
+            expertise, and hands-on field experience.
           </p>
-          <div className="mt-8 flex flex-wrap items-center justify-center gap-3">
-            <Link to='/solutions' className="w-fit rounded-md bg-primary px-5 py-2.5 font-medium text-white transition-opacity hover:opacity-90">
-            View Solutions</Link>
-            <Link to='/contact?type=demo' className="w-fit rounded-md bg-primary px-5 py-2.5 font-medium text-white transition-opacity hover:opacity-90">
-            Request a Demo</Link>
+          <div className="mt-8 flex flex-wrap items-center gap-3">
+            <Link
+              to="/solutions"
+              className="rounded-md bg-primary px-5 py-2.5 font-medium text-white shadow-md transition-opacity hover:opacity-90"
+            >
+              View Solutions
+            </Link>
+            <Link
+              to="/contact?type=demo"
+              className="rounded-md border border-primary/40 bg-white/90 px-5 py-2.5 font-medium text-primary shadow-sm backdrop-blur-sm transition-colors hover:bg-white"
+            >
+              Request a Demo
+            </Link>
           </div>
         </div>
       </section>
@@ -193,7 +205,7 @@ function Home() {
         </div>
       </section>
 
-      <section
+      {/* <section
         className="relative overflow-hidden px-6 pb-20 pt-10 text-center md:px-10 lg:px-16"
         style={{
           backgroundImage: "url('/img/home/nextsteps.jpg')",
@@ -206,9 +218,7 @@ function Home() {
           <p className="m-0 text-xl font-semibold uppercase tracking-[0.25em] text-white mx-96 border-b-2 pb-8">NEXT STEPS</p>
           <NextSteps />
         </div>
-      </section>
-
-      <Footer/>
+      </section> */}
     </div>
   );
 }

@@ -81,7 +81,7 @@ function About() {
           <div className="mt-8 grid gap-4 md:grid-cols-2">
             <article className="rounded-2xl border border-gray-200 bg-white p-6 text-center shadow-sm">
               <p className="text-4xl font-bold text-primary">
-                <CountUp end={2000} suffix="+" />
+                <CountUp end={10000} suffix="+" />
               </p>
               <p className="mt-2 text-sm font-semibold text-gray-900">Surveys Completed</p>
               <p className="mt-2 text-sm text-gray-600">

@@ -6,7 +6,7 @@ import RequestDemo from '../../components/RequestDemo';
 function HPR() {
   return (
     <div className="app">
-      <header className="hero" id="snapcat">
+      <header className="hero" id="hpr">
         <Navbar />
       </header>
       <section className="flex items-center gap-8 px-10 py-12 lg:px-16">
@@ -15,7 +15,7 @@ function HPR() {
             <div className="absolute -bottom-10 -left-10 h-40 w-40 bg-primary" />
             <img
               src="/img/solutions/HPR.png"
-              alt="SnapCAT"
+              alt="HPR Risk Engineering"
               className="relative z-10 w-full rounded-lg object-cover shadow-lg"
             />
           </div>
@@ -35,9 +35,33 @@ function HPR() {
         </div>
       </section>
 
-      <section className="px-10 pb-20 pt-4 lg:px-16">
-        <div className="mx-auto max-w-6xl space-y-10">
+      <section className="px-10 pb-4 lg:px-16">
+        <div className="mx-auto max-w-6xl">
           <div className="relative overflow-hidden rounded-3xl border border-primary/20 bg-secondary p-8 shadow-sm md:p-10">
+            <p className="text-xs font-semibold uppercase tracking-[0.2em] text-primary">Field Risk Engineering</p>
+            <h2 className="mt-3 text-3xl font-semibold tracking-tight text-gray-900 md:text-4xl">
+              Proactive risk insight, on site
+            </h2>
+            <div className="mt-6 space-y-5 text-base leading-relaxed text-gray-700 md:text-lg">
+              <p>
+                At SnapRISK, our Field Risk Engineering services help organizations proactively identify, evaluate, and
+                reduce property and operational risks before losses occur. Our experienced engineers work directly with
+                clients on-site to provide practical, data-driven insights that improve safety, resilience, and overall
+                risk quality.
+              </p>
+              <p>
+                We partner with clients across industrial, commercial, manufacturing, real estate, hospitality,
+                healthcare, and public entity sectors to deliver customized risk engineering solutions that support
+                insurance, operational, and business continuity objectives.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="px-10 pb-20 pt-8 lg:px-16">
+        <div className="mx-auto max-w-6xl space-y-10">
+          {/* <div className="relative overflow-hidden rounded-3xl border border-primary/20 bg-secondary p-8 shadow-sm md:p-10">
             <div className="absolute -right-10 -top-10 h-36 w-36 rounded-full bg-primary/15" />
             <p className="text-xs font-semibold uppercase tracking-[0.2em] text-primary">What's Included</p>
             <h2 className="mt-3 text-3xl font-semibold tracking-tight text-gray-900 md:text-4xl">HPR Surveys contain...</h2>
@@ -55,15 +79,15 @@ function HPR() {
                 <span>SnapCAT</span>
               </li>
               <li className="flex items-start gap-3">
-                <span className="mt-1 inline-flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-primary text-sm font-semibold text-white">3</span>
+                <span className="mt-1 inline-flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-primary text-sm font-semibold text-white">4</span>
                 <span>SnapREC</span>
               </li>
               <li className="flex items-start gap-3">
-                <span className="mt-1 inline-flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-primary text-sm font-semibold text-white">3</span>
-                <span>Hazards and Processes??</span>
+                <span className="mt-1 inline-flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-primary text-sm font-semibold text-white">5</span>
+                <span>Hazards and Processes</span>
               </li>
             </ul>
-          </div>
+          </div> */}
 
           <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
             <article className="group rounded-2xl border border-gray-200 bg-white p-7 shadow-sm transition-all duration-200 hover:-translate-y-1 hover:shadow-lg">
@@ -99,10 +123,31 @@ function HPR() {
             </article>
           </div>
 
+          <div className="relative overflow-hidden rounded-3xl border border-primary/20 bg-white p-8 shadow-sm md:p-10">
+            <p className="text-xs font-semibold uppercase tracking-[0.2em] text-primary">
+              Technology-Driven Risk Management
+            </p>
+            <h2 className="mt-3 text-3xl font-semibold tracking-tight text-gray-900 md:text-4xl">
+              Engineering expertise, powered by the SnapRISK® Platform
+            </h2>
+            <div className="mt-6 space-y-5 text-base leading-relaxed text-gray-700 md:text-lg">
+              <p>
+                SnapRISK combines engineering expertise with innovative digital solutions through the SnapRISK®
+                technology Platform, allowing clients to centralize recommendations, track corrective actions, manage
+                COPE data, and gain better visibility into their property risk portfolio.
+              </p>
+              <p>
+                Our goal is simple: help clients reduce risk, improve resilience, and make more informed decisions with
+                confidence.
+              </p>
+            </div>
+          </div>
+
           <div className="relative overflow-hidden rounded-3xl bg-gray-900 p-8 md:p-10 text-center">
             <div className="rounded-full bg-primary/35 blur-2xl" />
             <p className="relative text-2xl font-medium leading-relaxed text-white text-center">
-            SnapRISK makes HPR risk engineering faster, clearer, and more valuable – for everyone in the insurance ecosystem.
+              SnapRISK makes HPR risk engineering faster, clearer, and more valuable – for everyone in the insurance
+              ecosystem.
             </p>
           </div>
         </div>
