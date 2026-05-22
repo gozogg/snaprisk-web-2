@@ -30,11 +30,11 @@ function Dashboard() {
           </div>
 
           <div className="relative mx-auto w-[80%]">
-            <div className="absolute -bottom-10 -right-10 h-40 w-40 bg-primary" />
+            <div className="absolute -bottom-10 -right-10 h-40 w-40 bg-primary hidden lg:block" />
             <img
               src="/img/technology/dashboard.png"
               alt="SnapIR"
-              className="relative z-10 w-full rounded-lg object-cover shadow-lg"
+              className="relative z-10 w-full rounded-lg object-cover shadow-lg sm:border-primary sm:border-5"
             />
           </div>
         </section>

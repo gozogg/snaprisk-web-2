@@ -48,7 +48,7 @@ function About() {
         <Navbar />
       </header>
 
-      <section className="relative z-10 flex min-h-[min(85vh,40rem)] w-full flex-col overflow-hidden text-center">
+      <section className="relative z-10 flex min-h-[min(95vh,40rem)] w-full flex-col overflow-hidden text-center">
         <div className="relative z-10 flex flex-1 flex-col items-center justify-start px-6 pb-14 pt-12 text-center md:px-16 md:pb-20 md:pt-20 lg:px-20">
           <p className="m-0 text-xs font-semibold uppercase tracking-[0.22em] text-primary/80">
             About SnapRISK

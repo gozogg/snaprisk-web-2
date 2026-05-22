@@ -1,40 +1,19 @@
 import '../../App.css';
-import Navbar from '../../components/Navbar';
-import LearnMore from '../../components/LearnMore';
-import RequestDemo from '../../components/RequestDemo';
+import SolutionHero from '../../components/SolutionHero';
 
 function SnapVALUES() {
   return (
-<div className="app">
-      <header className="hero" id="snapcat">
-        <Navbar />
-      </header>
-      <section className="flex items-center gap-8 px-10 py-12 lg:px-16">
-        <div className="w-1/2 p-4 ml-4">
-          <div className="relative mx-auto w-[88%]">
-            <div className="absolute -bottom-10 -left-10 h-40 w-40 bg-primary" />
-            <img
-              src="/img/solutions/snapvalues.jpeg"
-              alt="SnapCAT"
-              className="relative z-10 w-full rounded-lg object-cover shadow-lg"
-            />
-          </div>
-        </div>
-        <div className="w-1/2 p-4 flex flex-col justify-center space-y-5">
-          <p className="text-xs font-semibold uppercase tracking-[0.2em] text-primary">Solutions</p>
-          <h1 className="text-5xl font-semibold tracking-tight text-gray-900">SnapVALUES™</h1>
-          <p className="max-w-xl text-lg leading-relaxed text-gray-700">
-          SnapVALUES™ is property a valuation tool that delivers fast, accurate replacement cost estimates – empowering better insurance decisions and reducing underinsurance risk. SnapVALUES™ uses mobile technology to 
-          replace spreadsheets and makes values collection infinitely easier, more accurate and defensible.  
-          </p>
-          <div className="flex flex-wrap items-center gap-3">
-            <LearnMore solution={'snapvalues'}/>
-            <RequestDemo solution={'snapvalues'}/>
-          </div>
-        </div>
-      </section>
+    <div className="app">
+      <SolutionHero
+        pageId="snapvalues"
+        imageSrc="/img/solutions/snapvalues.jpeg"
+        imageAlt="SnapVALUES"
+        title="SnapVALUES™"
+        description="SnapVALUES™ is a property valuation tool that delivers fast, accurate replacement cost estimates – empowering better insurance decisions and reducing underinsurance risk. SnapVALUES™ uses mobile technology to replace spreadsheets and makes values collection infinitely easier, more accurate and defensible."
+        solution="snapvalues"
+      />
 
-      <section className="px-10 pb-20 pt-4 lg:px-16">
+      <section className="px-4 pb-16 pt-4 sm:px-6 md:px-10 lg:px-16 lg:pb-20">
         <div className="mx-auto max-w-6xl space-y-10">
           <div className="relative overflow-hidden rounded-3xl border border-primary/20 bg-secondary p-8 shadow-sm md:p-10">
             <div className="absolute -right-10 -top-10 h-36 w-36 rounded-full bg-primary/15" />

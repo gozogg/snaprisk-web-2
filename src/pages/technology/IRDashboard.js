@@ -28,7 +28,7 @@ function IRDashboard() {
           </div>
 
           <div className="relative mx-auto w-[80%]">
-            <div className="absolute -bottom-10 -right-10 h-40 w-40 bg-primary" />
+            <div className="absolute -bottom-10 -right-10 h-40 w-40 bg-primary hidden lg:block" />
             <img
               src="/img/technology/dashboard.png"
               alt="SnapIR"
