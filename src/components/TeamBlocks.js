@@ -45,3 +45,57 @@ export default function TeamBlock({ teammate }) {
     </article>
   );
 }
+
+export function TeamBlockLarge({ teammate }) {
+  return (
+    <article className="mx-auto w-full max-w-2xl overflow-hidden rounded-3xl border border-white/10 bg-tertiary shadow-xl shadow-black/25">
+      <div className="flex flex-row h-96">
+
+        {/* Left: image + name/title — fixed width, never shrinks */}
+        <div className="w-64 shrink-0 flex flex-col">
+          <div className="px-5 pt-5 pb-3">
+            <img
+              src={teammate.img}
+              alt={`Portrait of ${teammate.firstName} ${teammate.lastName}`}
+              className="w-full object-cover rounded-2xl aspect-square"
+            />
+          </div>
+
+          <div className="space-y-1 px-5 pb-5">
+            <div className="flex items-center justify-between gap-2">
+              <p className="text-xs font-semibold uppercase tracking-widest">
+                {teammate.title}
+              </p>
+              <a
+                href={teammate.linkedin}
+                className="shrink-0 inline-flex h-8 w-8 items-center justify-center rounded-full border border-primary text-xs text-primary transition hover:bg-primary hover:text-white"
+              >
+                <i className="fa-brands fa-linkedin-in"></i>
+              </a>
+            </div>
+
+            <h3 className="text-xl font-semibold leading-tight text-primary">
+              {teammate.firstName} {teammate.lastName}
+            </h3>
+
+            {teammate.location && (
+              <p className="flex items-center gap-1.5 text-xs text-primary pt-2">
+                <i className="fa-solid fa-location-dot"></i>
+                {teammate.location}
+              </p>
+            )}
+          </div>
+        </div>
+
+        {/* Divider */}
+        <div className="w-px bg-white my-5" />
+
+        {/* Right: scrollable description */}
+        <div className="flex-1 overflow-y-auto p-5 scrollbar-thin scrollbar-thumb-white/10 scrollbar-track-transparent">
+          <p className="text-sm leading-7 text-primary/80">{teammate.longDescription}</p>
+        </div>
+
+      </div>
+    </article>
+  );
+}

@@ -1,6 +1,7 @@
 import '../../App.css';
 import Navbar from '../../components/Navbar';
 import TeamBlock from '../../components/TeamBlocks';
+import { TeamBlockLarge } from '../../components/TeamBlocks';
 import TeamPhotoCarousel from '../../components/TeamPhotoCarousel';
 
 
@@ -239,19 +240,31 @@ function OurTeam() {
 
       <section>
         <h1 className="text-4xl font-bold text-center">Executive Leadership</h1>
-        <div className="grid grid-cols-1 gap-6 md:grid-cols-2 md:gap-8 px-24 py-12">
+        <div className="grid grid-cols-1 gap-6 md:grid-cols-2 md:gap-8 px-24 py-12 lg:hidden">
         {leadership.map(person => (
           <TeamBlock key={person.firstName} teammate={person} />
+        ))}
+        </div>
+        <div className="grid grid-cols-1 gap-6 md:grid-cols-2 md:gap-8 px-24 py-12 hidden lg:grid">
+        {leadership.map(person => (
+          <TeamBlockLarge key={person.firstName} teammate={person} />
         ))}
         </div>
       </section>
 
       <section>
         <h1 className="text-4xl font-bold text-center">Executive Sales & Account Management</h1>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 px-24 py-12 md:gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 px-24 py-12 md:gap-8 lg:hidden">
           {sales.map((person) => (
             <div key={person.firstName} className="w-full">
               <TeamBlock teammate={person} />
+            </div>
+          ))}
+        </div>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 px-24 py-12 md:gap-8 hidden lg:grid">
+          {sales.map((person) => (
+            <div key={person.firstName} className="w-full">
+              <TeamBlockLarge teammate={person} />
             </div>
           ))}
         </div>
@@ -259,10 +272,17 @@ function OurTeam() {
 
       <section>
         <h1 className="text-4xl font-bold text-center">Operations & Engineering</h1>
-        <div className="flex flex-wrap justify-center gap-6 px-24 py-12 md:gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 px-24 py-12 md:gap-8 lg:hidden">
         {operations.map(person => (
-          <div key= {person.firstName} className="w-full md:w-[calc(33.333%-1.5rem)] max-w-sm">
+          <div key= {person.firstName} className="w-full">
             <TeamBlock key={person.firstName} teammate={person} />
+          </div>
+        ))}
+        </div>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 px-24 py-12 md:gap-8 hidden lg:grid">
+        {operations.map(person => (
+          <div key= {person.firstName} className="w-full">
+            <TeamBlockLarge key={person.firstName} teammate={person} />
           </div>
         ))}
         </div>
