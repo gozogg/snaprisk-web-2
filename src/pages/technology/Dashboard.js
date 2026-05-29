@@ -6,6 +6,7 @@ import RequestDemo from '../../components/RequestDemo';
 function Dashboard() {
   return (
     <div className="app bg-white">
+      <title>SnapRISK | Dashboard</title>
       <header className="hero relative z-30" id="dashboard">
         <Navbar />
       </header>
@@ -32,7 +33,7 @@ function Dashboard() {
           <div className="relative mx-auto w-[80%]">
             <div className="absolute -bottom-10 -right-10 h-40 w-40 bg-primary hidden lg:block" />
             <img
-              src="/img/technology/dashboard.png"
+              src="/img/technology/dashboard_new.png"
               alt="SnapIR"
               className="relative z-10 w-full rounded-lg object-cover shadow-lg sm:border-primary sm:border-5"
             />

@@ -36,6 +36,7 @@ function Solutions() {
 
   return (
     <div className="app relative">
+      <title>SnapRISK | Solutions</title>
       <div className="pointer-events-none absolute inset-x-0 top-0 z-0 h-[min(100vh,46rem)] overflow-hidden">
       <LiquidChrome
     baseColor={[0.780, 0.702, 0.816]}

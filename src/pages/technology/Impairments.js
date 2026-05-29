@@ -6,6 +6,7 @@ import RequestDemo from '../../components/RequestDemo';
 function Impairments() {
   return (
     <div className="app bg-white">
+      <title>SnapRISK | Impairments</title>
       <header className="hero relative z-30" id="dashboard">
         <Navbar />
       </header>

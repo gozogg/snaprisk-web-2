@@ -4,6 +4,7 @@ import SolutionHero from '../../components/SolutionHero';
 function SnapALERT() {
   return (
     <div className="app">
+      <title>SnapRISK | SnapALERT</title>
       <SolutionHero
         pageId="snapalert"
         imageSrc="/img/solutions/snapalert.png"

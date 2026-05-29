@@ -25,6 +25,7 @@ const IMPACT_METRICS = [
 function CaseStudies() {
   return (
     <div className="app">
+      <title>SnapRISK | Case Studies</title>
       <header className="hero" id="case-studies">
         <Navbar />
       </header>

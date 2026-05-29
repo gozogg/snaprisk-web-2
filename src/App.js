@@ -29,11 +29,10 @@ import OurTeam from './pages/about/OurTeam';
 import Careers from './pages/about/Careers';
 import Resources from './pages/about/Resources';
 import ScrollToTop from './components/ScrollToTop';
-import SmoothScrollProvider from './components/SmoothScrollProvider';
 
 function App() {
   return (
-    <SmoothScrollProvider>
+    <>
       <ScrollToTop />
       <Routes>
         <Route element={<AppLayout />}>
@@ -69,7 +68,7 @@ function App() {
         <Route path="/home" element={<Navigate to="/" replace />} />
         <Route path="*" element={<Navigate to="/" replace />} />
       </Routes>
-    </SmoothScrollProvider>
+    </>
   );
 }
 

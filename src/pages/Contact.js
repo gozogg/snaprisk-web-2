@@ -197,6 +197,7 @@ function Contact() {
 
   return (
     <div className="app">
+      <title>SnapRISK | Contact</title>
       <header className="hero" id="contact">
         <Navbar />
       </header>

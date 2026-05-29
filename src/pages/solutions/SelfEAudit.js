@@ -4,6 +4,7 @@ import SolutionHero from '../../components/SolutionHero';
 function SelfEAudit() {
   return (
     <div className="app">
+      <title>SnapRISK | Self E-AUDIT</title>
       <SolutionHero
         pageId="self-e-audit"
         imageSrc="/img/solutions/selfeaudit.png"

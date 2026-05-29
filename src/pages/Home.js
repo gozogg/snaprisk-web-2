@@ -92,7 +92,7 @@ function Home() {
           preload="metadata"
           aria-hidden
         >
-          <source src="/img/home/homepage_video.mp4" type="video/mp4" />
+          <source src="/img/home/homepage_video_longer.mp4" type="video/mp4" />
         </video>
 
         {/* Scrim: light panel for copy on the left, subtle darken on the right */}

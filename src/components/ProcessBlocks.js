@@ -23,23 +23,25 @@ const BLOCKS = [
 
 function ProcessBlock({ block }) {
   return (
-    <article className="group overflow-hidden rounded-xl border border-gray-200/80 bg-white shadow-sm transition-shadow hover:shadow-xl">
-      <div className="relative h-56 w-full overflow-hidden md:h-72 lg:h-96">
-        <img
-          src={block.img}
-          alt=""
-          className="absolute inset-0 h-full w-full object-cover transition-transform duration-300 group-hover:scale-[1.03]"
-        />
-        <div
-          className="absolute inset-0 bg-gradient-to-t from-black/75 via-black/35 to-black/10"
-        />
-        <div className="relative flex h-full flex-col justify-end p-6 text-left">
-          <h3 className="m-0 text-xl font-bold text-white md:text-2xl">{block.title}</h3>
-          <p className="mt-2 text-sm leading-relaxed text-white/90 md:text-base">{block.description}</p>
-          <Link to={block.link} className="mt-2 text-sm text-white/90 md:text-base px-4 py-2 rounded-md text-right">Learn more <i class="fa-solid fa-arrow-right"></i></Link>
+    <Link to={block.link}>
+      <article className="group overflow-hidden rounded-xl border border-gray-200/80 bg-white shadow-sm transition-shadow hover:shadow-xl">
+        <div className="relative h-56 w-full overflow-hidden md:h-72 lg:h-96">
+          <img
+            src={block.img}
+            alt=""
+            className="absolute inset-0 h-full w-full object-cover transition-transform duration-300 group-hover:scale-[1.03]"
+          />
+          <div
+            className="absolute inset-0 bg-gradient-to-t from-black/75 via-black/35 to-black/10"
+          />
+          <div className="relative flex h-full flex-col justify-end p-6 text-left">
+            <h3 className="m-0 text-xl font-bold text-white md:text-2xl">{block.title}</h3>
+            <p className="mt-2 text-sm leading-relaxed text-white/90 md:text-base">{block.description}</p>
+            <Link to={block.link} className="mt-2 text-sm text-white/90 md:text-base px-4 py-2 rounded-md text-right">Learn more <i class="fa-solid fa-arrow-right"></i></Link>
+          </div>
         </div>
-      </div>
-    </article>
+      </article>
+    </Link>
   );
 }
 

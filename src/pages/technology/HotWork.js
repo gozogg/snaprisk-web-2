@@ -5,6 +5,7 @@ import RequestDemo from '../../components/RequestDemo';
 function HotWork() {
   return (
     <div className="app bg-white">
+      <title>SnapRISK | Hot Work</title>
       <header className="hero relative z-30" id="dashboard">
         <Navbar />
       </header>

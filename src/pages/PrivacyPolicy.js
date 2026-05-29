@@ -5,6 +5,7 @@ import { Link } from 'react-router-dom';
 export default function PrivacyPolicy() {
   return (
     <div className="app">
+      <title>SnapRISK | Privacy Policy</title>
       <header className="hero" id="privacy">
         <Navbar />
       </header>

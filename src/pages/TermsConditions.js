@@ -5,6 +5,7 @@ import { Link } from 'react-router-dom';
 export default function TermsConditions() {
   return (
     <div className="app">
+      <title>SnapRISK | Terms and Conditions</title>
       <header className="hero" id="terms">
         <Navbar />
       </header>

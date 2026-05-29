@@ -1,52 +1,159 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useState, useRef } from 'react';
 import { Link, useLocation } from 'react-router-dom';
+import { Popover, PopoverButton, PopoverPanel } from '@headlessui/react';
 
 const solutionItems = [
-  { to: '/solutions/hpr', label: 'HPR' },
-  { to: '/solutions/snaprec', label: 'SnapREC®' },
-  { to: '/solutions/snapcat', label: 'SnapCAT®' },
-  { to: '/solutions/snapcope', label: 'SnapCOPE®' },
-  { to: '/solutions/snapir', label: 'SnapIR' },
-  { to: '/solutions/snapvalues', label: 'SnapVALUES™' },
-  { to: '/solutions/self-e-audit', label: 'Self E-Audit®' },
-  { to: '/solutions/snapalert', label: 'SnapALERT®' },
+  { to: '/solutions/hpr', label: 'HPR', description: ' Reduce High-Potential Risks', icon: 'fa-solid fa-clipboard-check' },
+  { to: '/solutions/snaprec', label: 'SnapREC®', description: 'Simplify Recommendation Tracking', icon: 'fa-solid fa-clipboard-list' },
+  { to: '/solutions/snapcat', label: 'SnapCAT®', description: 'Organize Critical Asset Data', icon: 'fa-solid fa-cloud-bolt' },
+  { to: '/solutions/snapcope', label: 'SnapCOPE®', description: 'Centralize Operational Safety Insights', icon: 'fa-solid fa-magnifying-glass' },
+  { to: '/solutions/snapir', label: 'SnapIR', description: 'Identify Thermal Issues Early', icon: 'fa-solid fa-temperature-full' },
+  { to: '/solutions/snapvalues', label: 'SnapVALUES™', description: 'Measure Risk And Performance', icon: 'fa-solid fa-coins' },
+  { to: '/solutions/self-e-audit', label: 'Self E-Audit®', description: 'Self-Guided Electrical Compliance Reviews', icon: 'fa-solid fa-gears' },
+  { to: '/solutions/snapalert', label: 'SnapALERT®', description: 'Real-Time Risk Notifications', icon: 'fa-solid fa-triangle-exclamation' },
 ];
 
 const technologyItems = [
-  { to: '/technology/dashboard', label: 'Dashboard' },
-  { to: '/technology/ir-dashboard', label: 'IR Dashboard' },
-  { to: '/technology/impairments', label: 'Impairments' },
-  { to: '/technology/hotwork', label: 'Hot Work' },
+  {
+    to: '/technology/dashboard',
+    label: 'Dashboard',
+    description: 'Analyze and Track your Fire Data',
+    icon: 'fa-solid fa-chart-line',
+  },
+  {
+    to: '/technology/ir-dashboard',
+    label: 'IR Dashboard',
+    description: 'Analyze and Track your IR Data',
+    icon: 'fa-solid fa-chart-pie',
+  },
+  {
+    to: '/technology/impairments',
+    label: 'Impairments',
+    description: 'Manage System Downtime with Visibility and Control',
+    icon: 'fa-solid fa-triangle-exclamation',
+  },
+  {
+    to: '/technology/hotwork',
+    label: 'Hot Work',
+    description: 'Prevent Loss Before It Happens',
+    icon: 'fa-solid fa-fire',
+  },
 ];
 
 const aboutItems = [
-  { to: '/about/case-studies', label: 'Case Studies' },
-  { to: '/about/team', label: 'Our Team' },
-  { to: '/about/careers', label: 'Careers' },
+  {
+    to: '/about',
+    label: 'About',
+    description: 'View our Story',
+    icon: 'fa-solid fa-circle-info',
+  },
+  {
+    to: '/about/case-studies',
+    label: 'Case Studies',
+    description: 'See What Our Clients Are Saying',
+    icon: 'fa-solid fa-book-open',
+  },
+  {
+    to: '/about/team',
+    label: 'Our Team',
+    description: 'Take a Look at Our Team',
+    icon: 'fa-solid fa-users',
+  },
+  {
+    to: '/about/careers',
+    label: 'Careers',
+    description: 'Join our Professional Team',
+    icon: 'fa-solid fa-briefcase',
+  },
 ];
 
-function DesktopDropdown({ label, to, items, linkClass, dropdownLinkClass }) {
+export function useHideOnScroll() {
+  const [visible, setVisible] = useState(true);
+  const lastScrollY = useRef(0);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const currentY = window.scrollY;
+      setVisible(currentY < lastScrollY.current || currentY < 10);
+      lastScrollY.current = currentY;
+    };
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
+  return visible;
+}
+
+function MegaMenuItem({ item }) {
   return (
-    <li className="group relative">
-      <Link to={to} className={`${linkClass} inline-flex items-center gap-1`} aria-haspopup="true">
+    <Link
+      to={item.to}
+      role="menuitem"
+      className="group/item flex gap-3 rounded-lg px-3 py-2.5 no-underline transition-colors hover:bg-primary/5 border m-1 hover:border-primary"
+    >
+      {item.icon && (
+        <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-primary/10 text-sm text-primary">
+          <i className={item.icon} aria-hidden="true" />
+        </span>
+      )}
+      <span className="min-w-0">
+        <span className="block text-sm font-semibold leading-snug text-gray-900 group-hover/item:text-primary">
+          {item.label}
+        </span>
+        {item.description && (
+          <span className="mt-0.5 block text-xs leading-snug text-gray-500">{item.description}</span>
+        )}
+      </span>
+    </Link>
+  );
+}
+
+function DesktopDropdown({ label, to, items, linkClass, columns = 2, align = 'left', viewAllLabel }) {
+  const panelWidth = columns === 2 ? 'w-[34rem] max-w-[min(34rem,calc(100vw-2rem))]' : 'w-[18rem] max-w-[min(18rem,calc(100vw-2rem))]';
+  const footerText = viewAllLabel ?? `View all ${label.toLowerCase()}`;
+
+  return (
+    <Popover className="group relative">
+      <PopoverButton
+        className={`${linkClass} inline-flex items-center gap-1.5 snaprisk-font popover-element`}
+        aria-haspopup="true"
+      >
         {label}
-      </Link>
-      <div className="absolute left-0 top-full z-50 hidden min-w-[14rem] pt-1 group-hover:block group-focus-within:block">
-        <ul
-          className="m-0 list-none rounded-md border border-white/15 bg-primary py-2 shadow-lg"
+        <i
+          className="fa-solid fa-chevron-down text-[0.55rem] opacity-60 transition-transform duration-200"
+          aria-hidden="true"
+        />
+      </PopoverButton>
+      <div
+        className={`absolute top-full z-50 hidden pt-2 group-hover:block group-focus-within:block ${
+          align === 'right' ? 'right-0' : 'left-0'
+        }`}
+      >
+        <PopoverPanel
           role="menu"
           aria-label={label}
+          className={`${panelWidth} overflow-hidden rounded-xl border border-primary/15 bg-white p-2 shadow-[0_16px_40px_rgba(15,23,42,0.12)]`}
         >
-          {items.map(item => (
-            <li key={item.to} role="none">
-              <Link to={item.to} className={dropdownLinkClass} role="menuitem">
-                {item.label}
-              </Link>
-            </li>
-          ))}
-        </ul>
+          <div className={columns === 2 ? 'grid grid-cols-2 gap-0.5' : 'flex flex-col gap-0.5'}>
+            {items.map(item => (
+              <MegaMenuItem key={item.to} item={item} />
+            ))}
+          </div>
+          {label != "ABOUT" && (
+            <div className="mt-1 border-t border-primary/10 px-3 py-2.5">
+            <Link
+              to={to}
+              role="menuitem"
+              className="inline-flex items-center gap-1.5 text-xs font-semibold uppercase tracking-[0.12em] text-primary no-underline transition-colors hover:text-primary/80"
+            >
+              {footerText}
+              <i className="fa-solid fa-arrow-right text-[0.6rem]" aria-hidden="true" />
+            </Link>
+          </div>
+          )}
+        </PopoverPanel>
       </div>
-    </li>
+    </Popover>
   );
 }
 
@@ -70,7 +177,7 @@ function MobileNavSection({ title, to, items, onNavigate }) {
           aria-label={`${open ? 'Collapse' : 'Expand'} ${title} menu`}
           onClick={() => setOpen(prev => !prev)}
         >
-          <i className={`fa-solid ${open ? 'fa-chevron-up' : 'fa-chevron-down'}`} aria-hidden="true" />
+          <i className={`fa-solid ${open ? 'fa-chevron-up' : 'fa-chevron-down'} text-primary`} aria-hidden="true" />
         </button>
       </div>
       {open && (
@@ -95,12 +202,10 @@ function MobileNavSection({ title, to, items, onNavigate }) {
 function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
   const { pathname } = useLocation();
+  const visible = useHideOnScroll();
 
   const linkClass =
-    'text-primary no-underline transition-colors hover:text-slate-300 font-semibold';
-
-  const dropdownLinkClass =
-    'block px-4 py-2 text-sm text-white no-underline transition-colors hover:bg-black/20';
+    'text-primary no-underline transition-colors hover:underline font-semibold';
 
   const closeMenu = () => setMenuOpen(false);
 
@@ -116,7 +221,10 @@ function Navbar() {
   }, [menuOpen]);
 
   return (
-    <nav className="relative z-40 w-full px-4 py-3 md:px-6 md:py-4">
+    <nav className="relative z-40 w-full px-4 py-3 md:px-6 md:py-4" style={{
+      transform: visible ? "translateY(0)" : "translateY(-100%)",
+      transition: "transform 0.3s ease",
+    }}>
       <div className="mx-auto max-w-6xl">
         {/* Mobile + tablet bar: logo left, menu right */}
         <div className="flex items-center justify-between md:hidden">
@@ -125,13 +233,16 @@ function Navbar() {
           </Link>
           <button
             type="button"
-            className="inline-flex h-11 w-11 items-center justify-center rounded-md border border-primary/25 text-primary transition-colors hover:bg-primary/10"
+            className="inline-flex h-11 w-11 items-center justify-center rounded-md border border-primary text-primary transition-colors hover:bg-primary/10"
             aria-expanded={menuOpen}
             aria-controls="mobile-nav-menu"
             aria-label={menuOpen ? 'Close menu' : 'Open menu'}
             onClick={() => setMenuOpen(prev => !prev)}
           >
-            <i className={`fa-solid text-xl ${menuOpen ? 'fa-xmark' : 'fa-bars'}`} aria-hidden="true" />
+            <i
+              className={`fa-solid text-xl text-primary ${menuOpen ? 'fa-xmark' : 'fa-bars'}`}
+              aria-hidden="true"
+            />
           </button>
         </div>
 
@@ -174,14 +285,13 @@ function Navbar() {
               to="/solutions"
               items={solutionItems}
               linkClass={linkClass}
-              dropdownLinkClass={dropdownLinkClass}
             />
             <DesktopDropdown
               label="TECHNOLOGY"
               to="/technology"
               items={technologyItems}
               linkClass={linkClass}
-              dropdownLinkClass={dropdownLinkClass}
+              columns={1}
             />
           </ul>
 
@@ -195,7 +305,8 @@ function Navbar() {
               to="/about"
               items={aboutItems}
               linkClass={linkClass}
-              dropdownLinkClass={dropdownLinkClass}
+              columns={1}
+              align="right"
             />
             <li>
               <Link

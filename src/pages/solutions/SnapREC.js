@@ -4,6 +4,7 @@ import SolutionHero from '../../components/SolutionHero';
 function SnapREC() {
   return (
     <div className="app">
+      <title>SnapRISK | SnapREC</title>
       <SolutionHero
         pageId="snaprec"
         imageSrc="/img/solutions/snaprec.png"

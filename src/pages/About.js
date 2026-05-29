@@ -35,6 +35,7 @@ function CountUp({ end, duration = 1200, suffix = '' }) {
 function About() {
   return (
     <div className="app relative">
+      <title>SnapRISK | About</title>
       <div className="pointer-events-none absolute inset-x-0 top-0 z-0 h-[min(100vh,46rem)] overflow-hidden">
       <LiquidChrome
     baseColor={[0.780, 0.702, 0.816]}
@@ -150,7 +151,7 @@ function About() {
           </div>
         </section>
 
-        <section className="mx-auto mt-14 max-w-6xl rounded-3xl border border-primary/20 bg-white p-8 shadow-sm md:mt-16 md:p-12">
+        {/* <section className="mx-auto mt-14 max-w-6xl rounded-3xl border border-primary/20 bg-white p-8 shadow-sm md:mt-16 md:p-12">
           <p className="text-center text-xs font-semibold uppercase tracking-[0.22em] text-primary">
             Founder Spotlight
           </p>
@@ -182,7 +183,7 @@ function About() {
               </p>
             </div>
           </div>
-        </section>
+        </section> */}
 
         <section className="mx-auto mt-14 max-w-6xl pb-6 md:mt-16">
           <div className="rounded-3xl border border-primary/20 bg-secondary p-8 shadow-sm md:p-10">
@@ -200,7 +201,7 @@ function About() {
           <div className="mt-6 rounded-3xl border border-gray-200 bg-white p-4 shadow-sm md:p-6">
             <div className="h-[500px] overflow-hidden rounded-2xl border border-gray-200 md:h-[600px]">
               <iframe
-                src="https://www.google.com/maps/d/embed?mid=1i0pWlsAbQWo4SVOTL2K7Wc8qj6DTclk&output=embed"
+                src="https://www.google.com/maps/d/embed?mid=1i0pWlsAbQWo4SVOTL2K7Wc8qj6DTclk&ehbc=2E312F"
                 className="-mt-20 h-[calc(100%+5rem)] w-full"
                 loading="lazy"
                 title="SnapRISK and partner locations map"

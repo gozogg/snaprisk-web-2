@@ -6,6 +6,7 @@ import RequestDemo from '../../components/RequestDemo';
 function IRDashboard() {
   return (
     <div className="app bg-white">
+      <title>SnapRISK | IR Dashboard</title>
       <header className="hero relative z-30" id="dashboard">
         <Navbar />
       </header>
@@ -30,7 +31,7 @@ function IRDashboard() {
           <div className="relative mx-auto w-[80%]">
             <div className="absolute -bottom-10 -right-10 h-40 w-40 bg-primary hidden lg:block" />
             <img
-              src="/img/technology/dashboard.png"
+              src="/img/technology/ir-dashboard_new.png"
               alt="SnapIR"
               className="relative z-10 w-full rounded-lg object-cover shadow-lg"
             />

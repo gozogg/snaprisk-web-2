@@ -4,6 +4,7 @@ import SolutionHero from '../../components/SolutionHero';
 function SnapVALUES() {
   return (
     <div className="app">
+      <title>SnapRISK | SnapVALUES</title>
       <SolutionHero
         pageId="snapvalues"
         imageSrc="/img/solutions/snapvalues.jpeg"

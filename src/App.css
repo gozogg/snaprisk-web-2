@@ -38,6 +38,11 @@
   font-weight: 500;
 }
 
+.popover-element:focus {
+  outline: none !important;
+  box-shadow: none !important;
+}
+
 /* Keep default root area full height */
 #root {
   min-height: 100vh;

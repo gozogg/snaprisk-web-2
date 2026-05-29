@@ -23,6 +23,7 @@ const JOIN_REASONS = [
 function Careers() {
   return (
     <div className="app">
+      <title>SnapRISK | Careers</title>
       <header className="hero" id="careers">
         <Navbar />
       </header>

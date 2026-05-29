@@ -4,6 +4,7 @@ import SolutionHero from '../../components/SolutionHero';
 function HPR() {
   return (
     <div className="app">
+      <title>SnapRISK | HPR</title>
       <SolutionHero
         pageId="hpr"
         imageSrc="/img/solutions/HPR.png"

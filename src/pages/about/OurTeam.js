@@ -209,6 +209,7 @@ const operations = [
 function OurTeam() {
   return (
     <div className="app">
+      <title>SnapRISK | Team</title>
       <header className="hero" id="team">
         <Navbar />
       </header>
