@@ -14,7 +14,7 @@ function TeamMemberCard({ member, isSelected, onSelect }) {
             transition={{ type: 'spring', stiffness: 400, damping: 25 }}
           >
             <div className="relative overflow-hidden rounded-2xl bg-white shadow-sm ring-1 ring-gray-950/5 transition-shadow duration-300 group-hover:shadow-xl group-hover:shadow-gray-900/10 group-hover:ring-gray-950/10">
-              <div className="relative aspect-[3/4] overflow-hidden">
+              <div className="relative aspect-[11/12] overflow-hidden">
                 <img src={member.photo} alt={member.name} className="h-full w-full object-cover transition-transform duration-500 ease-out group-hover:scale-105" />
                 <div className="absolute inset-0 bg-gradient-to-t from-gray-900/70 via-gray-900/10 to-transparent" />
   
@@ -26,13 +26,15 @@ function TeamMemberCard({ member, isSelected, onSelect }) {
               <div className="px-4 py-4">
                 <h3 className="text-base font-semibold text-gray-900">{member.name}</h3>
                 <p className="mt-0.5 text-sm text-gray-500">{member.title}</p>
-                <p className="mt-1.5 flex items-center gap-1 text-xs text-primary">
-                  <svg className="h-3.5 w-3.5 shrink-0" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" d="M15 10.5a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" />
-                    <path strokeLinecap="round" strokeLinejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1 1 15 0Z" />
-                  </svg>
-                  {member.location}
-                </p>
+                {member.location && (
+                    <p className="mt-1.5 flex items-center gap-1 text-xs text-primary">
+                    <svg className="h-3.5 w-3.5 shrink-0" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor">
+                      <path strokeLinecap="round" strokeLinejoin="round" d="M15 10.5a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" />
+                      <path strokeLinecap="round" strokeLinejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1 1 15 0Z" />
+                    </svg>
+                    {member.location}
+                  </p>
+                )}
               </div>
             </div>
           </motion.button>
@@ -108,13 +110,15 @@ function TeamMemberCard({ member, isSelected, onSelect }) {
             </div>
   
             <div className="px-5 py-5">
-              <p className="mb-1 flex items-center gap-1.5 text-xs font-medium uppercase tracking-wider text-primary">
+             {member.location && (
+                <p className="mb-1 flex items-center gap-1.5 text-xs font-medium uppercase tracking-wider text-primary">
                 <svg className="h-3.5 w-3.5" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" d="M15 10.5a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" />
                   <path strokeLinecap="round" strokeLinejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1 1 15 0Z" />
                 </svg>
                 {member.location}
               </p>
+             )}
               <p className="mt-3 text-sm leading-relaxed text-gray-600">{member.bio}</p>
             </div>
           </motion.div>
@@ -134,7 +138,7 @@ function TeamMemberCard({ member, isSelected, onSelect }) {
             <p className="mt-2 text-gray-500">Meet the people behind our mission — leaders, builders, and innovators shaping the future.</p>
           </header>
   
-          <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 sm:gap-7 lg:grid-cols-3 lg:gap-8 2xl:grid-cols-4">
+          <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 sm:gap-7 lg:grid-cols-4 lg:gap-8 2xl:grid-cols-4">
             {teamMembers.map(member => (
               <TeamMemberCard key={member.id} member={member} isSelected={selectedMember?.id === member.id} onSelect={setSelectedMember} />
             ))}

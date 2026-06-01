@@ -236,7 +236,7 @@ const TEAM_MEMBERS = [
   {
     id: 4,
     name: 'Paul Fix',
-    title: 'Executive Vice President',
+    title: 'Director of Operations',
     location: 'Minneapolis, MN',
     category: 'Executive Sales',
     bio: `Paul Fix is an Executive Vice President with SnapRISK and has extensive experience as a sales and account management executive. 
@@ -285,7 +285,7 @@ const TEAM_MEMBERS = [
     name: 'Kevin Beach',
     title: 'Lead Developer',
     location: 'Phoenix, AZ',
-    category: 'Operations',
+    category: 'Technology',
     bio: `Kevin attended the University of Illinois at Urbana-Champaign where he studied economics and computer
                   science, and has experience working in both the financial and insurance industries. Since joining the
                   team, Kevin has been continuously finding ways to integrate new technologies into SnapRISK® in order
@@ -297,9 +297,9 @@ const TEAM_MEMBERS = [
   {
     id: 8,
     name: 'Matthew Maday',
-    title: 'Director of Operations',
+    // title: 'Director of Operations',
     location: 'Chicago, IL',
-    category: 'Operations',
+    category: 'Technology',
     bio: `Matthew holds a bachelor’s degree from Oklahoma State University in fire protection and safety
                   engineering technology. He began his career at FM Global as a field engineer and then as a licensed
                   adjuster. Since joining the team, Matthew has applied his practical experience and knowledge to help
