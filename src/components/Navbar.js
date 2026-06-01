@@ -1,6 +1,7 @@
 import { useEffect, useState, useRef } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { Popover, PopoverButton, PopoverPanel } from '@headlessui/react';
+import ReactiveHeaderHideOnDrag from './ReactiveHeader';
 
 const solutionItems = [
   { to: '/solutions/hpr', label: 'HPR', description: ' Reduce High-Potential Risks', icon: 'fa-solid fa-clipboard-check' },
@@ -221,6 +222,7 @@ function Navbar() {
   }, [menuOpen]);
 
   return (
+    // <ReactiveHeaderHideOnDrag>
     <nav className="relative z-40 w-full px-4 py-3 md:px-6 md:py-4" style={{
       transform: visible ? "translateY(0)" : "translateY(-100%)",
       transition: "transform 0.3s ease",
@@ -320,6 +322,7 @@ function Navbar() {
         </div>
       </div>
     </nav>
+    // </ReactiveHeaderHideOnDrag>
   );
 }
 

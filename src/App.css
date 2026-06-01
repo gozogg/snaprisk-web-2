@@ -48,17 +48,16 @@
   min-height: 100vh;
 }
 
-/* Route change — fade/slide in */
+/* Route change — fade/slide in
 .page-transition-shell {
-  opacity: 0.97;
+  opacity: 0;
   transform: translateY(10px);
 }
 
 .page-transition-shell.page-enter-active {
-  opacity: 1;
+  opacity: 0;
   transform: translateY(0);
-  transition: opacity 0.45s ease, transform 0.45s ease;
-}
+} */
 
 /* Scroll — sections fade up as they enter view */
 .scroll-reveal {
@@ -133,14 +132,14 @@
 @media (prefers-reduced-motion: reduce) {
   .page-transition-shell,
   .page-transition-shell.page-enter-active {
-    opacity: 1;
+    opacity: 0;
     transform: none;
     transition: none;
   }
 
   .scroll-reveal,
   .scroll-reveal.scroll-reveal-visible {
-    opacity: 1;
+    opacity: 0;
     transform: none;
     transition: none;
   }
