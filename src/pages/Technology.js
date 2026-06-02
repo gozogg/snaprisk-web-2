@@ -1,5 +1,6 @@
 import '../App.css';
 import Navbar from '../components/Navbar';
+import HeroStagger, { HeroStaggerItem } from '../components/HeroStagger';
 import PixelBlast from '../components/backgrounds/PixelBlast';
 import Beams from '../components/backgrounds/Beams';
 import FloatingLines from '../components/backgrounds/FloatingLines';
@@ -75,20 +76,28 @@ function Technology() {
         <Navbar />
       </header>
 
-      <section className="relative z-10 flex min-h-[min(95vh,40rem)] w-full flex-col overflow-hidden text-center">
-        <div className="relative z-10 flex flex-1 flex-col items-center justify-start px-6 pb-14 pt-12 text-center md:px-16 md:pb-20 md:pt-20 lg:px-20">
-          <p className="m-0 text-xs font-semibold uppercase tracking-[0.22em] text-primary/80">Technology</p>
-          <h1 className="mt-3 text-4xl font-bold tracking-tight text-primary drop-shadow-md md:text-6xl">
-            You&apos;ve got the data, <br></br>now it&apos;s time to put it to work
-          </h1>
-          <p className="mt-6 max-w-4xl text-base leading-relaxed text-primary/95 drop-shadow md:mt-8 md:text-xl">
-            SnapRISK technology converts risk engineering data into action-ready insight for underwriting, operations,
-            and resilience planning. Build one connected workflow from survey scheduling through recommendation response.
-          </p>
-          <div className="flex flex-wrap items-center gap-3 pt-12">
-            <RequestDemo solution={''}/>
-          </div>
-        </div>
+      <section className="relative z-10 flex min-h-[min(95vh,40rem)] w-full flex-col overflow-hidden text-center" data-no-reveal>
+        <HeroStagger className="relative z-10 flex flex-1 flex-col items-center justify-start px-6 pb-14 pt-12 text-center md:px-16 md:pb-20 md:pt-20 lg:px-20">
+          <HeroStaggerItem>
+            <p className="m-0 text-xs font-semibold uppercase tracking-[0.22em] text-primary/80">Technology</p>
+          </HeroStaggerItem>
+          <HeroStaggerItem>
+            <h1 className="mt-3 text-4xl font-bold tracking-tight text-primary drop-shadow-md md:text-6xl">
+              You&apos;ve got the data, <br />now it&apos;s time to put it to work
+            </h1>
+          </HeroStaggerItem>
+          <HeroStaggerItem>
+            <p className="mt-6 max-w-4xl text-base leading-relaxed text-primary/95 drop-shadow md:mt-8 md:text-xl">
+              SnapRISK technology converts risk engineering data into action-ready insight for underwriting, operations,
+              and resilience planning. Build one connected workflow from survey scheduling through recommendation response.
+            </p>
+          </HeroStaggerItem>
+          <HeroStaggerItem>
+            <div className="flex flex-wrap items-center justify-center gap-3 pt-12">
+              <RequestDemo solution={''}/>
+            </div>
+          </HeroStaggerItem>
+        </HeroStagger>
       </section>
 
       <main className="relative z-10 px-6 pb-16 md:px-10 md:pb-20 lg:px-16">

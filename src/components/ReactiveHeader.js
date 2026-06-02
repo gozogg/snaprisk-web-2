@@ -1,5 +1,4 @@
-import { useState, useEffect, useRef } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+import { useEffect, useRef } from 'react';
 
 export default function ReactiveHeaderHideOnDrag({ children, scrollContainerRef, conditional, firstHiddenYValue, scrollThreshold, hiddenAtTopY }) {
   const headerRef = useRef(null);

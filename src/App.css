@@ -48,31 +48,9 @@
   min-height: 100vh;
 }
 
-/* Route change — fade/slide in
-.page-transition-shell {
-  opacity: 0;
-  transform: translateY(10px);
-}
-
-.page-transition-shell.page-enter-active {
-  opacity: 0;
-  transform: translateY(0);
-} */
-
-/* Scroll — sections fade up as they enter view */
+/* Scroll reveal initial state (animated via Framer Motion in ScrollRevealProvider) */
 .scroll-reveal {
-  opacity: 0;
-  transform: translateY(22px);
-  transition:
-    opacity 0.65s ease,
-    transform 0.65s ease;
-  transition-delay: var(--reveal-delay, 0ms);
   will-change: opacity, transform;
-}
-
-.scroll-reveal.scroll-reveal-visible {
-  opacity: 1;
-  transform: translateY(0);
 }
 
 /* IndustriesSlide — infinite marquee (content duplicated in JS for seamless loop) */
@@ -130,20 +108,6 @@
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .page-transition-shell,
-  .page-transition-shell.page-enter-active {
-    opacity: 0;
-    transform: none;
-    transition: none;
-  }
-
-  .scroll-reveal,
-  .scroll-reveal.scroll-reveal-visible {
-    opacity: 0;
-    transform: none;
-    transition: none;
-  }
-
   .industries-marquee-track {
     animation: none;
     transform: none;

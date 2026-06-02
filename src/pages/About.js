@@ -201,7 +201,7 @@ function About() {
           <div className="mt-6 rounded-3xl border border-gray-200 bg-white p-4 shadow-sm md:p-6">
             <div className="h-[500px] overflow-hidden rounded-2xl border border-gray-200 md:h-[600px]">
               <iframe
-                src="https://www.google.com/maps/d/embed?mid=1i0pWlsAbQWo4SVOTL2K7Wc8qj6DTclk&ehbc=2E312F"
+                src="https://www.google.com/maps/d/embed?mid=17TxLcn1CK1qSqiNWOQfp2wbnupUr72g&ehbc=2E312F" 
                 className="-mt-20 h-[calc(100%+5rem)] w-full"
                 loading="lazy"
                 title="SnapRISK and partner locations map"
@@ -213,10 +213,10 @@ function About() {
                 <i className="fa-solid fa-location-dot text-sm" aria-hidden="true"></i>
                 <span className="text-sm font-medium text-gray-700">SnapRISK</span>
               </div>
-              <div className="flex items-center gap-2 text-red-500">
+              {/* <div className="flex items-center gap-2 text-red-500">
                 <i className="fa-solid fa-location-dot text-sm" aria-hidden="true"></i>
                 <span className="text-sm font-medium text-gray-700">Partners</span>
-              </div>
+              </div> */}
             </div>
           </div>
         </section>

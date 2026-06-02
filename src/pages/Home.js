@@ -4,6 +4,7 @@ import IndustriesSlide from '../components/IndustriesSlide';
 import ProcessBlocks from '../components/ProcessBlocks';
 import NextSteps from '../components/NextSteps';
 import ScrollStack, { ScrollStackItem } from '../components/ScrollStack';
+import HeroStagger, { HeroStaggerItem } from '../components/HeroStagger';
 import { Link } from 'react-router-dom';
 
 const JOURNEY_STEPS = [
@@ -105,35 +106,43 @@ function Home() {
           aria-hidden
         />
 
-        <header className="hero relative z-30">
+        <div className="hero relative sticky top-0 z-30">
           <Navbar />
-        </header>
-
-        <div className="relative z-10 flex flex-1 flex-col items-start justify-center px-6 pb-16 pt-6 md:px-16 md:pb-20 md:pt-8 lg:px-20">
-          <p className="m-0 text-xs font-semibold uppercase tracking-[0.22em] text-primary/80">Welcome</p>
-          <h1 className="mt-3 max-w-3xl text-4xl font-bold leading-tight tracking-tight text-primary md:text-6xl">
-            Together in Risk
-          </h1>
-          <p className="mt-6 max-w-2xl text-lg leading-relaxed text-gray-800 md:mt-8 md:text-xl">
-            SnapRISK is a global technology company specializing in property risk engineering. We help
-            organizations navigate complex property exposures through innovative technology, deep engineering
-            expertise, and hands-on field experience.
-          </p>
-          <div className="mt-8 flex flex-wrap items-center gap-3">
-            <Link
-              to="/solutions"
-              className="rounded-md bg-primary px-5 py-2.5 font-medium text-white shadow-md transition-opacity hover:opacity-90"
-            >
-              View Solutions
-            </Link>
-            <Link
-              to="/contact?type=demo"
-              className="rounded-md border border-primary/40 bg-white/90 px-5 py-2.5 font-medium text-primary shadow-sm backdrop-blur-sm transition-colors hover:bg-white"
-            >
-              Request a Demo
-            </Link>
-          </div>
         </div>
+
+        <HeroStagger className="relative z-10 flex flex-1 flex-col items-start justify-center px-6 pb-16 pt-6 md:px-16 md:pb-20 md:pt-8 lg:px-20">
+          <HeroStaggerItem>
+            <p className="m-0 text-xs font-semibold uppercase tracking-[0.22em] text-primary/80">Welcome</p>
+          </HeroStaggerItem>
+          <HeroStaggerItem>
+            <h1 className="mt-3 max-w-3xl text-4xl font-bold leading-tight tracking-tight text-primary md:text-6xl">
+              Together in Risk
+            </h1>
+          </HeroStaggerItem>
+          <HeroStaggerItem>
+            <p className="mt-6 max-w-2xl text-lg leading-relaxed text-gray-800 md:mt-8 md:text-xl">
+              SnapRISK is a global technology company specializing in property risk engineering. We help
+              organizations navigate complex property exposures through innovative technology, deep engineering
+              expertise, and hands-on field experience.
+            </p>
+          </HeroStaggerItem>
+          <HeroStaggerItem>
+            <div className="mt-8 flex flex-wrap items-center gap-3">
+              <Link
+                to="/solutions"
+                className="rounded-md bg-primary px-5 py-2.5 font-medium text-white shadow-md transition-opacity hover:opacity-90"
+              >
+                View Solutions
+              </Link>
+              <Link
+                to="/contact?type=demo"
+                className="rounded-md border border-primary/40 bg-white/90 px-5 py-2.5 font-medium text-primary shadow-sm backdrop-blur-sm transition-colors hover:bg-white"
+              >
+                Request a Demo
+              </Link>
+            </div>
+          </HeroStaggerItem>
+        </HeroStagger>
       </section>
 
       <section className="bg-white py-12 md:py-16">

@@ -1,22 +1,26 @@
-import { useEffect, useRef } from 'react';
+import { AnimatePresence, motion, useReducedMotion } from 'framer-motion';
 import { useLocation } from 'react-router-dom';
+import { pageTransition } from '../motion/variants';
 
 export default function PageTransition({ children }) {
   const { pathname } = useLocation();
-  const shellRef = useRef(null);
+  const reducedMotion = useReducedMotion();
 
-  useEffect(() => {
-    const shell = shellRef.current;
-    if (!shell) return;
-
-    shell.classList.remove('page-enter-active');
-    void shell.offsetWidth;
-    shell.classList.add('page-enter-active');
-  }, [pathname]);
+  if (reducedMotion) {
+    return <div className="page-transition-shell">{children}</div>;
+  }
 
   return (
-    <div ref={shellRef} className="page-transition-shell">
-      {children}
-    </div>
+    <AnimatePresence mode="wait">
+      <motion.div
+        key={pathname}
+        className="page-transition-shell"
+        initial={pageTransition.initial}
+        animate={pageTransition.animate}
+        exit={pageTransition.exit}
+      >
+        {children}
+      </motion.div>
+    </AnimatePresence>
   );
 }

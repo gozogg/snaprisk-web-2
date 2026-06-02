@@ -1,7 +1,7 @@
 import { useEffect, useState, useRef } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { Popover, PopoverButton, PopoverPanel } from '@headlessui/react';
-import ReactiveHeaderHideOnDrag from './ReactiveHeader';
+import { AnimatePresence, motion } from 'framer-motion';
 
 const solutionItems = [
   { to: '/solutions/hpr', label: 'HPR', description: ' Reduce High-Property Risks', icon: 'fa-solid fa-clipboard-check' },
@@ -140,7 +140,7 @@ function DesktopDropdown({ label, to, items, linkClass, columns = 2, align = 'le
               <MegaMenuItem key={item.to} item={item} />
             ))}
           </div>
-          {label != "ABOUT" && (
+          {label !== "ABOUT" && (
             <div className="mt-1 border-t border-primary/10 px-3 py-2.5">
             <Link
               to={to}
@@ -181,27 +181,36 @@ function MobileNavSection({ title, to, items, onNavigate }) {
           <i className={`fa-solid ${open ? 'fa-chevron-up' : 'fa-chevron-down'} text-primary`} aria-hidden="true" />
         </button>
       </div>
-      {open && (
-        <ul className="m-0 list-none bg-secondary/40 pb-2">
-          {items.map(item => (
-            <li key={item.to}>
-              <Link
-                to={item.to}
-                onClick={onNavigate}
-                className="block px-4 py-2.5 text-sm text-gray-700 no-underline transition-colors hover:bg-white/80"
-              >
-                {item.label}
-              </Link>
-            </li>
-          ))}
-        </ul>
-      )}
+      <AnimatePresence initial={false}>
+        {open && (
+          <motion.ul
+            initial={{ height: 0, opacity: 0 }}
+            animate={{ height: 'auto', opacity: 1 }}
+            exit={{ height: 0, opacity: 0 }}
+            transition={{ duration: 0.22, ease: [0.25, 0.1, 0.25, 1] }}
+            className="m-0 list-none overflow-hidden bg-secondary/40 pb-2"
+          >
+            {items.map(item => (
+              <li key={item.to}>
+                <Link
+                  to={item.to}
+                  onClick={onNavigate}
+                  className="block px-4 py-2.5 text-sm text-gray-700 no-underline transition-colors hover:bg-white/80"
+                >
+                  {item.label}
+                </Link>
+              </li>
+            ))}
+          </motion.ul>
+        )}
+      </AnimatePresence>
     </li>
   );
 }
 
 function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
   const { pathname } = useLocation();
   const visible = useHideOnScroll();
 
@@ -221,13 +230,28 @@ function Navbar() {
     };
   }, [menuOpen]);
 
+  useEffect(() => {
+    const updateScrolledState = () => {
+      setIsScrolled(window.scrollY > 12);
+    };
+
+    updateScrolledState();
+    window.addEventListener('scroll', updateScrolledState, { passive: true });
+
+    return () => {
+      window.removeEventListener('scroll', updateScrolledState);
+    };
+  }, [pathname]);
+
   return (
-    // <ReactiveHeaderHideOnDrag>
-    <nav className="relative z-40 w-full px-4 py-3 md:px-6 md:py-4" style={{
-      transform: visible ? "translateY(0)" : "translateY(-100%)",
-      transition: "transform 0.3s ease",
-    }}>
-      <div className="mx-auto max-w-6xl">
+    <>
+      <div className="h-[5rem] md:h-[8rem]" aria-hidden />
+      <nav className={`fixed left-0 top-0 z-40 w-full px-4 py-3 transition-[transform,background-color,box-shadow] duration-300 md:px-6 md:py-4 ${
+        isScrolled || menuOpen ? 'bg-white/95 shadow-md backdrop-blur-sm' : 'bg-transparent shadow-none'
+      }`} style={{
+        transform: visible ? 'translateY(0)' : 'translateY(-100%)',
+      }}>
+        <div className="mx-auto max-w-6xl">
         {/* Mobile + tablet bar: logo left, menu right */}
         <div className="flex items-center justify-between md:hidden">
           <Link to="/" className="flex shrink-0 items-center" onClick={closeMenu}>
@@ -320,9 +344,9 @@ function Navbar() {
             </li>
           </ul>
         </div>
-      </div>
-    </nav>
-    // </ReactiveHeaderHideOnDrag>
+        </div>
+      </nav>
+    </>
   );
 }
 

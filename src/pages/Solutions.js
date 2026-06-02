@@ -1,6 +1,7 @@
 import '../App.css';
 import { Link } from 'react-router-dom';
 import Navbar from '../components/Navbar';
+import HeroStagger, { HeroStaggerItem } from '../components/HeroStagger';
 import DPPArrows from '../components/DPPArrows';
 import Silk from '../components/backgrounds/Silk';
 import DarkVeil from '../components/backgrounds/DarkVeil';
@@ -50,25 +51,33 @@ function Solutions() {
         <Navbar />
       </header>
 
-      <section className="relative z-10 flex min-h-[min(95vh,40rem)] w-full flex-col overflow-hidden text-center">
-        <div className="relative z-10 flex flex-1 flex-col items-center justify-start px-6 pb-14 pt-12 text-center md:px-16 md:pb-20 md:pt-20 lg:px-20">
-          <p className="m-0 text-xs font-semibold uppercase tracking-[0.22em] text-primary/80">Solutions</p>
-          <h1 className="mt-3 text-4xl font-bold tracking-tight text-primary drop-shadow-md md:text-6xl">The SnapRISK Solution</h1>
-          <p className="mt-6 max-w-5xl text-base leading-relaxed text-primary/95 drop-shadow md:mt-8 md:text-xl">
-            For almost two decades, SnapRISK has been redefining how property risks are managed-leading with our
-            powerful SnapCAT platform and unmatched HPR property risk engineering solutions. From streamlining data
-            capture to delivering high-impact insights, we help clients tackle their toughest risk challenges with
-            speed, precision, and confidence.{' '}
-            <span className="font-bold">
-              Whether you are in need of one, or multiple solutions, you can custom create your digital property
-              portfolio.
-            </span>
-          </p>
-          <div className="flex flex-wrap items-center gap-3 pt-12">
-            <LearnMore solution={''}/>
-            <RequestDemo solution={''}/>
-          </div>
-        </div>
+      <section className="relative z-10 flex min-h-[min(95vh,40rem)] w-full flex-col overflow-hidden text-center" data-no-reveal>
+        <HeroStagger className="relative z-10 flex flex-1 flex-col items-center justify-start px-6 pb-14 pt-12 text-center md:px-16 md:pb-20 md:pt-20 lg:px-20">
+          <HeroStaggerItem>
+            <p className="m-0 text-xs font-semibold uppercase tracking-[0.22em] text-primary/80">Solutions</p>
+          </HeroStaggerItem>
+          <HeroStaggerItem>
+            <h1 className="mt-3 text-4xl font-bold tracking-tight text-primary drop-shadow-md md:text-6xl">The SnapRISK Solution</h1>
+          </HeroStaggerItem>
+          <HeroStaggerItem>
+            <p className="mt-6 max-w-5xl text-base leading-relaxed text-primary/95 drop-shadow md:mt-8 md:text-xl">
+              For almost two decades, SnapRISK has been redefining how property risks are managed-leading with our
+              powerful SnapCAT platform and unmatched HPR property risk engineering solutions. From streamlining data
+              capture to delivering high-impact insights, we help clients tackle their toughest risk challenges with
+              speed, precision, and confidence.{' '}
+              <span className="font-bold">
+                Whether you are in need of one, or multiple solutions, you can custom create your digital property
+                portfolio.
+              </span>
+            </p>
+          </HeroStaggerItem>
+          <HeroStaggerItem>
+            <div className="flex flex-wrap items-center justify-center gap-3 pt-12">
+              <LearnMore solution={''}/>
+              <RequestDemo solution={''}/>
+            </div>
+          </HeroStaggerItem>
+        </HeroStagger>
       </section>
 
       <section className="relative z-10 px-6 pb-12 md:px-10 lg:px-16">
