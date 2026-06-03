@@ -4,14 +4,14 @@ import { Popover, PopoverButton, PopoverPanel } from '@headlessui/react';
 import { AnimatePresence, motion } from 'framer-motion';
 
 const solutionItems = [
-  { to: '/solutions/hpr', label: 'HPR', description: ' Reduce High-Property Risks', icon: 'fa-solid fa-clipboard-check' },
+  { to: '/solutions/hpr', label: 'HPR', description: 'Engineered Property Risk Reduction', icon: 'fa-solid fa-clipboard-check' },
   { to: '/solutions/snaprec', label: 'SnapREC®', description: 'Simplify Recommendation Tracking', icon: 'fa-solid fa-clipboard-list' },
   { to: '/solutions/snapcat', label: 'SnapCAT®', description: 'Organize Critical Asset Data', icon: 'fa-solid fa-cloud-bolt' },
-  { to: '/solutions/snapcope', label: 'SnapCOPE®', description: 'Centralize Operational Insights', icon: 'fa-solid fa-magnifying-glass' },
-  { to: '/solutions/snapir', label: 'SnapIR', description: 'Identify Thermal Issues Early', icon: 'fa-solid fa-temperature-full' },
-  { to: '/solutions/snapvalues', label: 'SnapVALUES™', description: 'Measure Risk And Performance', icon: 'fa-solid fa-coins' },
+  { to: '/solutions/snapcope', label: 'SnapCOPE®', description: 'Digitally Organized Data Collection', icon: 'fa-solid fa-magnifying-glass' },
+  { to: '/solutions/snapir', label: 'SnapIR', description: 'Identify Electrical Anomalies Early', icon: 'fa-solid fa-temperature-full' },
+  { to: '/solutions/snapvalues', label: 'SnapVALUES™', description: 'Smarter Property Value Insights', icon: 'fa-solid fa-coins' },
   { to: '/solutions/self-e-audit', label: 'Self E-Audit®', description: 'Self-Guided Risk Assessment', icon: 'fa-solid fa-gears' },
-  { to: '/solutions/snapalert', label: 'SnapALERT®', description: 'Platform-driven insights ', icon: 'fa-solid fa-triangle-exclamation' },
+  { to: '/solutions/snapalert', label: 'SnapALERT®', description: 'Platform weather-driven insights', icon: 'fa-solid fa-triangle-exclamation' },
 ];
 
 const technologyItems = [

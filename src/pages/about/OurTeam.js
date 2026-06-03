@@ -218,6 +218,22 @@ const TEAM_MEMBERS = [
     linkedin: 'https://www.linkedin.com/in/greg-lindsley-5a12785/'
   },
   {
+    id: 4,
+    name: 'Paul Fix',
+    title: 'Executive Vice President',
+    location: 'Minneapolis, MN',
+    category: 'Executive Leadership',
+    bio: `Paul Fix is an Executive Vice President with SnapRISK and has extensive experience as a sales and account management executive. 
+                  He is well-connected throughout the global risk management and insurance community. His strengths include communication, collaboration, 
+                  critical thinking, strategic vision and building relationships that last a lifetime. In his current role he will continue to expand the 
+                  SnapRISK brand experience and delivery of innovative risk control services. Prior to joining SnapRISK, Mr. Fix held a variety of leadership 
+                  roles in insurance (FM & IRI), brokerage (Aon), property risk control (Global Risk Consultants), restoration (First Onsite) and client servicing 
+                  (all of the above). At GRC, he led the global sales team and was responsible for the overall growth, retention and development of risk control 
+                  opportunities for his clients. Each of these experiences will be invaluable for him in his role at SnapRISK as we continue to grow and exceed expectations.`,
+    photo: '/img/portraits/paul_new.png',
+    linkedin: 'https://www.linkedin.com/in/paul-fix-177bb460/'
+  },
+  {
     id: 3,
     name: 'Jerry Basta',
     title: 'Executive Vice President',
@@ -232,22 +248,6 @@ const TEAM_MEMBERS = [
                   He also acted as project manager for research projects in fire protection technology, including large scale fire testing for the aerosol and consumer products industry.`,
     photo: '/img/portraits/jerry_new.png',
     linkedin: 'https://www.linkedin.com/in/jerry-basta-92729a7/'
-  },
-  {
-    id: 4,
-    name: 'Paul Fix',
-    title: 'Director of Operations',
-    location: 'Minneapolis, MN',
-    category: 'Executive Sales',
-    bio: `Paul Fix is an Executive Vice President with SnapRISK and has extensive experience as a sales and account management executive. 
-                  He is well-connected throughout the global risk management and insurance community. His strengths include communication, collaboration, 
-                  critical thinking, strategic vision and building relationships that last a lifetime. In his current role he will continue to expand the 
-                  SnapRISK brand experience and delivery of innovative risk control services. Prior to joining SnapRISK, Mr. Fix held a variety of leadership 
-                  roles in insurance (FM & IRI), brokerage (Aon), property risk control (Global Risk Consultants), restoration (First Onsite) and client servicing 
-                  (all of the above). At GRC, he led the global sales team and was responsible for the overall growth, retention and development of risk control 
-                  opportunities for his clients. Each of these experiences will be invaluable for him in his role at SnapRISK as we continue to grow and exceed expectations.`,
-    photo: '/img/portraits/paul_new.png',
-    linkedin: 'https://www.linkedin.com/in/paul-fix-177bb460/'
   },
   {
     id: 5,
@@ -297,7 +297,7 @@ const TEAM_MEMBERS = [
   {
     id: 8,
     name: 'Matthew Maday',
-    // title: 'Director of Operations',
+    title: 'Operations/Technology Director',
     location: 'Chicago, IL',
     category: 'Technology',
     bio: `Matthew holds a bachelor’s degree from Oklahoma State University in fire protection and safety
@@ -342,6 +342,7 @@ const TEAM_MEMBERS = [
     id: 11,
     name: 'Terry Chavez',
     title: 'Senior IR Thermographer',
+    location: 'United States',
     category: 'Operations',
     bio: `Terence (Terry) Chavez is Senior Infrared Thermographer at SnapRISK, bringing over 20 years of experience in electrical safety and thermography.
      He specializes in infrared surveys and inspections across industrial, commercial, and manufacturing environments, with deep expertise in electrical 
@@ -351,7 +352,7 @@ const TEAM_MEMBERS = [
      strengthening his experience in safety consulting and code compliance. Most recently, he has been recognized for his expertise in forensic analysis
       of PV power generation and solar array structures, while also serving as an FAA Certified Part 107 Drone Pilot, enhancing aerial inspection capabilities.
  `,
-    photo: '/img/portraits/terry_new.png',
+    photo: '/img/portraits/terry_new2.png',
     linkedin: 'https://www.linkedin.com/in/terry-c-b72645319/'
   },
 ];
@@ -368,7 +369,7 @@ function OurTeam() {
       <main className="content px-4 pb-14 md:px-8 md:pb-18">
         <section className="mx-auto mt-10 max-w-5xl rounded-3xl border border-white/10 bg-secondary p-8 shadow-2xl shadow-primary/10 md:mt-14 md:p-12">
           <p className="text-center text-xs font-semibold uppercase tracking-[0.24em] text-primary/80">
-            Meet Our Team
+            Meet Our Leadership Team
           </p>
           <h1 className="mt-3 text-center text-4xl font-bold leading-tight text-primary md:text-5xl">
             A Proven Global Team

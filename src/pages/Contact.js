@@ -292,15 +292,15 @@ function Contact() {
                     </label>
                     <label className="flex items-center gap-2 text-sm text-gray-700">
                       <input type="checkbox" name="solutionsInterestedIn" value="snaprec" defaultChecked={solution === 'snaprec'} className="h-4 w-4 accent-primary" />
-                      SnapREC
+                      SnapREC®
                     </label>
                     <label className="flex items-center gap-2 text-sm text-gray-700">
                       <input type="checkbox" name="solutionsInterestedIn" value="snapcat" defaultChecked={solution === 'snapcat'} className="h-4 w-4 accent-primary" />
-                      SnapCAT
+                      SnapCAT®
                     </label>
                     <label className="flex items-center gap-2 text-sm text-gray-700">
                       <input type="checkbox" name="solutionsInterestedIn" value="snapcope" defaultChecked={solution === 'snapcope'} className="h-4 w-4 accent-primary" />
-                      SnapCOPE
+                      SnapCOPE®
                     </label>
                     <label className="flex items-center gap-2 text-sm text-gray-700">
                       <input type="checkbox" name="solutionsInterestedIn" value="snapir" defaultChecked={solution === 'snapir'} className="h-4 w-4 accent-primary" />
@@ -308,15 +308,15 @@ function Contact() {
                     </label>
                     <label className="flex items-center gap-2 text-sm text-gray-700">
                       <input type="checkbox" name="solutionsInterestedIn" value="snapvalues" defaultChecked={solution === 'snapvalues'} className="h-4 w-4 accent-primary" />
-                      SnapVALUES
+                      SnapVALUES™
                     </label>
                     <label className="flex items-center gap-2 text-sm text-gray-700">
                       <input type="checkbox" name="solutionsInterestedIn" value="self-e-audit" defaultChecked={solution === 'self-e-audit'} className="h-4 w-4 accent-primary" />
-                      Self eAudit
+                      Self E-Audit®
                     </label>
                     <label className="flex items-center gap-2 text-sm text-gray-700">
                       <input type="checkbox" name="solutionsInterestedIn" value="snapalert" defaultChecked={solution === 'snapalert'} className="h-4 w-4 accent-primary" />
-                      SnapALERT
+                      SnapALERT®
                     </label>
                     <label className="flex items-center gap-2 text-sm text-gray-700">
                       <input type="checkbox" name="solutionsInterestedIn" value="snapalert" defaultChecked={solution === 'dashboard'} className="h-4 w-4 accent-primary" />
@@ -394,15 +394,15 @@ function Contact() {
                     </label>
                     <label className="flex items-center gap-2 text-sm text-gray-700">
                       <input type="checkbox" name="solutionsInterestedIn" value="snaprec" defaultChecked={solution === 'snaprec'} className="h-4 w-4 accent-primary" />
-                      SnapREC
+                      SnapREC®
                     </label>
                     <label className="flex items-center gap-2 text-sm text-gray-700">
                       <input type="checkbox" name="solutionsInterestedIn" value="snapcat" defaultChecked={solution === 'snapcat'} className="h-4 w-4 accent-primary" />
-                      SnapCAT
+                      SnapCAT®
                     </label>
                     <label className="flex items-center gap-2 text-sm text-gray-700">
                       <input type="checkbox" name="solutionsInterestedIn" value="snapcope" defaultChecked={solution === 'snapcope'} className="h-4 w-4 accent-primary" />
-                      SnapCOPE
+                      SnapCOPE®
                     </label>
                     <label className="flex items-center gap-2 text-sm text-gray-700">
                       <input type="checkbox" name="solutionsInterestedIn" value="snapir" defaultChecked={solution === 'snapir'} className="h-4 w-4 accent-primary" />
@@ -410,15 +410,15 @@ function Contact() {
                     </label>
                     <label className="flex items-center gap-2 text-sm text-gray-700">
                       <input type="checkbox" name="solutionsInterestedIn" value="snapvalues" defaultChecked={solution === 'snapvalues'} className="h-4 w-4 accent-primary" />
-                      SnapVALUES
+                      SnapVALUES™
                     </label>
                     <label className="flex items-center gap-2 text-sm text-gray-700">
                       <input type="checkbox" name="solutionsInterestedIn" value="self-e-audit" defaultChecked={solution === 'self-e-audit'} className="h-4 w-4 accent-primary" />
-                      Self eAudit
+                      Self E-Audit®
                     </label>
                     <label className="flex items-center gap-2 text-sm text-gray-700">
                       <input type="checkbox" name="solutionsInterestedIn" value="snapalert" defaultChecked={solution === 'snapalert'} className="h-4 w-4 accent-primary" />
-                      SnapALERT
+                      SnapALERT®
                     </label>
                   </div>
                 </fieldset>

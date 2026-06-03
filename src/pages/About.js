@@ -114,7 +114,7 @@ function About() {
               </p>
               <p className="mt-2 text-sm font-semibold text-gray-900">Industries Served</p>
               <p className="mt-2 text-sm text-gray-600">
-                No matter the sector, we have the power.
+                No matter the industry, we have the power.
               </p>
             </article>
           </div>

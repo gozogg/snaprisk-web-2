@@ -134,7 +134,7 @@ function TeamMemberCard({ member, isSelected, onSelect }) {
       <div className="min-h-screen px-4 py-12 sm:px-6 lg:px-8">
         <div className="mx-auto max-w-7xl">
           <header className="mb-10 sm:mb-14 text-center">
-            <h1 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">Our Team</h1>
+            <h1 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">Our Leaders</h1>
             <p className="mt-2 text-gray-500">Meet the people behind our mission — leaders, builders, and innovators shaping the future.</p>
           </header>
   

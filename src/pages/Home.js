@@ -112,7 +112,7 @@ function Home() {
 
         <HeroStagger className="relative z-10 flex flex-1 flex-col items-start justify-center px-6 pb-16 pt-6 md:px-16 md:pb-20 md:pt-8 lg:px-20">
           <HeroStaggerItem>
-            <p className="m-0 text-xs font-semibold uppercase tracking-[0.22em] text-primary/80">Welcome</p>
+            <p className="m-0 text-sm font-semibold uppercase tracking-[0.22em] text-primary/80">Welcome</p>
           </HeroStaggerItem>
           <HeroStaggerItem>
             <h1 className="mt-3 max-w-3xl text-4xl font-bold leading-tight tracking-tight text-primary md:text-6xl">
@@ -148,7 +148,7 @@ function Home() {
       <section className="bg-white py-12 md:py-16">
         <div className="sticky top-0 z-20 mx-auto max-w-6xl border-b border-primary/10 bg-white/95 px-6 py-4 text-center backdrop-blur md:px-10 lg:px-16">
           <p className="m-0 text-xl font-semibold uppercase tracking-[0.25em] text-primary">
-            The journey with SnapRISK
+            The Journey with <span className= "snaprisk-font">S</span><span className= "snaprisk-font lowercase">nap</span><span className= "snaprisk-font uppercase">RISK</span>
           </p>
           <p className="mx-auto mt-3 max-w-lg text-base leading-relaxed text-gray-600 md:text-lg">
             Six stages from first conversation to lasting partnership.
