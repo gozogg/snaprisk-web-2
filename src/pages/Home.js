@@ -6,6 +6,8 @@ import NextSteps from '../components/NextSteps';
 import ScrollStack, { ScrollStackItem } from '../components/ScrollStack';
 import HeroStagger, { HeroStaggerItem } from '../components/HeroStagger';
 import { Link } from 'react-router-dom';
+import {motion} from 'framer-motion'
+
 
 const JOURNEY_STEPS = [
   {
@@ -145,6 +147,10 @@ function Home() {
         </HeroStagger>
       </section>
 
+      <motion.div   
+        initial={{ opacity: 0, y: 50 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6 }}>
       <section className="bg-white py-12 md:py-16">
         <div className="sticky top-0 z-20 mx-auto max-w-6xl border-b border-primary/10 bg-white/95 px-6 py-4 text-center backdrop-blur md:px-10 lg:px-16">
           <p className="m-0 text-xl font-semibold uppercase tracking-[0.25em] text-primary">
@@ -212,6 +218,7 @@ function Home() {
           <ProcessBlocks />
         </div>
       </section>
+      </motion.div>
 
       {/* <section
         className="relative overflow-hidden px-6 pb-20 pt-10 text-center md:px-10 lg:px-16"

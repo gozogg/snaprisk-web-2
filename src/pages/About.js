@@ -201,7 +201,7 @@ function About() {
           <div className="mt-6 rounded-3xl border border-gray-200 bg-white p-4 shadow-sm md:p-6">
             <div className="h-[500px] overflow-hidden rounded-2xl border border-gray-200 md:h-[600px]">
               <iframe
-                src="https://www.google.com/maps/d/embed?mid=17TxLcn1CK1qSqiNWOQfp2wbnupUr72g&ehbc=2E312F" 
+                src="https://www.google.com/maps/d/embed?mid=1uExt5zrGSI_xbBLmdVYaklqLEtHlUgM" 
                 className="-mt-20 h-[calc(100%+5rem)] w-full"
                 loading="lazy"
                 title="SnapRISK and partner locations map"
