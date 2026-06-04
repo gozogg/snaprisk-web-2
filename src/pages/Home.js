@@ -2,7 +2,7 @@ import '../App.css';
 import Navbar from '../components/Navbar';
 import IndustriesSlide from '../components/IndustriesSlide';
 import ProcessBlocks from '../components/ProcessBlocks';
-import NextSteps from '../components/NextSteps';
+// import NextSteps from '../components/NextSteps';
 import ScrollStack, { ScrollStackItem } from '../components/ScrollStack';
 import HeroStagger, { HeroStaggerItem } from '../components/HeroStagger';
 import { Link } from 'react-router-dom';

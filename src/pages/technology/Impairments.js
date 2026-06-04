@@ -1,6 +1,6 @@
 import '../../App.css';
 import Navbar from '../../components/Navbar';
-import { Link } from 'react-router-dom';
+// import { Link } from 'react-router-dom';
 import RequestDemo from '../../components/RequestDemo';
 
 function Impairments() {

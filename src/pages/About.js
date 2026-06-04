@@ -1,8 +1,8 @@
 import { useEffect, useState } from 'react';
 import '../App.css';
 import Navbar from '../components/Navbar';
-import Threads from '../components/backgrounds/Threads';
-import DotGrid from '../components/backgrounds/DotGrid';
+// import Threads from '../components/backgrounds/Threads';
+// import DotGrid from '../components/backgrounds/DotGrid';
 import LiquidChrome from '../components/backgrounds/LiquidChrome';
 import RequestDemo from '../components/RequestDemo';
 import { Link } from 'react-router-dom';
@@ -207,17 +207,17 @@ function About() {
                 title="SnapRISK and partner locations map"
               />
             </div>
-            <div className="mx-auto mt-4 flex w-full max-w-full flex-wrap items-center justify-center gap-x-6 gap-y-2 rounded-xl border border-primary/15 bg-secondary px-4 py-2.5 sm:w-1/2 sm:max-w-none">
-              <span className="text-xs font-semibold uppercase tracking-[0.14em] text-gray-500">Legend</span>
+            {/* <div className="mx-auto mt-4 flex w-full max-w-full flex-wrap items-center justify-center gap-x-6 gap-y-2 rounded-xl border border-primary/15 bg-secondary px-4 py-2.5 sm:w-1/2 sm:max-w-none"> */}
+              {/* <span className="text-xs font-semibold uppercase tracking-[0.14em] text-gray-500">Legend</span>
               <div className="flex items-center gap-2 text-primary">
                 <i className="fa-solid fa-location-dot text-sm" aria-hidden="true"></i>
                 <span className="text-sm font-medium text-gray-700">SnapRISK</span>
-              </div>
+              </div> */}
               {/* <div className="flex items-center gap-2 text-red-500">
                 <i className="fa-solid fa-location-dot text-sm" aria-hidden="true"></i>
                 <span className="text-sm font-medium text-gray-700">Partners</span>
               </div> */}
-            </div>
+            {/* </div> */}
           </div>
         </section>
       </main>

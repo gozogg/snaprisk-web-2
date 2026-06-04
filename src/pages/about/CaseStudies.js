@@ -16,37 +16,37 @@ const CLIENT_TESTIMONIALS = [
   },
   {
     quote_1:
-      `In 2017, a national restaurant group launched a strategic data improvement initiative to strengthen its property insurance program. SnapCAT® Natural Catastrophe Risk Assessments were deployed across Florida locations, resulting in $1M in premium savings at renewal. Encouraged by the outcome, the client expanded the program to California in 2018, achieving an additional $800K in savings. `,
-    quote_2: `This early success led to continued assessments across Gulf Coast properties in year three and a sustained, year-over-year expansion. They continued engaging SnapCAT® for surveys for 10 years, and in 2020, the client also adopted Self E-Audit® to scale internal visibility and maintain underwriting confidence.`,
+      `A national restaurant group launched a strategic data improvement initiative to strengthen its property insurance program. SnapCAT® Natural Catastrophe Risk Assessments were deployed across Florida locations, resulting in $1M in premium savings at renewal. Encouraged by the outcome, the client then expanded the program to California, achieving an additional $800K in savings. `,
+    quote_2: `This early success led to continued assessments across Gulf Coast properties in year three and a sustained, year-over-year expansion. They continued engaging SnapCAT® for surveys for 10 years, and eventually, the client also adopted Self E-Audit® to scale internal visibility and maintain underwriting confidence.`,
     name: 'National Restaurant Group',
     title: 'Industry: Multi- brand casual dining',
     logo: '/img/testimonials/casual-dining.jpeg'
   },
   {
     quote_1:
-      `Beginning in 2007, a national retail REIT engaged SnapRISK® for COPE data consulting. In 2011, they launched a two-year initiative using SnapCAT® Natural Catastrophe Risk Assessments to support a layered insurance program—starting with Florida and California properties.`,
+      `A national retail REIT engaged SnapRISK® for COPE data consulting. They launched a two-year initiative using SnapCAT® Natural Catastrophe Risk Assessments to support a layered insurance program—starting with Florida and California properties.`,
     quote_2: `The impact was immediate: SnapCAT® enabled geospatial visibility and RMS-modeled insights that reshaped renewal conversations. The client saved $3.8M in premium over two years, directly attributed to the initiative, against a $386K spend— delivering a 9.8x ROI. 
 
-Following this success, the REIT embedded its “data improvement story” into renewal marketing, earning top-tier positioning with underwriters and avoiding steep rate increases during the hard market. The engagement expanded to Gulf Coast properties and continued through 2021, completing a full portfolio transformation.`,
+Following this success, the REIT embedded its “data improvement story” into renewal marketing, earning top-tier positioning with underwriters and avoiding steep rate increases during the hard market. The engagement expanded to Gulf Coast properties, completing a full portfolio transformation.`,
     name: 'National Retail Real Estate Portfolio',
     title: 'Industry- Retail Real Estate Investment Trust',
     logo: '/img/testimonials/real-estate.jpeg'
   },
   {
     quote_1:
-      `In 2013, a national department store chain launched a targeted initiative to improve natural catastrophe data quality and drive differentiated outcomes in a tightening insurance market. The journey began with SnapCAT®assessments in Florida (Year 1) and California (Year 2), resulting in $1.8M in premium savings over two years—delivering a 4.5x ROI on a $384,600 investment. To scale the initiative, SnapRISK® consultants conducted high- value surveys and trained local personnel for virtual assessments. In Year 3, the program expanded to Gulf Coast stores.`,
-    quote_2: `By 2017, the client transitioned all HPR engineering work to SnapRISK® for their distribution centers, citing improved renewal outcomes. This engagement remains active today, with the client continuing to invest in risk visibility and portfolio-wide data improvement.`,
+      `A national department store chain launched a targeted initiative to improve natural catastrophe data quality and drive differentiated outcomes in a tightening insurance market. The journey began with SnapCAT®assessments in Florida (Year 1) and California (Year 2), resulting in $1.8M in premium savings over two years—delivering a 4.5x ROI on a $384,600 investment. To scale the initiative, SnapRISK® consultants conducted high- value surveys and trained local personnel for virtual assessments. In Year 3, the program expanded to Gulf Coast stores.`,
+    quote_2: `Within 5 years, the client transitioned all HPR engineering work to SnapRISK® for their distribution centers, citing improved renewal outcomes. This engagement remains active today, with the client continuing to invest in risk visibility and portfolio-wide data improvement.`,
     name: 'National Department Store Chain',
     title: 'Industry- National Retail Chain',
     logo: '/img/testimonials/retail.jpeg'
   },
 ];
 
-const IMPACT_METRICS = [
-  { label: 'Average Reporting Speed Improvement', value: '35%' },
-  { label: 'Typical Data Completeness Increase', value: '2.3x' },
-  { label: 'Portfolio Visibility Across Programs', value: 'End-to-end' },
-];
+// const IMPACT_METRICS = [
+//   { label: 'Average Reporting Speed Improvement', value: '35%' },
+//   { label: 'Typical Data Completeness Increase', value: '2.3x' },
+//   { label: 'Portfolio Visibility Across Programs', value: 'End-to-end' },
+// ];
 
 function CaseStudies() {
   return (
