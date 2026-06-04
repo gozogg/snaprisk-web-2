@@ -1,9 +1,9 @@
 import '../App.css';
 import Navbar from '../components/Navbar';
 import HeroStagger, { HeroStaggerItem } from '../components/HeroStagger';
-import PixelBlast from '../components/backgrounds/PixelBlast';
-import Beams from '../components/backgrounds/Beams';
-import FloatingLines from '../components/backgrounds/FloatingLines';
+// import PixelBlast from '../components/backgrounds/PixelBlast';
+// import Beams from '../components/backgrounds/Beams';
+// import FloatingLines from '../components/backgrounds/FloatingLines';
 import LiquidChrome from '../components/backgrounds/LiquidChrome';
 import RequestDemo from '../components/RequestDemo';
 
@@ -83,7 +83,7 @@ function Technology() {
           </HeroStaggerItem>
           <HeroStaggerItem>
             <h1 className="mt-3 text-4xl font-bold tracking-tight text-primary drop-shadow-md md:text-6xl">
-              You&apos;ve got the data, <br />now it&apos;s time to put it to work
+              You have got the data, <br />now it is time to put it to work
             </h1>
           </HeroStaggerItem>
           <HeroStaggerItem>

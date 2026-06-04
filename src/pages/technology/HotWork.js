@@ -17,7 +17,7 @@ function HotWork() {
             <h1 className="mt-3 text-4xl font-semibold tracking-tight text-gray-900 md:text-5xl">Hot Work Management</h1>
             <p className="mt-3 text-xl font-medium text-primary md:text-2xl">Control High-Risk Work. Prevent Loss Before It Happens </p>
             <p className="mt-6 text-base leading-relaxed text-gray-700 md:text-lg">
-            Hot work introduce significant fire risk if not properly managed. 
+            Hot work introduces significant fire risk if not properly managed. 
             </p>
             <p className="mt-4 text-base leading-relaxed text-gray-700 md:text-lg">
             SnapRISK digitizes the entire hot work process, transforming manual permits into standardized, trackable workflows that improve safety, compliance, and accountability.

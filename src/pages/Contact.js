@@ -242,7 +242,7 @@ function Contact() {
             {inquiryType === 'demo' && (
               <form className="space-y-5" onSubmit={handleDemo}>
                 <h2 className="text-3xl font-semibold tracking-tight text-gray-900">Request Demo</h2>
-                <p className="text-gray-600">Tell us about your portfolio and we&apos;ll schedule a tailored walkthrough.</p>
+                <p className="text-gray-600">Tell us about your portfolio and we will schedule a tailored walkthrough.</p>
 
                 <div className="grid gap-5 md:grid-cols-2">
                   <div>
@@ -489,7 +489,7 @@ function Contact() {
                     name="experience"
                     rows="4"
                     className={fieldClassName}
-                    placeholder="Tell us a bit about your background and why you&apos;re interested in SnapRISK."
+                    placeholder="Tell us a bit about your background and why you are interested in SnapRISK."
                   />
                 </div>
 
@@ -518,7 +518,7 @@ function Contact() {
             {inquiryType === 'queries' && (
               <form className="space-y-5" onSubmit={handleSubmit}>
                 <h2 className="text-3xl font-semibold tracking-tight text-gray-900">Additional Queries</h2>
-                <p className="text-gray-600">Send us your question and we&apos;ll route it to the right team.</p>
+                <p className="text-gray-600">Send us your question and we will route it to the right team.</p>
 
                 <div className="grid gap-5 md:grid-cols-2">
                   <div>

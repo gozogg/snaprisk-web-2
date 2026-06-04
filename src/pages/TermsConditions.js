@@ -81,7 +81,7 @@ export default function TermsConditions() {
             National Council (WBENC), the nation&apos;s largest certifier of women-owned businesses. We are also
             a certified Small Business Enterprise with the Florida State Minority Supplier Development Council.
             We recognize the importance of supplier diversity embraced by today&apos;s leading corporations and
-            government agencies—and we&apos;re ready to help strengthen your supply chain through inclusive
+            government agencies—and we are ready to help strengthen your supply chain through inclusive
             partnerships.
               </p>
             </div>
