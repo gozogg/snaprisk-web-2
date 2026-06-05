@@ -1,25 +1,26 @@
 import { AnimatePresence, motion, useReducedMotion } from 'framer-motion';
-import { useLocation } from 'react-router-dom';
+import { useLocation, useOutlet } from 'react-router-dom';
 import { pageTransition } from '../motion/variants';
 
-export default function PageTransition({ children }) {
-  const { pathname } = useLocation();
+export default function PageTransition() {
+  const location = useLocation();
+  const outlet = useOutlet();
   const reducedMotion = useReducedMotion();
 
   if (reducedMotion) {
-    return <div className="page-transition-shell">{children}</div>;
+    return <div className="page-transition-shell">{outlet}</div>;
   }
 
   return (
-    <AnimatePresence mode="wait">
+    <AnimatePresence initial={false}>
       <motion.div
-        key={pathname}
+        key={location.key}
         className="page-transition-shell"
         initial={pageTransition.initial}
         animate={pageTransition.animate}
         exit={pageTransition.exit}
       >
-        {children}
+        {outlet}
       </motion.div>
     </AnimatePresence>
   );

@@ -366,7 +366,7 @@ function OurTeam() {
         <Navbar />
       </header>
 
-      <main className="content px-4 pb-14 md:px-8 md:pb-18">
+      <main className="px-4 pb-14 md:px-8 md:pb-18">
         <section className="mx-auto mt-10 max-w-5xl rounded-3xl border border-white/10 bg-secondary p-8 shadow-2xl shadow-primary/10 md:mt-14 md:p-12">
           <p className="text-center text-xs font-semibold uppercase tracking-[0.24em] text-primary/80">
             Meet Our Leadership Team

@@ -1,5 +1,8 @@
 import { useState } from 'react';
+import { createPortal } from 'react-dom';
 import { AnimatePresence, motion } from 'framer-motion';
+
+const modalTransition = { type: 'spring', stiffness: 400, damping: 32 };
 
 function TeamMemberCard({ member, isSelected, onSelect }) {
     return (
@@ -7,7 +10,6 @@ function TeamMemberCard({ member, isSelected, onSelect }) {
         {!isSelected ? (
           <motion.button
             type="button"
-            layoutId={`team-card-${member.id}`}
             onClick={() => onSelect(member)}
             className="group w-full text-left cursor-pointer"
             whileHover={{ y: -6 }}
@@ -55,7 +57,7 @@ function TeamMemberCard({ member, isSelected, onSelect }) {
   }
   
   function TeamMemberModal({ member, onClose }) {
-    return (
+    return createPortal(
       <>
         <motion.div
           initial={{ opacity: 0 }}
@@ -68,9 +70,11 @@ function TeamMemberCard({ member, isSelected, onSelect }) {
   
         <div className="pointer-events-none fixed inset-0 z-50 flex items-center justify-center p-4 sm:p-6">
           <motion.div
-            layoutId={`team-card-${member.id}`}
+            initial={{ opacity: 0, scale: 0.96, y: 12 }}
+            animate={{ opacity: 1, scale: 1, y: 0 }}
+            exit={{ opacity: 0, scale: 0.96, y: 12 }}
+            transition={modalTransition}
             className="pointer-events-auto w-full max-w-md overflow-hidden rounded-2xl bg-white shadow-2xl ring-1 ring-gray-950/10"
-            transition={{ type: 'spring', stiffness: 300, damping: 30 }}
           >
             <div className="relative aspect-[4/3] overflow-hidden sm:aspect-[3/2]">
               <img src={member.photo} alt={member.name} className="h-full w-full object-cover object-top" />
@@ -123,7 +127,8 @@ function TeamMemberCard({ member, isSelected, onSelect }) {
             </div>
           </motion.div>
         </div>
-      </>
+      </>,
+      document.body
     );
   }
   
@@ -145,7 +150,15 @@ function TeamMemberCard({ member, isSelected, onSelect }) {
           </div>
         </div>
   
-        <AnimatePresence>{selectedMember && <TeamMemberModal member={selectedMember} onClose={() => setSelectedMember(null)} />}</AnimatePresence>
+        <AnimatePresence>
+          {selectedMember && (
+            <TeamMemberModal
+              key={selectedMember.id}
+              member={selectedMember}
+              onClose={() => setSelectedMember(null)}
+            />
+          )}
+        </AnimatePresence>
       </div>
     );
   }
