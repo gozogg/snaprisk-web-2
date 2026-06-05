@@ -192,7 +192,7 @@ const TEAM_MEMBERS = [
     id: 1,
     name: 'Ellen Michael',
     title: 'President',
-    location: 'United States',
+    location: 'United States ',
     category: 'Executive Leadership',
     bio: `As President of SnapRISK, Ellen Marie Michael leads with over 30 years of experience in HPR account management, sales, and executive leadership. 
                   A former risk manager and seasoned industry executive, Ellen understands the challenges risk professionals face and turns that insight into practical, strategic 
