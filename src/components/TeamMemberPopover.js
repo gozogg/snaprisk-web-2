@@ -132,24 +132,50 @@ function TeamMemberCard({ member, isSelected, onSelect }) {
     );
   }
   
-  export default function TeamDemo({teamMembers}) {
+  export default function TeamDemo({ leadershipMembers = [], teamMembers = [] }) {
     const [selectedMember, setSelectedMember] = useState(null);
-  
+    const allMembers = [...leadershipMembers, ...teamMembers];
+
+    const renderCard = member => (
+      <TeamMemberCard
+        key={member.id}
+        member={member}
+        isSelected={selectedMember?.id === member.id}
+        onSelect={setSelectedMember}
+      />
+    );
+
     return (
-      <div className="min-h-screen px-4 py-12 sm:px-6 lg:px-8">
+      <div className="px-4 pb-12 sm:px-6 lg:px-8 py-12">
         <div className="mx-auto max-w-7xl">
-          <header className="mb-10 sm:mb-14 text-center">
+          <header className="mb-10 text-center sm:mb-14">
             <h1 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">Our Leaders</h1>
-            <p className="mt-2 text-gray-500">Meet the people behind our mission — leaders, builders, and innovators shaping the future.</p>
+            <p className="mt-2 text-gray-500">
+              Meet the people behind our mission — leaders, builders, and innovators shaping the future.
+            </p>
           </header>
-  
-          <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 sm:gap-7 lg:grid-cols-4 lg:gap-8 2xl:grid-cols-4">
-            {teamMembers.map(member => (
-              <TeamMemberCard key={member.id} member={member} isSelected={selectedMember?.id === member.id} onSelect={setSelectedMember} />
-            ))}
+
+          {/* Mobile + tablet: single grid */}
+          <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 sm:gap-7 lg:hidden">
+            {allMembers.map(renderCard)}
+          </div>
+
+          {/* Large screens: leadership row + team grid */}
+          <div className="hidden lg:block">
+            {leadershipMembers.length > 0 && (
+              <div className="mx-auto grid w-full max-w-5xl grid-cols-3 gap-8">
+                {leadershipMembers.map(renderCard)}
+              </div>
+            )}
+
+            {teamMembers.length > 0 && (
+              <div className="mx-auto mt-12 grid w-full max-w-7xl grid-cols-4 gap-8">
+                {teamMembers.map(renderCard)}
+              </div>
+            )}
           </div>
         </div>
-  
+
         <AnimatePresence>
           {selectedMember && (
             <TeamMemberModal

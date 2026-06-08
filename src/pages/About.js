@@ -200,11 +200,16 @@ function About() {
 
           <div className="mt-6 rounded-3xl border border-gray-200 bg-white p-4 shadow-sm md:p-6">
             <div className="h-[500px] overflow-hidden rounded-2xl border border-gray-200 md:h-[600px]">
-              <iframe
+              {/* <iframe
                 src="https://www.google.com/maps/d/embed?mid=1uExt5zrGSI_xbBLmdVYaklqLEtHlUgM" 
                 className="-mt-20 h-[calc(100%+5rem)] w-full"
                 loading="lazy"
                 title="SnapRISK and partner locations map"
+              /> */}
+              <img
+                src="/img/team_map.png"
+                alt="SnapRISK global team locations map"
+                className="h-full w-full object-fill"
               />
             </div>
             {/* <div className="mx-auto mt-4 flex w-full max-w-full flex-wrap items-center justify-center gap-x-6 gap-y-2 rounded-xl border border-primary/15 bg-secondary px-4 py-2.5 sm:w-1/2 sm:max-w-none"> */}

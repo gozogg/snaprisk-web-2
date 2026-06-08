@@ -187,7 +187,7 @@ import TeamDemo from '../../components/TeamMemberPopover';
 //   }
 // ]
 
-const TEAM_MEMBERS = [
+const TEAM_MEMBERS_LEADERSHIP = [
   {
     id: 1,
     name: 'Ellen Michael',
@@ -232,7 +232,10 @@ const TEAM_MEMBERS = [
                   opportunities for his clients. Each of these experiences will be invaluable for him in his role at SnapRISK as we continue to grow and exceed expectations.`,
     photo: '/img/portraits/paul_new.png',
     linkedin: 'https://www.linkedin.com/in/paul-fix-177bb460/'
-  },
+  }
+]
+
+const TEAM_MEMBERS = [
   {
     id: 3,
     name: 'Jerry Basta',
@@ -297,9 +300,9 @@ const TEAM_MEMBERS = [
   {
     id: 8,
     name: 'Matthew Maday',
-    title: 'Operations/Technology Director',
+    title: 'Technology/Operations Director',
     location: 'Chicago, IL',
-    category: 'Technology',
+    category: 'Technology/Operations',
     bio: `Matthew holds a bachelor’s degree from Oklahoma State University in fire protection and safety
                   engineering technology. He began his career at FM Global as a field engineer and then as a licensed
                   adjuster. Since joining the team, Matthew has applied his practical experience and knowledge to help
@@ -388,7 +391,7 @@ function OurTeam() {
           </div>
         </section>
 
-        <TeamDemo teamMembers={TEAM_MEMBERS} />
+        <TeamDemo leadershipMembers={TEAM_MEMBERS_LEADERSHIP} teamMembers={TEAM_MEMBERS} />
       </main>
 
 {/* OLD TEAM SECTIONS */}

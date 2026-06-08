@@ -78,21 +78,10 @@ export default function TermsConditions() {
               <p className="mt-3">
               Carrington Risk Consulting LLC, doing business as SnapRISK, is proud to be a woman-founded,
             female-run business. We support and align with the mission of the Women&apos;s Business Enterprise
-            National Council (WBENC), the nation&apos;s largest certifier of women-owned businesses. We are also
-            a certified Small Business Enterprise with the Florida State Minority Supplier Development Council.
+            National Council (WBENC), the nation&apos;s largest certifier of women-owned businesses.
             We recognize the importance of supplier diversity embraced by today&apos;s leading corporations and
             government agencies—and we are ready to help strengthen your supply chain through inclusive
             partnerships.
-              </p>
-            </div>
-
-            <div>
-              <h2 className="text-lg font-semibold text-gray-900 underline decoration-primary/30 underline-offset-4">
-                Changes to Terms and Conditions
-              </h2>
-              <p className="mt-3">
-                We reserve the right to modify or amend these terms and conditions at any time. Any changes we make will
-                be posted on this page.
               </p>
             </div>
 

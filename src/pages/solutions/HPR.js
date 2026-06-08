@@ -10,7 +10,7 @@ function HPR() {
         imageSrc="/img/solutions/HPR.png"
         imageAlt="HPR Risk Engineering"
         title="HPR Risk Engineering"
-        description="SnapRISK delivers modern, tech-powered HPR property risk engineering for complex, high-value facilities. We go beyond traditional inspections—providing deeper risk insight that supports stronger coverage and better client outcomes. We combine deep HPR engineering expertise with mobile-first technology to make risk data work harder, faster, and smarter—for brokers, carriers, and risk professionals alike."
+        description="SnapRISK delivers modern, tech-powered HPR property risk engineering for complex, high-value facilities. Our field risk engineering services go beyond traditional inspections—providing deeper risk insight that supports stronger coverage and better client outcomes. We combine deep HPR engineering expertise with mobile-first technology to make risk data work harder, faster, and smarter—for brokers, carriers, and risk professionals alike."
         solution="hpr"
       />
 
