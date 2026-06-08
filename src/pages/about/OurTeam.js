@@ -300,7 +300,7 @@ const TEAM_MEMBERS = [
   {
     id: 8,
     name: 'Matthew Maday',
-    title: 'Technology/Operations Director',
+    title: 'Director',
     location: 'Chicago, IL',
     category: 'Technology/Operations',
     bio: `Matthew holds a bachelor’s degree from Oklahoma State University in fire protection and safety
