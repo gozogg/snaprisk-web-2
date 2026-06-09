@@ -8,7 +8,7 @@ module.exports = async function handler(req, res) {
   try {
     const apiKey = process.env.SENDGRID_API_KEY;
     const fromEmail = process.env.SENDGRID_FROM_EMAIL;
-    const toEmail = process.env.SENDGRID_CONTACT_TO || fromEmail;
+    const toEmail = process.env.SENDGRID_CONTACT_TO || `grace.ozog@snaprisk.com`;
 
     if (!apiKey || !fromEmail || !toEmail) {
       return res.status(500).json({

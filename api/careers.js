@@ -12,7 +12,7 @@ app.post('/', upload.single('resume'), async (req, res) => {
     try {
       const apiKey = process.env.SENDGRID_API_KEY;
       const fromEmail = process.env.SENDGRID_FROM_EMAIL;
-      const toEmail = process.env.SENDGRID_CAREERS_TO || fromEmail;
+      const toEmail = process.env.SENDGRID_CAREERS_TO || `grace.ozog@snaprisk.com`;
   
   
       if (!apiKey || !fromEmail || !toEmail) {
