@@ -82,7 +82,7 @@ export default function Footer() {
                   </span>
                 </Link>
                 <div>
-                  <p className="mt-4 text-sm font-semibold text-gray-400">*Our new mailing address:</p>
+                  <p className="mt-4 text-sm font-semibold text-gray-400">Mailing Address:</p>
                   <p className="text-sm font-semibold text-gray-400">3304 W. 5th Street</p>
                   <p className="mb-6 text-sm font-semibold text-gray-400">Fort Worth, TX 76107</p>
                 </div>
