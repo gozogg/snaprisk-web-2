@@ -23,8 +23,17 @@ function IRDashboard() {
             <p className="mt-4 text-base leading-relaxed text-gray-700 md:text-lg">
             By centralizing infrared findings across all locations, SnapRISK provides a single, intuitive view of asset health, enabling proactive maintenance and smarter decision-making. 
             </p>
-            <div className='mt-6'>
-              <RequestDemo solution={'ir-dashboard'}></RequestDemo>
+            <div className="mt-6 flex flex-wrap items-center gap-3">
+              <RequestDemo solution="ir-dashboard" />
+              <a
+                href="https://portal.snaprisk.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex w-fit items-center gap-2 rounded-md border border-primary px-5 py-2.5 font-medium text-primary transition-opacity hover:opacity-90"
+              >
+                Client Portal
+                <i className="fa-solid fa-arrow-up-right-from-square text-sm" aria-hidden="true" />
+              </a>
             </div>
           </div>
 

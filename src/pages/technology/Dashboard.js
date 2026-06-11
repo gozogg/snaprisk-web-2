@@ -1,5 +1,4 @@
 import '../../App.css';
-import { Link } from 'react-router-dom';
 import Navbar from '../../components/Navbar';
 import RequestDemo from '../../components/RequestDemo';
 
@@ -25,8 +24,17 @@ function Dashboard() {
               It consolidates information across all locations and modules into a single, intuitive view, allowing
               teams to monitor performance, identify trends, and take action with confidence.
             </p>
-            <div className='mt-6'>
-              <RequestDemo solution={'dashboard'}></RequestDemo>
+            <div className="mt-6 flex flex-wrap items-center gap-3">
+              <RequestDemo solution="dashboard" />
+              <a
+                href="https://portal.snaprisk.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex w-fit items-center gap-2 rounded-md border border-primary px-5 py-2.5 font-medium text-primary transition-opacity hover:opacity-90"
+              >
+                Client Portal
+                <i className="fa-solid fa-arrow-up-right-from-square text-sm" aria-hidden="true" />
+              </a>
             </div>
           </div>
 

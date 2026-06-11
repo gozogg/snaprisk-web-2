@@ -22,8 +22,17 @@ function HotWork() {
             <p className="mt-4 text-base leading-relaxed text-gray-700 md:text-lg">
             SnapRISK digitizes the entire hot work process, transforming manual permits into standardized, trackable workflows that improve safety, compliance, and accountability.
             </p>
-            <div className='mt-6'>
-              <RequestDemo solution={'hotwork'}></RequestDemo>
+            <div className="mt-6 flex flex-wrap items-center gap-3">
+              <RequestDemo solution="hotwork" />
+              <a
+                href="https://portal.snaprisk.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex w-fit items-center gap-2 rounded-md border border-primary px-5 py-2.5 font-medium text-primary transition-opacity hover:opacity-90"
+              >
+                Client Portal
+                <i className="fa-solid fa-arrow-up-right-from-square text-sm" aria-hidden="true" />
+              </a>
             </div>
           </div>
 
