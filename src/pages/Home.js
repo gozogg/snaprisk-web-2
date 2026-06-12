@@ -159,8 +159,11 @@ function Home() {
         transition={{ duration: 0.6 }}>
       <section className="bg-white py-12 md:py-16">
         <div className="sticky top-0 z-20 mx-auto max-w-6xl border-b border-primary/10 bg-white/95 px-6 py-4 text-center backdrop-blur md:px-10 lg:px-16">
-          <p className="m-0 text-xl font-semibold uppercase tracking-[0.25em] text-primary">
+          {/* <p className="m-0 text-xl font-semibold uppercase tracking-[0.25em] text-primary">
             The Journey with <span className= "snaprisk-font">S</span><span className= "snaprisk-font lowercase">nap</span><span className= "snaprisk-font uppercase">RISK</span>
+          </p> */}
+          <p className="m-0 text-xl font-bold font-montserrat tracking-[0.25em] text-primary">
+            The Journey with SnapRISK
           </p>
           <p className="mx-auto mt-3 max-w-lg text-base leading-relaxed text-gray-600 md:text-lg">
             Six stages from first conversation to lasting partnership.
@@ -210,7 +213,7 @@ function Home() {
       </section>
 
       <section className='text-center bg-secondary py-16'>
-        <p className="m-0 text-xl font-semibold uppercase tracking-[0.25em] text-primary">INDUSTRIES</p>
+        <p className="m-0 text-xl font-bold tracking-[0.25em] text-primary font-montserrat">Industries</p>
         <p className="mx-auto mt-3 max-w-lg text-base leading-relaxed text-gray-600 md:text-lg">We bring deep expertise across a broad range of industries, enabling us to deliver tailored solutions regardless of sector.</p>
         <div className='mx-16 mt-10'>
           <IndustriesSlide />
@@ -218,7 +221,7 @@ function Home() {
       </section>
 
       <section className="px-6 py-16 md:px-10 lg:px-16 text-center">
-      <p className="m-0 text-xl font-semibold uppercase tracking-[0.25em] text-primary">READY TO DIG A LITTLE DEEPER?</p>
+      <p className="m-0 text-xl font-bold tracking-[0.25em] text-primary font-montserrat">Ready to dig a little deeper?</p>
       <p className="mx-auto mt-3 max-w-lg text-base leading-relaxed text-gray-600 md:text-lg">Take a deeper look into our company.</p>
         <div className="mx-auto max-w-6xl mt-6">
           <ProcessBlocks />

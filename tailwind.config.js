@@ -8,6 +8,11 @@ module.exports = {
         secondary: 'var(--color-secondary)',
         tertiary: 'var(--color-tertiary)',
       },
+      fontFamily: {
+        'montserrat': ['Montserrat'],
+        'lato': ['Lato'],
+        'garamond': ['Garamond']
+    }
     },
   },
   plugins: [],
