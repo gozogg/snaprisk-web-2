@@ -6,6 +6,7 @@ import HeroStagger, { HeroStaggerItem } from '../components/HeroStagger';
 // import FloatingLines from '../components/backgrounds/FloatingLines';
 import LiquidChrome from '../components/backgrounds/LiquidChrome';
 import RequestDemo from '../components/RequestDemo';
+import PageHelmet from '../components/PageHelmet';
 
 const SHARED_CAPABILITIES = [
   'View all your locations in one place',
@@ -63,7 +64,11 @@ const MODULES = [
 function Technology() {
   return (
     <div className="app relative">
-      <title>SnapRISK | Technology</title>
+      <PageHelmet
+        title="SnapRISK | Technology"
+        description="Discover the SnapRISK technology platform — dashboards, IR tools, impairments tracking, and hot work management for property risk engineering."
+        path="/technology"
+      />
       <div className="pointer-events-none absolute inset-x-0 top-0 z-0 h-[min(100vh,46rem)] overflow-hidden">
       <LiquidChrome
     baseColor={[0.780, 0.702, 0.816]}

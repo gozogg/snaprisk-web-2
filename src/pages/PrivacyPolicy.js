@@ -1,11 +1,16 @@
 import '../App.css';
 import Navbar from '../components/Navbar';
 import { Link } from 'react-router-dom';
+import PageHelmet from '../components/PageHelmet';
 
 export default function PrivacyPolicy() {
   return (
     <div className="app">
-      <title>SnapRISK | Privacy Policy</title>
+      <PageHelmet
+        title="SnapRISK | Privacy Policy"
+        description="Read the SnapRISK privacy policy to understand how we collect, use, and protect your information."
+        path="/privacy"
+      />
       <header className="hero" id="privacy">
         <Navbar />
       </header>

@@ -2,11 +2,16 @@ import '../../App.css';
 // import { Link } from 'react-router-dom';
 import Navbar from '../../components/Navbar';
 import RequestDemo from '../../components/RequestDemo';
+import PageHelmet from '../../components/PageHelmet';
 
 function IRDashboard() {
   return (
     <div className="app bg-white">
-      <title>SnapRISK | IR Dashboard</title>
+      <PageHelmet
+        title="SnapRISK | IR Dashboard"
+        description="Track impairment and incident response progress across your portfolio with the SnapRISK IR Dashboard."
+        path="/technology/ir-dashboard"
+      />
       <header className="hero relative z-30" id="dashboard">
         <Navbar />
       </header>

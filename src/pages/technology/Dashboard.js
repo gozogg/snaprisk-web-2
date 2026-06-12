@@ -1,11 +1,16 @@
 import '../../App.css';
 import Navbar from '../../components/Navbar';
 import RequestDemo from '../../components/RequestDemo';
+import PageHelmet from '../../components/PageHelmet';
 
 function Dashboard() {
   return (
     <div className="app bg-white">
-      <title>SnapRISK | Dashboard</title>
+      <PageHelmet
+        title="SnapRISK | Dashboard"
+        description="The SnapRISK Dashboard is the command center for your risk portfolio — real-time visibility, reporting, and action across all locations."
+        path="/technology/dashboard"
+      />
       <header className="hero relative z-30" id="dashboard">
         <Navbar />
       </header>

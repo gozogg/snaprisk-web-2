@@ -1,6 +1,7 @@
 import '../../App.css';
 import Navbar from '../../components/Navbar';
 import { Link } from 'react-router-dom';
+import PageHelmet from '../../components/PageHelmet';
 
 const JOIN_REASONS = [
   {
@@ -23,7 +24,11 @@ const JOIN_REASONS = [
 function Careers() {
   return (
     <div className="app">
-      <title>SnapRISK | Careers</title>
+      <PageHelmet
+        title="SnapRISK | Careers"
+        description="Join the SnapRISK team and help transform property risk engineering through technology, expertise, and partnership."
+        path="/about/careers"
+      />
       <header className="hero" id="careers">
         <Navbar />
       </header>

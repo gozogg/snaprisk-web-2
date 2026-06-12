@@ -4,6 +4,7 @@ import Navbar from '../../components/Navbar';
 // import { TeamBlockLarge } from '../../components/TeamBlocks';
 import TeamPhotoCarousel from '../../components/TeamPhotoCarousel';
 import TeamDemo from '../../components/TeamMemberPopover';
+import PageHelmet from '../../components/PageHelmet';
 
 
 // const leadership = [
@@ -364,7 +365,11 @@ const TEAM_MEMBERS = [
 function OurTeam() {
   return (
     <div className="app">
-      <title>SnapRISK | Team</title>
+      <PageHelmet
+        title="SnapRISK | Team"
+        description="Meet the SnapRISK leadership team and global network of property risk engineering professionals."
+        path="/about/team"
+      />
       <header className="hero" id="team">
         <Navbar />
       </header>

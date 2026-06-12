@@ -1,10 +1,15 @@
 import '../../App.css';
 import SolutionHero from '../../components/SolutionHero';
+import PageHelmet from '../../components/PageHelmet';
 
 function SnapIR() {
   return (
     <div className="app">
-      <title>SnapRISK | SnapIR</title>
+      <PageHelmet
+        title="SnapRISK | SnapIR"
+        description="Identify electrical anomalies early with certified infrared thermography surveys from SnapIR."
+        path="/solutions/snapir"
+      />
       <SolutionHero
         pageId="snapir"
         imageSrc="/img/solutions/snapir.png"

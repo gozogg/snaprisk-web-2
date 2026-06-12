@@ -6,6 +6,7 @@ import Navbar from '../components/Navbar';
 import LiquidChrome from '../components/backgrounds/LiquidChrome';
 import RequestDemo from '../components/RequestDemo';
 import { Link } from 'react-router-dom';
+import PageHelmet from '../components/PageHelmet';
 
 function CountUp({ end, duration = 1200, suffix = '' }) {
   const [value, setValue] = useState(0);
@@ -35,7 +36,11 @@ function CountUp({ end, duration = 1200, suffix = '' }) {
 function About() {
   return (
     <div className="app relative">
-      <title>SnapRISK | About</title>
+      <PageHelmet
+        title="SnapRISK | About"
+        description="Learn more about the story of SnapRISK, a global property risk engineering company combining technology, expertise, and partnership."
+        path="/about"
+      />
       <div className="pointer-events-none absolute inset-x-0 top-0 z-0 h-[min(100vh,46rem)] overflow-hidden">
       <LiquidChrome
     baseColor={[0.780, 0.702, 0.816]}

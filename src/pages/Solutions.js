@@ -10,6 +10,7 @@ import Iridescence from '../components/backgrounds/Iridescence';
 import LiquidChrome from '../components/backgrounds/LiquidChrome';
 import LearnMore from '../components/LearnMore';
 import RequestDemo from '../components/RequestDemo';
+import PageHelmet from '../components/PageHelmet';
 
 function FlameBullet({ className = '' }) {
   return (
@@ -37,7 +38,11 @@ function Solutions() {
 
   return (
     <div className="app relative">
-      <title>SnapRISK | Solutions</title>
+      <PageHelmet
+        title="SnapRISK | Solutions"
+        description="Explore SnapRISK property risk engineering solutions including HPR consulting, SnapREC, SnapCAT, SnapCOPE, SnapIR, and more."
+        path="/solutions"
+      />
       <div className="pointer-events-none absolute inset-x-0 top-0 z-0 h-[min(100vh,46rem)] overflow-hidden">
       <LiquidChrome
     baseColor={[0.780, 0.702, 0.816]}

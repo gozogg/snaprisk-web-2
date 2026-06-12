@@ -2,11 +2,16 @@ import '../../App.css';
 import Navbar from '../../components/Navbar';
 // import { Link } from 'react-router-dom';
 import RequestDemo from '../../components/RequestDemo';
+import PageHelmet from '../../components/PageHelmet';
 
 function Impairments() {
   return (
     <div className="app bg-white">
-      <title>SnapRISK | Impairments</title>
+      <PageHelmet
+        title="SnapRISK | Impairments"
+        description="Manage system downtime with visibility and control using SnapRISK impairments tracking."
+        path="/technology/impairments"
+      />
       <header className="hero relative z-30" id="dashboard">
         <Navbar />
       </header>

@@ -1,10 +1,15 @@
 import '../../App.css';
 import SolutionHero from '../../components/SolutionHero';
+import PageHelmet from '../../components/PageHelmet';
 
 function HPR() {
   return (
     <div className="app">
-      <title>SnapRISK | HPR</title>
+      <PageHelmet
+        title="SnapRISK | HPR"
+        description="Highly Protected Risk engineering consulting from SnapRISK — global property loss control surveys and risk improvement."
+        path="/solutions/hpr"
+      />
       <SolutionHero
         pageId="hpr"
         imageSrc="/img/solutions/HPR.png"

@@ -1,10 +1,15 @@
 import '../../App.css';
 import SolutionHero from '../../components/SolutionHero';
+import PageHelmet from '../../components/PageHelmet';
 
 function SnapREC() {
   return (
     <div className="app">
-      <title>SnapRISK | SnapREC</title>
+      <PageHelmet
+        title="SnapRISK | SnapREC"
+        description="SnapREC simplifies recommendation tracking and closure across your property risk engineering program."
+        path="/solutions/snaprec"
+      />
       <SolutionHero
         pageId="snaprec"
         imageSrc="/img/solutions/snaprec.png"

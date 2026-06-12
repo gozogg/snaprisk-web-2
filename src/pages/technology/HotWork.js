@@ -1,11 +1,16 @@
 import '../../App.css';
 import Navbar from '../../components/Navbar';
 import RequestDemo from '../../components/RequestDemo';
+import PageHelmet from '../../components/PageHelmet';
 
 function HotWork() {
   return (
     <div className="app bg-white">
-      <title>SnapRISK | Hot Work</title>
+      <PageHelmet
+        title="SnapRISK | Hot Work"
+        description="Prevent loss before it happens with SnapRISK hot work permit management and oversight."
+        path="/technology/hotwork"
+      />
       <header className="hero relative z-30" id="dashboard">
         <Navbar />
       </header>

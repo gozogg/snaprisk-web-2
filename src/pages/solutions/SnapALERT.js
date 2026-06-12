@@ -1,10 +1,15 @@
 import '../../App.css';
 import SolutionHero from '../../components/SolutionHero';
+import PageHelmet from '../../components/PageHelmet';
 
 function SnapALERT() {
   return (
     <div className="app">
-      <title>SnapRISK | SnapALERT</title>
+      <PageHelmet
+        title="SnapRISK | SnapALERT"
+        description="Weather-driven property risk alerts and portfolio insights with SnapALERT from SnapRISK."
+        path="/solutions/snapalert"
+      />
       <SolutionHero
         pageId="snapalert"
         imageSrc="/img/solutions/snapalert.png"

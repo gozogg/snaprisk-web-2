@@ -1,10 +1,15 @@
 import '../../App.css';
 import SolutionHero from '../../components/SolutionHero';
+import PageHelmet from '../../components/PageHelmet';
 
 function SnapCAT() {
   return (
     <div className="app">
-      <title>SnapRISK | SnapCAT</title>
+      <PageHelmet
+        title="SnapRISK | SnapCAT"
+        description="Organize critical asset and catastrophe exposure data across your portfolio with SnapCAT."
+        path="/solutions/snapcat"
+      />
       <SolutionHero
         pageId="snapcat"
         imageSrc="/img/solutions/snapcat.png"

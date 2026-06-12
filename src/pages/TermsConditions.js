@@ -1,11 +1,16 @@
 import '../App.css';
 import Navbar from '../components/Navbar';
 import { Link } from 'react-router-dom';
+import PageHelmet from '../components/PageHelmet';
 
 export default function TermsConditions() {
   return (
     <div className="app">
-      <title>SnapRISK | Terms and Conditions</title>
+      <PageHelmet
+        title="SnapRISK | Terms and Conditions"
+        description="Review the SnapRISK terms and conditions governing use of our website and services."
+        path="/terms"
+      />
       <header className="hero" id="terms">
         <Navbar />
       </header>

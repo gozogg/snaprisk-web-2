@@ -1,10 +1,15 @@
 import '../../App.css';
 import SolutionHero from '../../components/SolutionHero';
+import PageHelmet from '../../components/PageHelmet';
 
 function SnapCOPE() {
   return (
     <div className="app">
-      <title>SnapRISK | SnapCOPE</title>
+      <PageHelmet
+        title="SnapRISK | SnapCOPE"
+        description="Digitally organized COPE data collection for property risk engineering with SnapCOPE."
+        path="/solutions/snapcope"
+      />
       <SolutionHero
         pageId="snapcope"
         imageSrc="/img/solutions/snapcope.png"

@@ -2,6 +2,7 @@ import '../App.css';
 import { useEffect, useState } from 'react';
 import Navbar from '../components/Navbar';
 import { useSearchParams } from 'react-router-dom';
+import PageHelmet from '../components/PageHelmet';
 
 const VALID_SOLUTIONS = ['hpr', 'snaprec', 'snapcat', 'snapcope', 'snapir', 'snapvalues', 'self-e-audit', 'snapalert', 'dashboard', 'ir-dashboard', 'hotwork', 'impairments'];
 
@@ -197,7 +198,11 @@ function Contact() {
 
   return (
     <div className="app">
-      <title>SnapRISK | Contact</title>
+      <PageHelmet
+        title="SnapRISK | Contact"
+        description="Contact SnapRISK for demo requests, careers inquiries, and general questions about property risk engineering services."
+        path="/contact"
+      />
       <header className="hero" id="contact">
         <Navbar />
       </header>

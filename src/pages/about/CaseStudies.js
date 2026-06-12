@@ -1,6 +1,7 @@
 import '../../App.css';
 import Navbar from '../../components/Navbar';
 import { Link } from 'react-router-dom';
+import PageHelmet from '../../components/PageHelmet';
 
 // Add each testimonial: quote, name, company, title
 const CLIENT_TESTIMONIALS = [
@@ -51,7 +52,11 @@ const CLIENT_TESTIMONIALS = [
 function CaseStudies() {
   return (
     <div className="app">
-      <title>SnapRISK | Case Studies</title>
+      <PageHelmet
+        title="SnapRISK | Case Studies"
+        description="See how SnapRISK clients have improved property risk outcomes with HPR consulting and technology solutions."
+        path="/about/case-studies"
+      />
       <header className="hero" id="case-studies">
         <Navbar />
       </header>

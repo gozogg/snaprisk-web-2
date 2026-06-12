@@ -6,7 +6,8 @@ import ProcessBlocks from '../components/ProcessBlocks';
 import ScrollStack, { ScrollStackItem } from '../components/ScrollStack';
 import HeroStagger, { HeroStaggerItem } from '../components/HeroStagger';
 import { Link } from 'react-router-dom';
-import {motion} from 'framer-motion'
+import {motion} from 'framer-motion';
+import PageHelmet from '../components/PageHelmet';
 
 
 const JOURNEY_STEPS = [
@@ -81,6 +82,11 @@ const JOURNEY_STEPS = [
 function Home() {
   return (
     <div className="app relative">
+      <PageHelmet
+        title="SnapRISK"
+        description="SnapRISK is a global technology company specializing in property risk engineering. We help organizations navigate complex property exposures through innovative technology, deep engineering expertise, and hands-on field experience."
+        path="/"
+      />
       <section
         id="home"
         data-no-reveal

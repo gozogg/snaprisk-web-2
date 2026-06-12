@@ -1,10 +1,15 @@
 import '../../App.css';
 import SolutionHero from '../../components/SolutionHero';
+import PageHelmet from '../../components/PageHelmet';
 
 function SelfEAudit() {
   return (
     <div className="app">
-      <title>SnapRISK | Self E-AUDIT</title>
+      <PageHelmet
+        title="SnapRISK | Self E-AUDIT"
+        description="Self-guided property risk assessments at scale with SnapRISK Self E-Audit."
+        path="/solutions/self-e-audit"
+      />
       <SolutionHero
         pageId="self-e-audit"
         imageSrc="/img/solutions/selfeaudit.png"

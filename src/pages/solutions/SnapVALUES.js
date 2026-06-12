@@ -1,10 +1,15 @@
 import '../../App.css';
 import SolutionHero from '../../components/SolutionHero';
+import PageHelmet from '../../components/PageHelmet';
 
 function SnapVALUES() {
   return (
     <div className="app">
-      <title>SnapRISK | SnapVALUES</title>
+      <PageHelmet
+        title="SnapRISK | SnapVALUES"
+        description="Smarter property value insights and valuation support with SnapVALUES from SnapRISK."
+        path="/solutions/snapvalues"
+      />
       <SolutionHero
         pageId="snapvalues"
         imageSrc="/img/solutions/snapvalues.jpeg"
