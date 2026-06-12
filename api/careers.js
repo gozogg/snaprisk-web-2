@@ -8,7 +8,7 @@ dotenv.config();
 
 const app = express();
 app.use(express.json())
-app.post('/', upload.single('resume'), async (req, res) => {
+app.post('/api/careers', upload.single('resume'), async (req, res) => {
     try {
       const apiKey = process.env.SENDGRID_API_KEY;
       const fromEmail = process.env.SENDGRID_FROM_EMAIL;
@@ -25,9 +25,9 @@ app.post('/', upload.single('resume'), async (req, res) => {
       const body = req.body || {};
       const file = req.file;
   
-      if (!file) {
-        return res.status(400).json({ error: 'Resume file is required.' });
-      }
+      // if (!file) {
+      //   return res.status(400).json({ error: 'Resume file is required.' });
+      // }
   
       sgMail.setApiKey(apiKey);
   
@@ -43,14 +43,14 @@ app.post('/', upload.single('resume'), async (req, res) => {
           `Linkedin: ${body.linkedin || ''}`,
           `Experience: ${body.experience || ''}`,
         ].join('\n'),
-        attachments: [
+        attachments: file ? [
           {
-            content: file.buffer.toString('base64'),  // SendGrid needs base64
+            content: file.buffer.toString('base64'),
             filename: file.originalname,
             type: file.mimetype,
             disposition: 'attachment',
-          },
-        ]
+          }
+        ] : [],
       });
   
       return res.status(200).json({ ok: true });
